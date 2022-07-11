@@ -1,0 +1,64 @@
+.menu-position {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    z-index: 75;
+    left: 0px;
+    top: 0px;
+}
+/* Estilos para el ícono del Menú */
+.icon-menu{
+    position: relative;
+    z-index: 10;
+}
+.icon-menu svg{
+    padding: 40px 50px;
+    box-sizing: content-box;
+    vertical-align: top;
+    width: 40px;
+    cursor: pointer;
+}
+
+/* Estilos para el contenedor del Menú */
+.cont-menu{
+    background-color: #666666;
+    width: 400px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all .5s ease;
+}
+
+/* Estilos por agregar en JavaScript */
+.active{
+    transform: translate(-600px);
+}
+
+/* Estilos para el listado del Menú */
+.cont-menu {
+    display: flex;
+    flex-direction: column;
+}
+.cont-menu ul{
+    padding: 10px 0px 20px 0px;
+    list-style: none;
+}
+
+.cont-menu ul li{
+    color: white;
+    display: block;
+    font-size: 25px;
+    text-decoration: none;
+    padding: 10px 50px;
+    cursor: pointer;
+}
+
+.cont-menu ul li:hover{
+    background-color: rgb(228,228,228);
+    color: rgb(42,42,42);
+}
+.welcome {
+    color: #f3f3f3;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3rem;
+}

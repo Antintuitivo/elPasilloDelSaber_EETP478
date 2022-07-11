@@ -1,0 +1,54 @@
+.message {
+	background-color: #489e48;
+	color: white;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	text-align: center;
+	font-family: 'Oswald', sans serif;
+	font-weight: 400;
+	font-size: 2.5vh;
+	letter-spacing: 0.1vw;
+	height: 56px;
+	width: 100vw;
+	top: 0;
+	animation: spawn-message 7.5s ease-in-out forwards;
+}
+@keyframes spawn-message {
+	0% {
+		transform: translateY(-5vh);
+		display: fixed;
+	}
+	10% {
+		display: flex;
+		transform: translate(0,0);
+		color: #ffffff;		
+	}
+	94% {
+		display: flex;
+		transform: translate(0,0);
+		color: #ffffff;		
+	}
+	100% {
+		transform: translateY(-10vh);
+		display: fixed;	
+	}
+}
+.error {
+	background-color: #9e4848;
+	color: #ffffff;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	text-align: center;
+	font-family: 'Oswald', sans serif;
+	font-weight: 400;
+	font-size: 2.5vh;
+	letter-spacing: 0.1vw;
+	width: 100vw;
+	height: 56px;
+	top: 0;
+	animation: spawn-message 7.5s ease-in-out forwards;
+}
