@@ -22,11 +22,9 @@
         <article class="contenedor-inputs">
             
             
-            <input class="input-100" type="email" placeholder="Dirección de correo electrónico" name="email" required>
+            <input class="input-48" type="number" placeholder="DNI" name="email" required>
             
-            <input class="input-100" type="password" placeholder="Contraseña" name="password" required>
-            
-            <input class="input-100 btn-enviar" type="submit" value="INICIAR SESIÓN">
+            <input class="input-48 btn-enviar" type="submit" value="INICIAR">
             
             
             
