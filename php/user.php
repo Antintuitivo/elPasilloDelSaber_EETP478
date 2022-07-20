@@ -1,7 +1,9 @@
 <?php
     #Redirección en caso de no haber iniciado sesión, ni ser administrador.
     include 'header\session.php';
+    include '..\javascript\timed-logout.js'
     check_session();
+    StartTimers();
 ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
