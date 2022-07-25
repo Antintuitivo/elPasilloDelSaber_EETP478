@@ -1,10 +1,3 @@
-<?php 
-    #Actualiza el valor de la varialbe encargada de guardar la selección durante la sesión.
-    if(isset($_POST['table'])){
-        $_SESSION['state']['navegate'] = $_POST['table'];
-    } else {$_SESSION['state']['navegate'] = "`login`";}
-?>
-
     <div class="smol-box">
         <h2>BUSCA UNA CUENTA</h2>
         <!-- Selección de la tabla en donde se filtrara la búsqueda. -->

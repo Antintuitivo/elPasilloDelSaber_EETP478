@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lol</title>
+    <title>Preguntas Avellaneda</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     </head>
 <body>
@@ -12,15 +12,14 @@
  include 'imprimir.php';
 ?>
 
-    <h1> <?php echo $cuestion;?></h1>
+    <h1> <?php echo $question;?></h1>
 <form method="POST" target="imprimir.php">
 
+    <label> <input name="respuestas"  id="R1" type="radio"> <?php echo $answer ;?></label>
+    <label> <input name="respuestas"  id="R2" type="radio"> <?php echo $answer1 ;?> </label>
+    <label> <input name="respuestas"  id="R3" type="radio"> <?php echo $answer2 ;?></label>
+    <input class="" type="submit">
 
-
-   <label > <input name="lol1" type="checkbox"> <?php echo $answer ;?></label>
-    <label > <input name="lol2" type="checkbox"> <?php echo $answer1 ;?> </label> 
-    <label > <input name="lol3" type="checkbox"> <?php echo $answer2 ;?></label>
-    <input type="submit">
 </form>
 
 </body>
