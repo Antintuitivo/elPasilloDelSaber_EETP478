@@ -48,5 +48,4 @@
         }*/
         print_r($signal);
     }
->>>>>>> Stashed changes
 ?>
