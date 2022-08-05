@@ -15,15 +15,24 @@
     }
     
     
-    $datauser = mysqli_query($link,"SELECT * FROM users WHERE `user-email` = 'f@gmail.com'");
-
-    if($datauser != false) {
-        $rows = mysqli_fetch_array($datauser);
-        /*
-        if(isset($rows)){
-            if ($n && $rows['user-journey']){
-                
+    /*$datauser = mysqli_query($link,"SELECT * FROM users WHERE `user-email` = 'f@gmail.com'");*/
+    $sensorsignal = mysqli_query($link, "SELECT * FROM sensors ORDER BY `id-record` DESC LIMIT 1");
+    
+    #if($datauser != false) {
+        #$user = mysqli_fetch_array($datauser);
+        $signal = mysqli_fetch_array($sensorsignal);
+        
+        if(isset($num)){
+            if ($n == && $signal['user-journey']==){
+                ;
             }
-        }*/
-    }
+            if ($n == && $signal['user-journey']){
+                ;
+            }
+            if ($n && $signal['user-journey']){
+                ;
+            }
+        }
+        print_r($signal);
+    #}
 ?>
