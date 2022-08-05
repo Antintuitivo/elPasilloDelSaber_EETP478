@@ -8,8 +8,14 @@ $pos = 0;//cantidad de preguntas respondidas
 $stage = 3;//último sensor pisado por el usuario
 $file = "file.csv";//dirección del archivo csv
 
-$query = "SELECT * FROM 'users' WHERE '' ";//SELECT * FROM TableName WHERE id=(SELECT max(id) FROM TableName)
-$q2 = "SELECT * FROM 'sensors' WHERE '' ";
+$q = "SELECT TOP 1 * FROM 'users' WHERE 'jurney-ended' = NULL";//SELECT * FROM TableName WHERE id=(SELECT max(id) FROM TableName)
+$q2 = "SELECT * FROM 'signals' WHERE 'id-record'=(SELECT max('id-record') FROM 'signals') ";
+
+$result = mysqli_query(connect(),$q);
+if($result){
+    $rows = mysqli_fetch_array($result);
+    $usuario = $rows['id-user'];
+}
 
 if($age<15){
     $file = "menores.csv";
