@@ -18,6 +18,7 @@
     /*$datauser = mysqli_query($link,"SELECT * FROM users WHERE `user-email` = 'f@gmail.com'");*/
     $sensorsignal = mysqli_query($link, "SELECT * FROM sensors ORDER BY `id-record` DESC LIMIT 1");
     
+<<<<<<< Updated upstream
     #if($datauser != false) {
         #$user = mysqli_fetch_array($datauser);
         $signal = mysqli_fetch_array($sensorsignal);
@@ -35,4 +36,18 @@
         }
         print_r($signal);
     #}
+=======
+    if($datauser != false) {
+        #$user = mysqli_fetch_array($datauser);
+        $signal = mysqli_fetch_array($sensorsignal);
+        
+        /*
+        if(isset($rows)){
+            if ($n && $rows['user-journey']){
+                
+            }
+        }*/
+        print_r($signal);
+    }
+>>>>>>> Stashed changes
 ?>
