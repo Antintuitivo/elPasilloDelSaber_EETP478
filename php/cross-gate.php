@@ -12,24 +12,23 @@
     #Validación de requisitos para el pasaje de etapa.
     if(isset($_POST['num'])){
         $n = $_POST['num'];
-    }
-    
+    }  
     
     /*$datauser = mysqli_query($link,"SELECT * FROM users WHERE `user-email` = 'f@gmail.com'");*/
-    $sensorsignal = mysqli_query($link, "SELECT * FROM sensors ORDER BY `id-record` DESC LIMIT 1");
+    $sensorsignal = mysqli_query($link, "SELECT TOP 1 * FROM signals ORDER BY `id-record` DESC");
     
     #if($datauser != false) {
         #$user = mysqli_fetch_array($datauser);
         $signal = mysqli_fetch_array($sensorsignal);
         
         if(isset($num)){
-            if ($n == && $signal['user-journey']==){
+            if ($n == && $signal['signal-stage']==){
                 ;
             }
-            if ($n == && $signal['user-journey']){
+            if ($n == && $signal['signal-stage']){
                 ;
             }
-            if ($n && $signal['user-journey']){
+            if ($n && $signal['signal-stage']){
                 ;
             }
         }
@@ -42,7 +41,7 @@
         
         /*
         if(isset($rows)){
-            if ($n && $rows['user-journey']){
+            if ($n && $rows['signal-stage']){
                 
             }
         }*/
