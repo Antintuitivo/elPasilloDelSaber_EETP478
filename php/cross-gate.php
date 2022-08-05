@@ -18,7 +18,7 @@
     $datauser = mysqli_query($link,"SELECT * FROM users WHERE `user-email` = 'f@gmail.com'");
 
     if($datauser != false) {
-        $rows = mysqli_fetch_array($user);
+        $rows = mysqli_fetch_array($datauser);
         /*
         if(isset($rows)){
             if ($n && $rows['user-journey']){
@@ -26,5 +26,4 @@
             }
         }*/
     }
-        echo $rows['user-email'];
 ?>
