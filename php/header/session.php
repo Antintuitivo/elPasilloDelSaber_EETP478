@@ -16,6 +16,30 @@
             header("Location: /../web/");
         }
     }
+
+    function fetch_user_step(){
+    
+        $q = "SELECT TOP 1 * FROM 'users' WHERE 'jurney-ended' = NULL";//selecciona el último registro que no haya terminado el juego//SELECT * FROM TableName WHERE id=(SELECT max(id) FROM TableName)
+        
+        $result = mysqli_query(connect(),$q);
+        if($result){
+            $rows = mysqli_fetch_array($result);
+            $_SESSION['juego']['usuario'] = $rows['id-user'];
+            $_SESSION['juego']['pos'] = $rows['jurney-step'];
+        }
+    }
+
+    function fetch_stage(){ 
+
+        $q2 = "SELECT TOP 1 * FROM 'signals' WHERE 'id-record'=(SELECT max('id-record') FROM 'signals')";//lee el último registro de la tabla de señales para saber la etapa actual
+        
+        $resulta2 = mysqli_query(connect(),$q2);
+        if($resulta2){
+            $filas = mysqli_fetch_array($resulta2);
+            $_SESSION['juego']['stage'] = $filas['signal-stage'];
+        }
+    }
+    
     /*function close_session(){
         $id_record = $_SESSION['register']['id-record'];
         $sql = "UPDATE `user-record` SET `record-logout` = CURRENT_TIME() WHERE `user-record`.`id-record` = '$id_record'";
