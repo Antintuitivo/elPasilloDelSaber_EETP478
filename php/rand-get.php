@@ -1,21 +1,18 @@
 <?php 
 session_start();
 
-include 'header/session.php';
-include 'header/link.php';
-connect();
-fetch_user_step();
-fetch_stage();//buscar la etapa actual del usuario
-                
+//include 'header/session.php';
+//include 'header/link.php';               
 
-/*  $age = 0;//save the user's age to choose file
+/*  
 $file = "file.csv";//dirección del archivo csv  */
 
+$age = $_SESSION['juego']['edad'];
 $stage = $_SESSION['juego']['stage'];//último sensor pisado por el usuario
 $pos = $_SESSION['juego']['pos'];//cantidad de preguntas respondidas
 
 
-if($age<15){
+if($age<15){                //se selecciona el archivo csv a utilizar según la edad del usuario
     $file = "menores.csv";
 }elseif($age>=15){
     $file = "mayores.csv";
@@ -53,12 +50,4 @@ $question_index = rand($min,$max);      //randomize the number of the question t
    $_SESSION['juego']['ans'] = $rc;
    $_SESSION['juego']['question'] = $pregunta;
 
-   header("Location: /../web/Q&A");
-
-   //imprime todo
-    echo '<pre>';
-    print_r($csv[$question_index]);
-    print_r($csv);
-    echo '</pre>';
-    echo $question_index
 ?>

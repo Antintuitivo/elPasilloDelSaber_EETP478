@@ -1,7 +1,22 @@
 <?php
 session_start();
+include 'header/session.php';
+
+if(!isset($_SESSION['juego']['usuario'])){
+    fetch_usersetup();
+    fetch_stage();
+}
+
+if($_SESSION['juego']['pos']==3||$_SESSION['juego']['pos']==6){
+    fetch_stage();
+}
+
+if(isset($_SESSION['juego']['pos'])){
+    $_SESSION['juego']['pos']++;
+}
+
 include 'rand-get.php';
-$_SESSION['juego']['pos']++;
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -13,12 +28,10 @@ $_SESSION['juego']['pos']++;
     <link rel="stylesheet" type="text/css" href="style.css">
     </head>
 <body>
-<?php
- include 'imprimir.php';
-?>
 
     <h1> <?php echo $_SESSION['juego']['question'];?></h1>
-<form method="POST" target="imprimir.php">
+
+    <form method="POST">
 
     <label> <input name="respuestas"  id="R1" type="radio"> <?php echo $_SESSION['juego']['ans1'];?></label>
     <label> <input name="respuestas"  id="R2" type="radio"> <?php echo $_SESSION['juego']['ans2'] ;?> </label>
@@ -28,4 +41,9 @@ $_SESSION['juego']['pos']++;
 </form>
 
 </body>
+<?php 
+    if(){
+
+    }
+?>
 </html>

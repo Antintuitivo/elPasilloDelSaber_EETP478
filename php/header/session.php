@@ -17,15 +17,26 @@
         }
     }
 
-    function fetch_user_step(){
-    
-        $q = "SELECT TOP 1 * FROM 'users' WHERE 'jurney-ended' = NULL";//selecciona el último registro que no haya terminado el juego//SELECT * FROM TableName WHERE id=(SELECT max(id) FROM TableName)
+    function fetch_usersetup(){
+        
+        $tabla1 = "users";
+        $tabla2 = "jurney";
+        $q = "SELECT TOP 1 * FROM '$tabla2' WHERE 'jurney-ended' = NULL";//selecciona el último registro que no haya terminado el juego//SELECT * FROM TableName WHERE id=(SELECT max(id) FROM TableName)
         
         $result = mysqli_query(connect(),$q);
         if($result){
             $rows = mysqli_fetch_array($result);
             $_SESSION['juego']['usuario'] = $rows['id-user'];
             $_SESSION['juego']['pos'] = $rows['jurney-step'];
+        }
+
+        $user = $_SESSION['juego']['usuario'];
+        $q_userage = "SELECT TOP 1 * FROM '$tabla1' WHERE 'id-user' = $user";
+        $result = mysqli_query(connect(),$q_userage);
+
+        if($result){
+            $rows = mysqli_fetch_array($result);
+            $_SESSION['juego']['edad'] = $rows['user-age'];
         }
     }
 
