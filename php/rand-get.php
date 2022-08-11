@@ -47,7 +47,7 @@ $question_index = rand($min,$max);      //randomize the number of the question t
    $_SESSION['juego']['ans1'] = $r1;
    $_SESSION['juego']['ans2'] = $r2;
    $_SESSION['juego']['ans3'] = $r3;
-   $_SESSION['juego']['ans'] = $rc;
+   $_SESSION['juego']['ans_c'] = $rc;
    $_SESSION['juego']['question'] = $pregunta;
 
 ?>
