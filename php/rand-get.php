@@ -1,5 +1,4 @@
 <?php 
-session_start();
 
 //include 'header/session.php';
 //include 'header/link.php';               
@@ -7,9 +6,9 @@ session_start();
 /*  
 $file = "file.csv";//dirección del archivo csv  */
 
-$age = $_SESSION['juego']['edad'];
-$stage = $_SESSION['juego']['stage'];//último sensor pisado por el usuario
-$pos = $_SESSION['juego']['pos'];//cantidad de preguntas respondidas
+$age = $_SESSION['usuario']['age'];
+$stage = $_SESSION['juego']['etapa'];//último sensor pisado por el usuario
+$pos = $_SESSION['juego']['paso'];//cantidad de preguntas respondidas
 
 
 if($age<15){                //se selecciona el archivo csv a utilizar según la edad del usuario
