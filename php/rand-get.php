@@ -6,7 +6,7 @@
 /*  
 $file = "file.csv";//dirección del archivo csv  */
 
-$age = $_SESSION['usuario']['age'];
+$age = $_SESSION['usuario']['edad'];
 $stage = $_SESSION['juego']['etapa'];//último sensor pisado por el usuario
 $pos = $_SESSION['juego']['paso'];//cantidad de preguntas respondidas
 

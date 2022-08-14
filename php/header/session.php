@@ -36,7 +36,7 @@
 
         if($result){
             $rows = mysqli_fetch_array($result);
-            $_SESSION['juego']['age'] = $rows['user-age'];
+            $_SESSION['juego']['edad'] = $rows['user-age'];
         }
     }
 
