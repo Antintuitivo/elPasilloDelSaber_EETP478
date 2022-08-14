@@ -42,7 +42,7 @@
 
     function fetch_stage(){ 
 
-        $q2 = "SELECT TOP 1 * FROM 'signals' WHERE 'id-record'=(SELECT max('id-record') FROM 'signals')";//lee el último registro de la tabla de señales para saber la etapa actual
+        $q2 = "SELECT * FROM signals ORDER BY `id-record` DESC LIMIT 1";//lee el último registro de la tabla de señales para saber la etapa actual
         
         $resulta2 = mysqli_query(connect(),$q2);
         if($resulta2){
