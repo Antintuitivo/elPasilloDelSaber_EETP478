@@ -26,8 +26,8 @@
         $result = mysqli_query(connect(),$q);
         if($result){
             $rows = mysqli_fetch_array($result);
-            $_SESSION['juego']['usuario'] = $rows['id-user'];
-            $_SESSION['juego']['pos'] = $rows['jurney-step'];
+            $_SESSION['usuario']['id'] = $rows['id-user'];
+            $_SESSION['juego']['paso'] = $rows['jurney-step'];
         }
 
         $user = $_SESSION['juego']['usuario'];
@@ -36,7 +36,7 @@
 
         if($result){
             $rows = mysqli_fetch_array($result);
-            $_SESSION['juego']['edad'] = $rows['user-age'];
+            $_SESSION['juego']['age'] = $rows['user-age'];
         }
     }
 
@@ -47,7 +47,7 @@
         $resulta2 = mysqli_query(connect(),$q2);
         if($resulta2){
             $filas = mysqli_fetch_array($resulta2);
-            $_SESSION['juego']['stage'] = $filas['signal-stage'];
+            $_SESSION['juego']['etapa'] = $filas['signal-stage'];
         }
     }
     

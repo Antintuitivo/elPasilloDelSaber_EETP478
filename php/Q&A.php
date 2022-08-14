@@ -2,29 +2,29 @@
 session_start();
 include 'header/session.php';
 
-if(!isset($_SESSION['juego']['usuario'])){      //recupera la info del usuario de la base de datos
+if(!isset($_SESSION['usuario']['id'])){      //recupera la info del usuario de la base de datos
     fetch_usersetup();
     fetch_stage();
 }
 
-if($_SESSION['juego']['pos']==3||$_SESSION['juego']['pos']==6){ //recupera la etapa actual del usuario de la base de datos 
+if($_SESSION['juego']['paso']==4||$_SESSION['juego']['paso']==7){ //recupera la etapa actual del usuario de la base de datos 
     fetch_stage();
 }
 
-if(isset($_SESSION['juego']['pos']) && !empty($_POST['respuestas'])){  //aumenta la cantidad de preguntas respondidas
-    $_SESSION['juego']['pos']++;
+if(isset($_SESSION['juego']['paso']) && !empty($_POST['respuestas'])){  //aumenta la cantidad de preguntas respondidas
+    $_SESSION['juego']['paso']++;
 }
 
-if($_SESSION['juego']['pos']>9){                 //salida del bucle una vez responda nueve preguntas
-    header("Location: --escribirRanking--.php")
+if($_SESSION['juego']['paso']>9){                 //salida del bucle una vez responda nueve preguntas
+    header("Location: --escribirRanking--.php");
 }
 
 include 'rand-get.php';
 
-if(){
+/* if(){
 
 }
-
+*/
 ?>
 <!DOCTYPE html>
 <html lang="es">
