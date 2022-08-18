@@ -58,7 +58,12 @@
   $_SESSION['usuario']['id'] = $user['id-user'];
   $_SESSION['usuario']['edad'] = $user['user-age'];
 
+  #Registro de variables de sesión del usuario.
+  #-----------------------------------------------------------------------------
+  $_SESSION['juego']['paso'] = $journey['journey-step'];
+  $_SESSION['juego']['etapa'] = $journey['journey-stage'];
+
   #Redirección para iniciar el desafío.
   #-----------------------------------------------------------------------------
-  #header("Location: ../../web/php/intermedio.php");
+  header("Location: ../../web/php/intermedio.php");
 ?>
