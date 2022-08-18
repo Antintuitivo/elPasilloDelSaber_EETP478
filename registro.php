@@ -16,7 +16,9 @@
   $result = mysqli_query($link, $select);
   $validation = mysqli_num_rows($result);
 
-  if ($validation == null) {
+  echo "<h1>" . $validation . "<h1>";
+  if ($validation == 0) {
+    #Insertar nuevo usuario.
     $insert = "INSERT INTO users (`user-age`, `user-email`) VALUES ('$edad', '$email')";
     mysqli_query($link, $insert);
     $result = mysqli_query($link, $select);
@@ -25,21 +27,30 @@
   $user = mysqli_fetch_assoc($result);
   $id = $user['id-user'];
 
+#---------------------------------------------------------------------------------------------
+
   #Comprobar si la persona ya ha participado. Si es así, redirigirlo al ranking.
   #-----------------------------------------------------------------------------
   $select = "SELECT*FROM journey WHERE `id-user`='$id'";
-  $result = mysqli_query($link, $query);
+  $result = mysqli_query($link, $select);
+  $validation = mysqli_num_rows($result);
+
+  if ($validation == 0) {
+    #Insertar nuevo registro de progreso.
+    $insert = "INSERT INTO journey (`id-user`) VALUES ('$id')";
+    mysqli_query($link, $insert);
+    $result = mysqli_query($link, $select);
+  }
+
   $journey = mysqli_fetch_assoc($result);
 
-  if (isset($journey)) {
-    if ($journey['journey-step'] == 9) {
-      $message = "Disculpa, ya has participado.";
-      ?>
-      <span class="message"><?php echo $message;?></span>
-      <?php
-      #header("Location: ../../web/php/ranking.php");
-      include("../../web/php/ranking.php");
-    }
+  if ($journey['journey-step'] == 9) {
+    $message = "Disculpa, ya has participado.";
+    ?>
+    <span class="message"><?php echo $message;?></span>
+    <?php
+    #header("Location: ../../web/php/ranking.php");
+    include '../web/php/ranking.php';
   }
 
   #Registro de variables de sesión del usuario.
@@ -49,5 +60,5 @@
 
   #Redirección para iniciar el desafío.
   #-----------------------------------------------------------------------------
-  header("Location: ../../web/php/intermedio.php");
+  #header("Location: ../../web/php/intermedio.php");
 ?>
