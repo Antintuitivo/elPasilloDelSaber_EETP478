@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 include 'header/session.php';
 
 if(!isset($_SESSION['usuario']['id'])){                                                 //Recupera la info del usuario de la base de datos
