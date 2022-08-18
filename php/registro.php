@@ -7,7 +7,7 @@
 
   #Realizar, comprobar y almacenar credecenciales de la conexión a la DBMS.
   #-----------------------------------------------------------------------------
-  include 'php\header\link.php';
+  include 'header\link.php';
   $link = connect();
 
   #Validación de cuenta.
