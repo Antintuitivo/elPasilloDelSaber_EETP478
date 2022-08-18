@@ -19,7 +19,7 @@
 
     function fetch_usersetup(){
         
-        $tabla1 = "users";
+        
         $tabla2 = "jurney";
         $q = "SELECT TOP 1 * FROM '$tabla2' WHERE 'jurney-ended' = NULL";//selecciona el último registro que no haya terminado el juego//SELECT * FROM TableName WHERE id=(SELECT max(id) FROM TableName)
         
@@ -28,15 +28,6 @@
             $rows = mysqli_fetch_array($result);
             $_SESSION['usuario']['id'] = $rows['id-user'];
             $_SESSION['juego']['paso'] = $rows['jurney-step'];
-        }
-
-        $user = $_SESSION['juego']['usuario'];
-        $q_userage = "SELECT TOP 1 * FROM '$tabla1' WHERE 'id-user' = $user";
-        $result = mysqli_query(connect(),$q_userage);
-
-        if($result){
-            $rows = mysqli_fetch_array($result);
-            $_SESSION['juego']['edad'] = $rows['user-age'];
         }
     }
 
