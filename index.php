@@ -16,18 +16,13 @@
 </head>
 <body>
     <div class="transparent-background"></div>
-    <form class="big-box" action="../../web/php/validate-account.php" method="POST">
+    <form class="big-box" method="POST">
         <img src="../../web/img/school-icon.svg">
         <h2> Iniciar sesión </h2>
         <article class="contenedor-inputs">
-            
-            
-            <input class="input-48" type="number" placeholder="DNI" name="email" required>
-            
-            <input class="input-48 btn-enviar" type="submit" value="INICIAR">
-            
-            
-            
+            <input class="input-100" type="email" placeholder="Email" name="email" required>
+            <input class="input-100" type="number" placeholder="Edad" name="edad" min="0" required>
+            <input class="input-48 btn-enviar" type="submit" value="INICIAR" formaction="../../web/registro.php">
         </article>
     </form>
 </body>

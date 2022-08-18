@@ -1,5 +1,6 @@
 <?php
     session_start();
+    
     #Realizar, comprobar y almacenar credecenciales de la conexión a la DBMS.
     #-----------------------------------------------------------------------------
     include 'header\link.php';
@@ -29,6 +30,7 @@
                 ?>
                 <span class="error"><?php echo $message;?></span>
                 <?php
+                header("Location: ../../web/php/ranking.php");
             }
         }
     }

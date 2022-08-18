@@ -16,7 +16,7 @@ if(isset($_SESSION['juego']['pos']) && !empty($_POST['respuestas'])){  //aumenta
 }
 
 if($_SESSION['juego']['pos']>9){                 //salida del bucle una vez responda nueve preguntas
-    header("Location: --escribirRanking--.php")
+    header("Location: ../../web/php/ranking.php");
 }
 
 include 'rand-get.php';
