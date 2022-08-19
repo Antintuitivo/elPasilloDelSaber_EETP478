@@ -6,13 +6,7 @@
     $link = connect();
     
     function check_session(){
-        if (($_SESSION['login']['id-user'] == null) || ($_SESSION['login']['id-user'] == '')){
-            header("Location: /../web/");
-        }
-    }
-    #Redirección en caso de no ser administrador.
-    function checkadmin_session(){
-        if ($_SESSION['login']['user-admin'] == 0 ){
+        if (($_SESSION['usuario']['id'] == null) || ($_SESSION['usuario']['id'] == '')){
             header("Location: /../web/");
         }
     }

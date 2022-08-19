@@ -36,4 +36,3 @@
         header("Location: ../../web/php/ranking.php");
     }
 ?>
-</body>
