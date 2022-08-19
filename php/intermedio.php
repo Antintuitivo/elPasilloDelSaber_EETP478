@@ -1,3 +1,4 @@
+<h1>Ve a la siguiente etapa</h1>
 <?php
     session_start();
     
@@ -9,9 +10,10 @@
     #Validación de requisitos para el pasaje de etapa.
     #-----------------------------------------------------------------------------
     $juego = $_SESSION['juego'];
+    while (1 == 1) {
     $signal = mysqli_query($link, "SELECT * FROM signals ORDER BY `id-record` DESC LIMIT 1");
     $signal = mysqli_fetch_array($signal);
-        
+    
     $iduser = $_SESSION['usuario']['id'];
     if ($juego['paso'] == 0 && $signal['signal-stage'] == 1){
         mysqli_query($link, "UPDATE journey SET `journey-stage` = '1' WHERE `id-user` = '$iduser'");
@@ -35,4 +37,21 @@
         <?php
         header("Location: ../../web/php/ranking.php");
     }
+    sleep(1);
+}
 ?>
+<!--<script>
+    while(1){
+        if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+        }
+        else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+        xmlhttp.open("GET","../php/inter.php",false);
+        xmlhttp.send();
+        sleep(4);
+        }
+</script>
