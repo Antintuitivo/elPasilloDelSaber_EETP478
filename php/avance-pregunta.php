@@ -22,7 +22,17 @@ if(isset($_SESSION['juego']['paso']) && !empty($_POST['respuestas'])){          
 }
 
 if(isset($_POST['respuestas']) && $_POST['respuestas'] == $_SESSION['juego']['ans_c']){ //Suma de puntos
-    $_SESSION['tabla']['puntaje']++;
+    $_SESSION['juego']['racha']++;
+    
+    if($_SESSION['juego']['racha']>0){
+        $_SESSION['tabla']['puntaje'] = $_SESSION['tabla']['puntaje'] + 10 * $_SESSION['juego']['etapa'] * $_SESSION['juego']['racha'];
+        
+    }else{
+        $_SESSION['tabla']['puntaje'] += 10 * $_SESSION['juego']['etapa'];
+    }
+    
+}else{
+    $_SESSION['juego']['racha'] = 0;
 }
 
 if(isset($_POST['respuestas'])){                                                        //recupera las preguntas sólo si se respondió la anterior
