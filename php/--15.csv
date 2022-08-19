@@ -1,92 +1,91 @@
-﻿Índice;Tópico;Subtópico;Dificultad;Column1;Pregunta;Respuesta 1;Respuesta 2;Respuesta 3;N.º Correcta
-1;Historia y Geografía;Historia Argentina;Easy;;¿Quien es el padre de la patria Argentina?;Juan Manuel de Rosas;Manuel Belgrano;San Martin;3
-2;Historia y Geografía;Geografia Argentina;Easy;;¿Cual es la Capital de la República Argentina?;Buenos Aires;Rosario;Cordoba;1
-3;Historia y Geografía;Historia Mundial;Easy;;¿Cual es la Nacionalidad de Cleopatra?;Romana;Egipcia;Otomana;2
-4;Historia y Geografía;Historia Antigua;Easy;;¿Quien descubrio America?;Manuel Belgrano;Cristobal Colon;Hernan Cortez;2
-5;Historia y Geografía;Banderas y Países;Easy;;¿En qué país está ubicado Tokyo?;Japón;China;Korea del Sur;1
-6;Historia y Geografía;Geografía Mundial;Easy;;¿Donde se ubica Australia?;Centroamérica;Europa;Oceanía;3
-7;Deportes;Selección Argentina;Easy;;¿Qué animal dio nombre a la seleccion Argentina de rugby?;Tigre;Puma;Jaguarete;2
-8;Deportes;Jugadores Argentinos;Easy;;¿En qué club juega Lautaro Martinez?;Inter de Milán;Juventus;Torino;1
-9;Deportes;Copa Mundial;Easy;;¿En qué país se jugará el mundial del 2022?;Qatar;Estados unidos;Italia;1
-10;Deportes;Historia deporte Argentino;Easy;;"¿De qué club es el estadio llamado ""La bombonera""?";Boca Juniors;San lorenzo;Independiente;1
-11;Deportes;Clubes y Ligas Mundiales;Easy;;¿En qué provincia se encuentran los clubes Colon y Union?;Santa Fe;Córdoba;Jujuy;1
-12;Deportes;Futbolistas;Easy;;¿Que jugador de la selección argentina de futbol usa la numeración 10?;Lionel Messi;Di Maria;Mauro Icardi;1
-13;zoología;acuáticos;Easy;;¿Cual de los soguientes mamiferos vive en el agua?;Delfín;Yacare;Jabali;1
-14;zoología;voladores;Easy;;¿Cual de estos animales puede volar?;Loro;Gallina;Pingüinos;1
-15;zoología; terrestes;Easy;;¿Que animal es el más dormilón?;Koala;Gato;Tortuga;1
-16;zoología;domésticos;Easy;;¿Que animal se relaciona por la caza de ratas?;Gato;Perro;Loro;1
-17;zoología;randon;Easy;;¿Que animal no existe?;Unicornio;Perro;Caballo;1
-18;zoología;alimentos ;Easy;;¿Los pumas comen?;Carne;Plantas;Gusanos ;1
-19;Películas y Series;series;Easy;;¿Quien es el protagonista de flash?;Barry Allen;Alan Scott;bruce banner;1
-20;Películas y Series;Películas;Easy;;¿Cuantas peliculas hay de iron man?;3;5;2;1
-21;Películas y Series;series;Easy;;¿Donde trabaja homero simpson?;Planta nuclear; Mcdonald's;Compañia electronica;1
-22;Películas y Series;Películas;Easy;;¿Como se  llama el velociraptor de jurassic world?;Blu;Rock;Richards;1
-23;Películas y Series;Películas;Easy;;¿Cual es el nombre de batman?;bruce wayne;Wade Winston Wilson;James Logan;1
-24;Películas y Series;series;Easy;;¿Cual es el nombre de flash?;Barry Allen;Charles Xavier;Emma frost;1
-25;Preguntas Varias;dispositivos móviles;Easy;;¿Cual de estos es un dispositivo móvil?;Celulares;CPU;Playstation;1
-26;Preguntas Varias;consolas de videojuegos;Easy;;¿A qué franquicia es mario?;Nintendo;Xbox;Sega;1
-27;Preguntas Varias;Ciencias ;Easy;;¿A qué reino animal pertenecen las Hormigas?;Reino Animal;Reino vegetal;Fungi;1
-28;Preguntas Varias;Videojuegos;Easy;;"¿A que video juegos refiere las letras ""CS""?";Counter Strike;Free fire;God of war;1
-29;Preguntas Varias;Marcas ;Easy;;¿Cual de estas marcas es de deporte?;Nike;Pepsi;Rolex;1
-30;Preguntas Varias;Música;Easy;;¿Que genero de musica empezo en su carrera duki?;Rap;Rock;Tango;1
-31;Historia y Geografía;Historia Argentina;Medium;;¿Que sucedió el 25 de mayo de 1810 en Argentina?;Revolución de Mayo;Batalla de San lorenzo;Guerra de la Triple Alianza;1
-32;Historia y Geografía;Geografia Argentina;Medium;;¿Como se llama la provincia más al Sur de la Argentina?;Chaco;Tierra del Fuego;Santa Fe;2
-33;Historia y Geografía;Historia Mundial;Medium;;¿Cuantas Guerras Mundiales sucedieron en Europa?;1;3;2;3
-34;Historia y Geografía;Historia Antigua;Medium;;¿De qué mitología es Zeus?;Egipcio;Romana;Griego;3
-35;Historia y Geografía;Banderas y Países;Medium;;¿Que colores conforman la bandera de francia?;Naranja y blanco;Azul, Blanco y Rojo;Rojo y verde;2
-36;Historia y Geografía;Geografía Mundial;Medium;;¿Con qué países limita los Estados Unidos?;Canada y Cuba;Canada y Alaska;Canada y Mexico;3
-37;Deportes;Selección Argentina;Medium;;¿Quien es el actual técnico de la selección de Argentina de fútbol masculino?;Julio Falcioni;Lionel Scaloni;Tata Martino;2
-38;Deportes;Jugadores Argentinos;Medium;;¿En qué club triunfo Lionel Messi?;Chelsea;Barcelona;La Roma;2
-39;Deportes;Copa Mundial;Medium;;¿Que selección nacional tiene en su camisa y pantalón los colores Naranjas?;Nueva zelanda;Países bajos/Holanda;Inglaterra;2
-40;Deportes;Historia deporte Argentino;Medium;;¿Que herramienta se utiliza para jugar el jockey?;Paleta;Palo;Lanza;2
-41;Deportes;Clubes y Ligas Mundiales;Medium;;¿A que club Agentino tiene como mascota un tiburon?;Argentinos Jrs;Aldosivi;Estudiantes;2
-42;Deportes;Futbolistas;Medium;;¿Que jugador francés es la estrella del club PSG?;N'Golo Kanté;Kylian Mbappé;Paul Pogba;2
-43;zoología;acuáticos;Medium;;¿En caso de ser atacado que expulsa el pulpo?;Vapor;Tinta;Perlas;2
-44;zoología;voladores;Medium;;¿Cual es el ave más avistada en Argentina y Uruguay?;Ornero;Tero;Viudita Pico Celeste;2
-45;zoología; terrestes;Medium;;¿Cual es el animal terrestre más grande?;Leon;Elefante;Rinoceronte;2
-46;zoología;domésticos;Medium;;¿Que raza de perro es más utilizado por la policía?;Doberman;Pastor alemán;Pitbull;2
-47;zoología;randon;Medium;;¿Qué animales protagonizan las peliculas de jurasic park?;Yacares;Ddinosaurios;pumas;2
-48;zoología;alimentos ;Medium;;¿Qué comen las gallinas?;Pasto;Trigo;Hongos;2
-49;Películas y Series;series;Medium;;¿Como se llama el hijo de cosmo y wanda de los padrinos magicos?;Ricky;Poof;Will;2
-50;Películas y Series;Películas;Medium;;¿Quien es capitán del perla negra?;Julio cesar;Jack Sparrow;Will Smith;2
-51;Películas y Series;series;Medium;;¿Con que personaje el creador de los simpson se siente identificado?;Homero Simpson;Bart Simpson;Ned Flanders;2
-52;Películas y Series;Películas;Medium;;¿De qué está hecho el escudo del capitan america?;Aluminio ;Adamantium;kriptonita;2
-53;Películas y Series;Películas;Medium;;¿De donde viene aquaman?;Nueva zelanda;Atlantis;Antártida;2
-54;Películas y Series;series;Medium;;¿De que genero es top boy?;Romantica;Crímenes/Dramas;Comedia;2
-55;Preguntas Varias;dispositivos móviles;Medium;;¿Qué dispositivo móvil es el menos visto?;Tablet;Relojes inteligentes;Celulares;1
-56;Preguntas Varias;consolas de videojuegos;Medium;;¿A qué franquicia es sonic?;Xbox360;Sega; Playstation;2
-57;Preguntas Varias;Ciencias ;Medium;;¿Cual es la fórmula del agua?;O2;H20;CuO;2
-58;Preguntas Varias;Videojuegos;Medium;;¿Cual es la moneda utilizada en el Fornite?;Bitcoin;Pavos;Diamantes;2
-59;Preguntas Varias;Marcas ;Medium;;¿Cual de estas compañías es una red Social?;Amazon;Facebook;Puma;2
-60;Preguntas Varias;Música;Medium;;¿De que genero es Soda Stereo?;Trap;Jazz;Rock/Pop;3
-61;Historia y Geografía;Historia Argentina;Hard;;¿Que cuerpo militar creó San Martín?;Los Patricios;Regimiento de Granaderos a Caballo;Gauchos Aguerridos;2
-62;Historia y Geografía;Geografia Argentina;Hard;;¿Cuantas Provincias/jurisdicciones componen la Argentina?;20;22;24;3
-63;Historia y Geografía;Historia Mundial;Hard;;¿Quien se proclamó a sí mismo Cónsul de Francia?;Napoleon ;Maximilien de Robespierre;Charles de Gaulle;1
-64;Historia y Geografía;Historia Antigua;Hard;;¿En cuantas partes se dividió el imperio romano en el 476 d.c ?;2;3;1;1
-65;Historia y Geografía;Banderas y Países;Hard;;¿Cual de estos países es de Centro América?;Estados Unidos;Barbados;Honduras;3
-66;Historia y Geografía;Geografía Mundial;Hard;;¿Cuantos continentes existen en nuestro planeta?;7;8;6;1
-67;Deportes;Selección Argentina;Hard;;¿Cuántas copas mundiales tiene la selección Argentina de fútbol masculino?;3;1;2;3
-68;Deportes;Jugadores Argentinos;Hard;;"¿Que jugador Argentino se crio en el barrio llamado ""Fuerte Apache""?";Maradona;Cristian Pavon;Carlos Tevez;3
-69;Deportes;Copa Mundial;Hard;;¿Cuantos equipos SudAmericanos logran clasificar directamente a un mundial?;5;3;4;3
-70;Deportes;Historia deporte Argentino;Hard;;¿En qué deporte de especializa Rafael Nadal?;Rugby;Natación;Tenis;3
-71;Deportes;Clubes y Ligas Mundiales;Hard;;¿Como se llama la liga de Inglaterra?;Ligue 2;MLS;Premier League;3
-72;Deportes;Futbolistas;Hard;;¿De qué nacionalidad es el Rey Pelé?;Argentina;Paraguay;Brasil;3
-73;zoología;acuáticos;Hard;;¿Cual de los siguientes animales marítimos es el más grande?;Orca;Tiburón;Ballena azul;3
-74;zoología;voladores;Hard;;¿Cual de estas aves es carroñera?;Paloma;Cuervo;Buitre;3
-75;zoología; terrestes;Hard;;¿Qué animal representa china?;Oso pardo;Oso siberiano;Oso panda;3
-76;zoología;domésticos;Hard;;¿Que raza de perro es Argentino?;Pitbull;Doberman;Dogo Argentino;3
-77;zoología;randon;Hard;;¿Qué buscan las abejas en las flores?;Agua;Miel;Polen;3
-78;zoología;alimentos ;Hard;;"¿Qué animales comen el ""Planton""?";Terrestres;Aereos;Acuaticps;3
-79;Películas y Series;series;Hard;;¿Como se llama la hermana de gomball en el increible mundo de gomball?;Natalia;Sofia;Anais;3
-80;Películas y Series;Películas;Hard;;¿Quien es stan Lee?;Médico;Escritor de historia;El creador de marvel;3
-81;Películas y Series;series;Hard;;¿Cuantas temporadas tienen stranger things?;5;3;4;3
-82;Películas y Series;Películas;Hard;;¿De que genero es la película viernes 13?;Romantica;Comedia;Terror;3
-83;Películas y Series;Películas;Hard;;¿De donde vienen superman?;Kursone-2;Kartomania;Kripton;3
-84;Películas y Series;series;Hard;;¿Cual es el nombre completo de Apu de los simpson?;Apu Khatun;Apu Rathod;Apu Nahasapeemapetilon;3
-85;Preguntas Varias;dispositivos móviles;Hard;;¿Cual es de las siguientes marcas de dispositivos moviles?;TLC;Sirefon XF;Huawei;3
-86;Preguntas Varias;consolas de videojuegos;Hard;;¿A quien busca recatar mario? ;Luigi; Bowser;Una princesa;3
-87;Preguntas Varias;Ciencias ;Hard;;¿Cuantos litros de agua hay que tomar por dia?;4 litros;2 litros;3,5 litros;3
-88;Preguntas Varias;Videojuegos;Hard;;¿Que pokemon acompañó a ash ketchum en sus aventuras en pokémon?;Charizard;Ho-oh;Pikachu;3
-89;Preguntas Varias;Marcas ;Hard;;¿Quien es el creador de Facebook?;Bill Gates;Elon Musk;Mark zukenber;3
-90;Preguntas Varias;Música;Hard;;¿A qué artista representa la triple T?;Cazzu;Lali Esposito;Tini;3
-;;;;;;;;;
+﻿Tópico;Subtópico;Pregunta;Respuesta 1;Respuesta 2;Respuesta 3;N.º Correcta
+Historia y Geografía;Historia Argentina;¿Quien es el padre de la patria Argentina?;Juan Manuel de Rosas;Manuel Belgrano;San Martin;3
+Historia y Geografía;Geografia Argentina;¿Cual es la Capital de la República Argentina?;Buenos Aires;Rosario;Cordoba;1
+Historia y Geografía;Historia Mundial;¿Cual es la Nacionalidad de Cleopatra?;Romana;Egipcia;Otomana;2
+Historia y Geografía;Historia Antigua;¿Quien descubrio America?;Manuel Belgrano;Cristobal Colon;Hernan Cortez;2
+Historia y Geografía;Banderas y Países;¿En qué país está ubicado Tokyo?;Japón;China;Korea del Sur;1
+Historia y Geografía;Geografía Mundial;¿Donde se ubica Australia?;Centroamérica;Europa;Oceanía;3
+Deportes;Selección Argentina;¿Qué animal dio nombre a la seleccion Argentina de rugby?;Tigre;Puma;Jaguarete;2
+Deportes;Jugadores Argentinos;¿En qué club juega Lautaro Martinez?;Inter de Milán;Juventus;Torino;1
+Deportes;Copa Mundial;¿En qué país se jugará el mundial del 2022?;Qatar;Estados unidos;Italia;1
+Deportes;Historia deporte Argentino;"¿De qué club es el estadio llamado ""La bombonera""?";Boca Juniors;San lorenzo;Independiente;1
+Deportes;Clubes y Ligas Mundiales;¿En qué provincia se encuentran los clubes Colon y Union?;Santa Fe;Córdoba;Jujuy;1
+Deportes;Futbolistas;¿Que jugador de la selección argentina de futbol usa la numeración 10?;Lionel Messi;Di Maria;Mauro Icardi;1
+zoología;acuáticos;¿Cual de los soguientes mamiferos vive en el agua?;Delfín;Yacare;Jabali;1
+zoología;voladores;¿Cual de estos animales puede volar?;Loro;Gallina;Pingüinos;1
+zoología; terrestes;¿Que animal es el más dormilón?;Koala;Gato;Tortuga;1
+zoología;domésticos;¿Que animal se relaciona por la caza de ratas?;Gato;Perro;Loro;1
+zoología;randon;¿Que animal no existe?;Unicornio;Perro;Caballo;1
+zoología;alimentos ;¿Los pumas comen?;Carne;Plantas;Gusanos ;1
+Películas y Series;series;¿Quien es el protagonista de flash?;Barry Allen;Alan Scott;bruce banner;1
+Películas y Series;Películas;¿Cuantas peliculas hay de iron man?;3;5;2;1
+Películas y Series;series;¿Donde trabaja homero simpson?;Planta nuclear; Mcdonald's;Compañia electronica;1
+Películas y Series;Películas;¿Como se  llama el velociraptor de jurassic world?;Blu;Rock;Richards;1
+Películas y Series;Películas;¿Cual es el nombre de batman?;bruce wayne;Wade Winston Wilson;James Logan;1
+Películas y Series;series;¿Cual es el nombre de flash?;Barry Allen;Charles Xavier;Emma frost;1
+Preguntas Varias;dispositivos móviles;¿Cual de estos es un dispositivo móvil?;Celulares;CPU;Playstation;1
+Preguntas Varias;consolas de videojuegos;¿A qué franquicia es mario?;Nintendo;Xbox;Sega;1
+Preguntas Varias;Ciencias ;¿A qué reino animal pertenecen las Hormigas?;Reino Animal;Reino vegetal;Fungi;1
+Preguntas Varias;Videojuegos;"¿A que video juegos refiere las letras ""CS""?";Counter Strike;Free fire;God of war;1
+Preguntas Varias;Marcas ;¿Cual de estas marcas es de deporte?;Nike;Pepsi;Rolex;1
+Preguntas Varias;Música;¿Que genero de musica empezo en su carrera duki?;Rap;Rock;Tango;1
+Historia y Geografía;Historia Argentina;¿Que sucedió el 25 de mayo de 1810 en Argentina?;Revolución de Mayo;Batalla de San lorenzo;Guerra de la Triple Alianza;1
+Historia y Geografía;Geografia Argentina;¿Como se llama la provincia más al Sur de la Argentina?;Chaco;Tierra del Fuego;Santa Fe;2
+Historia y Geografía;Historia Mundial;¿Cuantas Guerras Mundiales sucedieron en Europa?;1;3;2;3
+Historia y Geografía;Historia Antigua;¿De qué mitología es Zeus?;Egipcio;Romana;Griego;3
+Historia y Geografía;Banderas y Países;¿Que colores conforman la bandera de francia?;Naranja y blanco;Azul, Blanco y Rojo;Rojo y verde;2
+Historia y Geografía;Geografía Mundial;¿Con qué países limita los Estados Unidos?;Canada y Cuba;Canada y Alaska;Canada y Mexico;3
+Deportes;Selección Argentina;¿Quien es el actual técnico de la selección de Argentina de fútbol masculino?;Julio Falcioni;Lionel Scaloni;Tata Martino;2
+Deportes;Jugadores Argentinos;¿En qué club triunfo Lionel Messi?;Chelsea;Barcelona;La Roma;2
+Deportes;Copa Mundial;¿Que selección nacional tiene en su camisa y pantalón los colores Naranjas?;Nueva zelanda;Países bajos/Holanda;Inglaterra;2
+Deportes;Historia deporte Argentino;¿Que herramienta se utiliza para jugar el jockey?;Paleta;Palo;Lanza;2
+Deportes;Clubes y Ligas Mundiales;¿A que club Agentino tiene como mascota un tiburon?;Argentinos Jrs;Aldosivi;Estudiantes;2
+Deportes;Futbolistas;¿Que jugador francés es la estrella del club PSG?;N'Golo Kanté;Kylian Mbappé;Paul Pogba;2
+zoología;acuáticos;¿En caso de ser atacado que expulsa el pulpo?;Vapor;Tinta;Perlas;2
+zoología;voladores;¿Cual es el ave más avistada en Argentina y Uruguay?;Ornero;Tero;Viudita Pico Celeste;2
+zoología; terrestes;¿Cual es el animal terrestre más grande?;Leon;Elefante;Rinoceronte;2
+zoología;domésticos;¿Que raza de perro es más utilizado por la policía?;Doberman;Pastor alemán;Pitbull;2
+zoología;randon;¿Qué animales protagonizan las peliculas de jurasic park?;Yacares;Ddinosaurios;pumas;2
+zoología;alimentos ;¿Qué comen las gallinas?;Pasto;Trigo;Hongos;2
+Películas y Series;series;¿Como se llama el hijo de cosmo y wanda de los padrinos magicos?;Ricky;Poof;Will;2
+Películas y Series;Películas;¿Quien es capitán del perla negra?;Julio cesar;Jack Sparrow;Will Smith;2
+Películas y Series;series;¿Con que personaje el creador de los simpson se siente identificado?;Homero Simpson;Bart Simpson;Ned Flanders;2
+Películas y Series;Películas;¿De qué está hecho el escudo del capitan america?;Aluminio ;Adamantium;kriptonita;2
+Películas y Series;Películas;¿De donde viene aquaman?;Nueva zelanda;Atlantis;Antártida;2
+Películas y Series;series;¿De que genero es top boy?;Romantica;Crímenes/Dramas;Comedia;2
+Preguntas Varias;dispositivos móviles;¿Qué dispositivo móvil es el menos visto?;Tablet;Relojes inteligentes;Celulares;1
+Preguntas Varias;consolas de videojuegos;¿A qué franquicia es sonic?;Xbox360;Sega; Playstation;2
+Preguntas Varias;Ciencias ;¿Cual es la fórmula del agua?;O2;H20;CuO;2
+Preguntas Varias;Videojuegos;¿Cual es la moneda utilizada en el Fornite?;Bitcoin;Pavos;Diamantes;2
+Preguntas Varias;Marcas ;¿Cual de estas compañías es una red Social?;Amazon;Facebook;Puma;2
+Preguntas Varias;Música;¿De que genero es Soda Stereo?;Trap;Jazz;Rock/Pop;3
+Historia y Geografía;Historia Argentina;¿Que cuerpo militar creó San Martín?;Los Patricios;Regimiento de Granaderos a Caballo;Gauchos Aguerridos;2
+Historia y Geografía;Geografia Argentina;¿Cuantas Provincias/jurisdicciones componen la Argentina?;20;22;24;3
+Historia y Geografía;Historia Mundial;¿Quien se proclamó a sí mismo Cónsul de Francia?;Napoleon ;Maximilien de Robespierre;Charles de Gaulle;1
+Historia y Geografía;Historia Antigua;¿En cuantas partes se dividió el imperio romano en el 476 d.c ?;2;3;1;1
+Historia y Geografía;Banderas y Países;¿Cual de estos países es de Centro América?;Estados Unidos;Barbados;Honduras;3
+Historia y Geografía;Geografía Mundial;¿Cuantos continentes existen en nuestro planeta?;7;8;6;1
+Deportes;Selección Argentina;¿Cuántas copas mundiales tiene la selección Argentina de fútbol masculino?;3;1;2;3
+Deportes;Jugadores Argentinos;"¿Que jugador Argentino se crio en el barrio llamado ""Fuerte Apache""?";Maradona;Cristian Pavon;Carlos Tevez;3
+Deportes;Copa Mundial;¿Cuantos equipos SudAmericanos logran clasificar directamente a un mundial?;5;3;4;3
+Deportes;Historia deporte Argentino;¿En qué deporte de especializa Rafael Nadal?;Rugby;Natación;Tenis;3
+Deportes;Clubes y Ligas Mundiales;¿Como se llama la liga de Inglaterra?;Ligue 2;MLS;Premier League;3
+Deportes;Futbolistas;¿De qué nacionalidad es el Rey Pelé?;Argentina;Paraguay;Brasil;3
+zoología;acuáticos;¿Cual de los siguientes animales marítimos es el más grande?;Orca;Tiburón;Ballena azul;3
+zoología;voladores;¿Cual de estas aves es carroñera?;Paloma;Cuervo;Buitre;3
+zoología; terrestes;¿Qué animal representa china?;Oso pardo;Oso siberiano;Oso panda;3
+zoología;domésticos;¿Que raza de perro es Argentino?;Pitbull;Doberman;Dogo Argentino;3
+zoología;randon;¿Qué buscan las abejas en las flores?;Agua;Miel;Polen;3
+zoología;alimentos ;"¿Qué animales comen el ""Planton""?";Terrestres;Aereos;Acuaticps;3
+Películas y Series;series;¿Como se llama la hermana de gomball en el increible mundo de gomball?;Natalia;Sofia;Anais;3
+Películas y Series;Películas;¿Quien es stan Lee?;Médico;Escritor de historia;El creador de marvel;3
+Películas y Series;series;¿Cuantas temporadas tienen stranger things?;5;3;4;3
+Películas y Series;Películas;¿De que genero es la película viernes 13?;Romantica;Comedia;Terror;3
+Películas y Series;Películas;¿De donde vienen superman?;Kursone-2;Kartomania;Kripton;3
+Películas y Series;series;¿Cual es el nombre completo de Apu de los simpson?;Apu Khatun;Apu Rathod;Apu Nahasapeemapetilon;3
+Preguntas Varias;dispositivos móviles;¿Cual es de las siguientes marcas de dispositivos moviles?;TLC;Sirefon XF;Huawei;3
+Preguntas Varias;consolas de videojuegos;¿A quien busca recatar mario? ;Luigi; Bowser;Una princesa;3
+Preguntas Varias;Ciencias ;¿Cuantos litros de agua hay que tomar por dia?;4 litros;2 litros;3,5 litros;3
+Preguntas Varias;Videojuegos;¿Que pokemon acompañó a ash ketchum en sus aventuras en pokémon?;Charizard;Ho-oh;Pikachu;3
+Preguntas Varias;Marcas ;¿Quien es el creador de Facebook?;Bill Gates;Elon Musk;Mark zukenber;3
+Preguntas Varias;Música;¿A qué artista representa la triple T?;Cazzu;Lali Esposito;Tini;3
