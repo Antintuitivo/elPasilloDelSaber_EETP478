@@ -3,8 +3,8 @@ session_start();
 //include 'header/session.php';
 //include 'header/link.php';
 
-/*  
-$file = "file.csv";//dirección del archivo csv  */
+
+$file = "file.csv";//dirección del archivo csv 
 
 $age = $_SESSION['usuario']['edad'];
 $stage = $_SESSION['juego']['etapa'];//último sensor pisado por el usuario
@@ -17,23 +17,23 @@ if($age<15){                //Se selecciona el archivo csv a utilizar según la 
 }
 
 if($pos>=1&&$pos<=3&&$stage==1){        //Easy
-$min = 1;           //minimum number of the question index to select
-$max = 30;          //maximum number of the question index to select
+    $min = 1;           //minimum number of the question index to select
+    $max = 30;          //maximum number of the question index to select
 }elseif($pos>=4&&$pos<=6&&$stage==2){   //Medium
-$min = 31;          //minimum number of the question index to select
-$max = 60;          //maximum number of the question index to select
+    $min = 31;          //minimum number of the question index to select
+    $max = 60;          //maximum number of the question index to select
 }elseif($pos>=7&&$pos<=9&&$stage==3){   //Hard
-$min = 61;          //minimum number of the question index to select
-$max = 90;          //90//maximum number of the question index to select
+    $min = 61;          //minimum number of the question index to select
+    $max = 90;          //90//maximum number of the question index to select
+}else{
+    $min = 1;
+    $max = 90;
 }
 
 $question_index = rand($min,$max);                                  //Randomize the number of the question to fetch
    
 $csv = array_map('str_getcsv', file($file,FILE_SKIP_EMPTY_LINES));  //mapea el archivo
 $keys = array_shift($csv);
-print_r($keys);
-echo "<br>";
-print_r($csv);
 foreach ($csv as $i=>$row) {                                        //transforma el archivo a un array multidimensional
 $csv[$i] = array_combine($keys, $row);
 }
