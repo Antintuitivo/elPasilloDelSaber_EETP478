@@ -67,5 +67,5 @@
 
   #Redirección para iniciar el desafío.
   #-----------------------------------------------------------------------------
-  header("Location: ../../web/php/intermedio.php");
+  header("Location: ../../web/php/intermedio-page.php");
 ?>
