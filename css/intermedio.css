@@ -1,0 +1,17 @@
+html{
+    font-size: 1vw;
+    font-family: Arial;
+}
+
+body{
+    /*background-color: #121212;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url(../img/eetp-478.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
