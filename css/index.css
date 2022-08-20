@@ -61,6 +61,7 @@ svg{
 }
 
 #gear:hover {
+    transform-origin:center center;
 	animation: spin 3s alternate infinite;
 }
 @keyframes spin {
