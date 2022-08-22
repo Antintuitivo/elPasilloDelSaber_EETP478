@@ -16,7 +16,6 @@
   $result = mysqli_query($link, $select);
   $validation = mysqli_num_rows($result);
 
-  echo "<h1>" . $validation . "<h1>";
   if ($validation == 0) {
     #Insertar nuevo usuario.
     $insert = "INSERT INTO users (`user-age`, `user-email`) VALUES ('$edad', '$email')";
