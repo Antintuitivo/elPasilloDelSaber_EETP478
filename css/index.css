@@ -30,7 +30,8 @@ body{
 h2{
     color: #ffff;
     padding: 20px;
-    text-align: center;
+    text-align: left;
+    font-family: 'Aboreto', cursive;
     font-weight: 100;
     font-size: 30px;
 }

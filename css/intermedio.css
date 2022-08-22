@@ -59,7 +59,9 @@ body{
 
 .title {
 	padding: 2vw 2vh;
-    font-family: monospace;
+    /*font-family: monospace;*/
+    font-family: 'Rubik Distressed', cursive;
+    font-family: 'Rubik Maze', cursive;
 	animation: change-title 2s forwards;
 }
 @keyframes change-title {
@@ -67,9 +69,9 @@ body{
         transform: translate(0,-4vw);
     }
     100% {
-        background-color: #414141;
+        /*background-color: #414141;*/
         transform: translate(0,0);
-        font-size: 3rem;
+        font-size: 70px;
         color: #ffffff;
         text-shadow: 0 0 0 rgb(0, 0, 0);
     }
