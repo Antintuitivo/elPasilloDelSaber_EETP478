@@ -1,7 +1,7 @@
 function change() {
     if (xmlhttp.readyState === 4) {
         if (xmlhttp.status === 200) {
-            document.location.href = '../php/Q&A.php';
+            document.location.href = '../php/avance-pregunta.php';
             // todo va bien, respuesta recibida
         } else {
             alert('Hubo problemas con la petición.');

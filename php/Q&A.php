@@ -22,5 +22,20 @@ session_start();
 
 </form>
 
+<?php
+echo $_SESSION['juego']['paso'];
+echo "<br>";
+echo $_SESSION['tabla']['puntaje'];
+echo "<br>";
+echo $_SESSION['juego']['etapa'];
+echo "<br>";
+echo $_SESSION['juego']['racha'];
+echo "<br>";
+echo $_SESSION['usuario']['id'];
+echo "<br>";
+echo $_SESSION['usuario']['edad'];
+echo "<br>";
+?>
+
 </body>
 </html>

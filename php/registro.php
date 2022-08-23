@@ -52,7 +52,7 @@
     include '../web/php/ranking.php';
   }
 
-  #Registro de variables de sesión del usuario.
+  #Registro de variables del usuario.
   #-----------------------------------------------------------------------------
   $_SESSION['usuario']['id'] = $user['id-user'];
   $_SESSION['usuario']['edad'] = $user['user-age'];

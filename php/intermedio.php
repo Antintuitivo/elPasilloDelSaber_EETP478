@@ -17,19 +17,19 @@
         if ($juego['paso'] == 0 && $signal['signal-stage'] == 1){
             mysqli_query($link, "UPDATE journey SET `journey-stage` = '1' WHERE `id-user` = '$iduser'");
             $_SESSION['juego']['etapa'] = 1;
-            header("Location: ../../web/php/Q&A.php");
+            header("Location: ../../web/php/avance-pregunta.php");
             exit();
         }
         if ($juego['paso'] == 3 && $signal['signal-stage'] == 2){
             mysqli_query($link, "UPDATE journey SET `journey-stage` = '2' WHERE `id-user` = '$iduser'");
             $_SESSION['juego']['etapa'] = 2;
-            header("Location: ../../web/php/Q&A.php");
+            header("Location: ../../web/php/avance-pregunta.php");
             exit();
         }
         if ($juego['paso'] == 6 && $signal['signal-stage'] == 3){
             mysqli_query($link, "UPDATE journey SET `journey-stage` = '3' WHERE `id-user` = '$iduser'");
             $_SESSION['juego']['etapa'] = 3;
-            header("Location: ../../web/php/Q&A.php");
+            header("Location: ../../web/php/avance-pregunta.php");
             exit();
         }
         if ($juego['paso'] == 9 && $signal['signal-stage'] == 3){

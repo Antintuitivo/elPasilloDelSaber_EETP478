@@ -1,9 +1,4 @@
 <?php  
-session_start();
-//include 'header/session.php';
-//include 'header/link.php';
-
-
 $file = "file.csv";//dirección del archivo csv 
 
 $age = $_SESSION['usuario']['edad'];
@@ -25,9 +20,6 @@ if($pos>=1&&$pos<=3&&$stage==1){        //Easy
 }elseif($pos>=7&&$pos<=9&&$stage==3){   //Hard
     $min = 61;          //minimum number of the question index to select
     $max = 90;          //90//maximum number of the question index to select
-}else{
-    $min = 1;
-    $max = 90;
 }
 
 $question_index = rand($min,$max);                                  //Randomize the number of the question to fetch
