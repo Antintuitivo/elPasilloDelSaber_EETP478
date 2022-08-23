@@ -39,7 +39,7 @@
   echo "<h1>" . $validation . "<h1>";
   if ($validation == 0) {
     #Insertar entrada a la tabla.
-    $insert = "INSERT INTO ranking (`id-user`, `ranking-nick`, `ranking-score`, `ranking-et`) VALUES ('$id', '$nick', '$score', '$et')";
+    $insert = "INSERT INTO ranking (`id-user`, `ranking-nick`, `ranking-score`, `ranking-et`) VALUES ('$id', '$nick', 22, '$et')";
     mysqli_query($link, $insert);
     $result = mysqli_query($link, $select);
   } else{

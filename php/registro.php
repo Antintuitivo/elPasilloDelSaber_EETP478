@@ -61,8 +61,11 @@
   #-----------------------------------------------------------------------------
   $_SESSION['juego']['paso'] = $journey['journey-step'];
   $_SESSION['juego']['etapa'] = $journey['journey-stage'];
-  $_SESSION['tabla']['puntaje'] = 0;
   $_SESSION['juego']['racha'] = 0;
+
+  #Registro de variables de sesión del usuario.
+  #-----------------------------------------------------------------------------  
+  $_SESSION['tabla']['puntaje'] = 0;
 
   #Redirección para iniciar el desafío.
   #-----------------------------------------------------------------------------
