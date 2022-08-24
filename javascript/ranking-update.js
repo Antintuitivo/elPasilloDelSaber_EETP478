@@ -46,16 +46,38 @@ if (window.XMLHttpRequest){
     // code for IE6, IE5
     httpRequest=new ActiveXObject("Microsoft.XMLHTTP");
 }
-
 // Petición constante de datos a la DB por medio de AJAX, cada 10s (10000).
 setInterval(function() {
 httpRequest.onreadystatechange = function(){
     if (httpRequest.readyState === 4) { // Request is done
         if (httpRequest.status === 200) { // successfully
-            addrows('ranking', httpRequest.responseText);
+            //Comprobar si se está utilizando el campo de búsqueda.
+            searching = document.getElementById('search-input');
+            if (searching.value == ""){
+               addrows('ranking', httpRequest.responseText);
+            }
         }
     }
 };
 httpRequest.open('GET', "../php/get-ranking.php",true);
 httpRequest.send();
 }, 10000);
+
+//---------------------------------------------------------------------------------------------
+
+function myFunction(searchValue, tableID) {
+    var input, filter, table, tr, td, i;
+    filter = searchValue.toUpperCase();
+    table = document.getElementById(tableID);
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[1];
+      if (td) {
+        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }       
+    }
+  }

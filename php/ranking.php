@@ -16,6 +16,7 @@
 </head>
 <body>
     <div class="transparent-background"></div>
+    <input type="text" placeholder="Buscar por nick.." id="search-input" onkeyup="myFunction(this.value, 'ranking')">
     <div style="overflow: auto; max-height: 400px;">
         <table id="ranking">
             <tr>
