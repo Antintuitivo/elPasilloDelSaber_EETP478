@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="El pasillo del saber"/>
+    <meta name="author" content="Roldán Tomas - Juan Ignacio Bianchini">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>El pasillo del saber</title>
+    <link rel="icon" href="img\school-icon.svg">
     <link rel="stylesheet" type="text/css" href="../../web/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="../../web/css/messages.css">
     <link rel="stylesheet" type="text/css" href="../../web/css/intermedio.css">

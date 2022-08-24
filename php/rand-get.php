@@ -11,13 +11,13 @@ if($age<15){                //Se selecciona el archivo csv a utilizar según la 
     $file = "mayores.csv";
 }
 
-if($pos>=1&&$pos<=3&&$stage==1){        //Easy
+if($pos < 3 && $stage==1){        //Easy
     $min = 1;           //minimum number of the question index to select
     $max = 30;          //maximum number of the question index to select
-}elseif($pos>=4&&$pos<=6&&$stage==2){   //Medium
+}elseif($pos < 6 && $stage==2){   //Medium
     $min = 31;          //minimum number of the question index to select
     $max = 60;          //maximum number of the question index to select
-}elseif($pos>=7&&$pos<=9&&$stage==3){   //Hard
+}elseif($pos < 9 && $stage==3){   //Hard
     $min = 61;          //minimum number of the question index to select
     $max = 90;          //90//maximum number of the question index to select
 }

@@ -8,13 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
     <title>Ranking</title>
-    <link rel="icon" href="img\school-icon.svg">
+    <link rel="icon" href="../../web/img/school-icon.svg">
     <link rel="stylesheet" type="text/css" href="../../web/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="../../web/css/messages.css">
+    <link rel="stylesheet" type="text/css" href="../../web/css/index.css">
     <link rel="stylesheet" type="text/css" href="../../web/css/ranking.css">
 </head>
 <body>
-    <h1 id="test"></h1>
+    <div class="transparent-background"></div>
     <div style="overflow: auto; max-height: 400px;">
         <table id="ranking">
             <tr>

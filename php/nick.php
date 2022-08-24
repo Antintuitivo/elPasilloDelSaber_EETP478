@@ -39,11 +39,15 @@
   echo "<h1>" . $validation . "<h1>";
   if ($validation == 0) {
     #Insertar entrada a la tabla.
-    $insert = "INSERT INTO ranking (`id-user`, `ranking-nick`, `ranking-score`, `ranking-et`) VALUES ('$id', '$nick', 22, '$et')";
+    $insert = "INSERT INTO ranking (`id-user`, `ranking-nick`, `ranking-score`, `ranking-et`) VALUES ('$id', '$nick', '$score', '$et')";
     mysqli_query($link, $insert);
     $result = mysqli_query($link, $select);
-  } else{
-        header("Location: ../../web/php/ranking.php");
+  } else {
+      $message = "Nick ya registrado.";
+      ?>
+      <span class="error"><?php echo $message;?></span>
+      <?php
+      include("../../web/php/nick-page.php");
   }
 
   #Cierre de sesión.

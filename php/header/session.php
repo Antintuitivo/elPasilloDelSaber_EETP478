@@ -12,16 +12,15 @@
     }
 
     function fetch_usersetup(){
-        
-        
-        $tabla2 = "jurney";
-        $q = "SELECT TOP 1 * FROM '$tabla2' WHERE 'jurney-ended' = NULL";//selecciona el último registro que no haya terminado el juego//SELECT * FROM TableName WHERE id=(SELECT max(id) FROM TableName)
+    
+        $id = $_SESSION['usuario']['id'];    
+        $q = "SELECT*FROM journey WHERE `id-user`=$id";//selecciona el último registro que no haya terminado el juego//SELECT * FROM TableName WHERE id=(SELECT max(id) FROM TableName)
         
         $result = mysqli_query(connect(),$q);
         if($result){
             $rows = mysqli_fetch_array($result);
             $_SESSION['usuario']['id'] = $rows['id-user'];
-            $_SESSION['juego']['paso'] = $rows['jurney-step'];
+            $_SESSION['juego']['paso'] = $rows['journey-step'];
         }
     }
 
