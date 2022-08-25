@@ -32,5 +32,6 @@ session_start();
         </div>
         <input class="btn-submit" type="submit">
     </form>
+    <progress id="q" max="10" value=<?php $_SESSION['tabla']['puntaje'] ?>></progress>
 </body>
 </html>
