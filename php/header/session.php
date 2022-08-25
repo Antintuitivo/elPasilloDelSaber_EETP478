@@ -6,16 +6,35 @@
     $link = connect();
     
     function check_session(){
-        if (($_SESSION['login']['id-user'] == null) || ($_SESSION['login']['id-user'] == '')){
+        if (($_SESSION['usuario']['id'] == null) || ($_SESSION['usuario']['id'] == '')){
             header("Location: /../web/");
         }
     }
-    #Redirección en caso de no ser administrador.
-    function checkadmin_session(){
-        if ($_SESSION['login']['user-admin'] == 0 ){
-            header("Location: /../web/");
+
+    function fetch_usersetup(){
+    
+        $id = $_SESSION['usuario']['id'];    
+        $q = "SELECT*FROM journey WHERE `id-user`=$id";//selecciona el último registro que no haya terminado el juego//SELECT * FROM TableName WHERE id=(SELECT max(id) FROM TableName)
+        
+        $result = mysqli_query(connect(),$q);
+        if($result){
+            $rows = mysqli_fetch_array($result);
+            $_SESSION['usuario']['id'] = $rows['id-user'];
+            $_SESSION['juego']['paso'] = $rows['journey-step'];
         }
     }
+
+    function fetch_stage(){ 
+
+        $q2 = "SELECT * FROM signals ORDER BY `id-record` DESC LIMIT 1";//lee el último registro de la tabla de señales para saber la etapa actual
+        
+        $resulta2 = mysqli_query(connect(),$q2);
+        if($resulta2){
+            $filas = mysqli_fetch_array($resulta2);
+            $_SESSION['juego']['etapa'] = $filas['signal-stage'];
+        }
+    }
+    
     /*function close_session(){
         $id_record = $_SESSION['register']['id-record'];
         $sql = "UPDATE `user-record` SET `record-logout` = CURRENT_TIME() WHERE `user-record`.`id-record` = '$id_record'";

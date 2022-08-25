@@ -2,8 +2,8 @@
     #Obtener variables desde el formulario en HTML, con el método POST.
     session_start();
     $email = $_POST['email'];
-    $password = $_POST['password'];
-
+    $age = $_POST['age'];
+    $table = 'users';
     #Realizar, comprobar y almacenar credecenciales de la conexión a la DBMS.
     #-----------------------------------------------------------------------------
     include 'header\link.php';
@@ -11,11 +11,10 @@
 
     #Validación de cuenta
     #-----------------------------------------------------------------------------
-    $query = "SELECT*FROM login WHERE `user-email`='$email' and `user-password`='$password'";
-    $result = mysqli_query($link, $query);
+    $query = "SELECT*FROM login WHERE `user-email`='$email'";
     $validation = mysqli_num_rows($result);
 
-    if ($validation){
+    if (!$validation){
         $user = mysqli_fetch_assoc($result);
         $id = $user["id-user"];
         #Comprobración de sesión ya existente.
@@ -48,8 +47,8 @@
             } else {header("Location: ../../web/php/user.php");}
         }
     } else {
-        if (isset($email) && isset($password)) {
-                $message = "Usuario no registrado.";
+        if (isset($email) && isset($age)) {
+                $message = "Usuario ya registrado =^(";
                 ?>
                 <span class="error"><?php echo $message;?></span>
                 <?php
