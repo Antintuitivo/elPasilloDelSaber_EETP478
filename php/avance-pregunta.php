@@ -21,7 +21,6 @@ if(isset($_POST['respuestas'])){                                                
 }
 
 if($_SESSION['juego']['paso']==0){                                                 //Recupera la info del usuario de la base de datos
-    fetch_usersetup();
     fetch_stage();
     include 'rand-get.php';
 }
