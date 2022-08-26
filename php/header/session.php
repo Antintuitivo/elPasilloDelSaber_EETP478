@@ -11,19 +11,6 @@
         }
     }
 
-    function fetch_usersetup(){
-    
-        $id = $_SESSION['usuario']['id'];    
-        $q = "SELECT*FROM journey WHERE `id-user`=$id";//selecciona el último registro que no haya terminado el juego//SELECT * FROM TableName WHERE id=(SELECT max(id) FROM TableName)
-        
-        $result = mysqli_query(connect(),$q);
-        if($result){
-            $rows = mysqli_fetch_array($result);
-            $_SESSION['usuario']['id'] = $rows['id-user'];
-            $_SESSION['juego']['paso'] = $rows['journey-step'];
-        }
-    }
-
     function fetch_stage(){ 
 
         $q2 = "SELECT * FROM signals ORDER BY `id-record` DESC LIMIT 1";//lee el último registro de la tabla de señales para saber la etapa actual
