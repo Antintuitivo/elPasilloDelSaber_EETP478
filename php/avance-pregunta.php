@@ -12,11 +12,7 @@ if(isset($_POST['respuestas'])){                  //Aumenta la cantidad de pregu
     $_SESSION['juego']['paso'] += 1;
 }
 
-if(isset($_POST['respuestas'])){                                                        //recupera las preguntas sólo si se respondió la anterior
-    include 'rand-get.php';
-}
-
-if($_SESSION['juego']['paso'] == 0 || $_SESSION['juego']['paso'] == 3 || $_SESSION['juego']['paso']== 6){                                                 //Recupera la info del usuario de la base de datos
+if(isset($_POST['respuestas'])||$_SESSION['juego']['paso'] == 0 || $_SESSION['juego']['paso'] == 3 || $_SESSION['juego']['paso']== 6){                                                        //recupera las preguntas sólo si se respondió la anterior
     include 'rand-get.php';
 }
 

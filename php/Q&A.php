@@ -1,5 +1,6 @@
 <?php
 session_start();
+$p=$_SESSION['juego']['paso'];
 ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
@@ -33,6 +34,6 @@ session_start();
         <input class="btn-submit" type="submit">
     </form>
     <label for="q">Sigue avanzando!</label><!-- podemos cambiar la etiqueta por otras según etapa -->
-    <progress id="q" max="9" value='<?php $_SESSION['tabla']['puntaje'] ?>'></progress>
+    <progress id="q" max="9" value="<?php echo $p?>"> <?php echo $p?>0% </progress>
 </body>
 </html>
