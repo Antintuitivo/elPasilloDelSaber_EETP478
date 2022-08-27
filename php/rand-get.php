@@ -22,7 +22,6 @@ if($stage==1){          //Easy
 }elseif($stage==3){     //Hard
     $min = 60;          
     $max = 89;
-
 }
 
 $question_index = rand($min,$max);                                  //Randomize the number of the question to fetch
@@ -40,9 +39,5 @@ $_SESSION['juego']['ans3']=$csv[$question_index]["respuesta3"];
 $_SESSION['juego']['ans_c']=$csv[$question_index]["respuesta_correcta"];        //se almacena la respuesta correcta
 $_SESSION['juego']['question'] = $pregunta;
 
-/*$_SESSION['juego']['ans1'] = $r1;
-$_SESSION['juego']['ans2'] = $r2;
-$_SESSION['juego']['ans3'] = $r3;
-$_SESSION['juego']['ans_c'] = $rc;*/
-
+$_SESSION['juego']['i'] = $question_index;
 ?>

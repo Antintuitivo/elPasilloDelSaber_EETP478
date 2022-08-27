@@ -36,4 +36,4 @@ httpRequest.onreadystatechange = function(){
 };
 httpRequest.open('GET', "../php/intermedio.php",true);
 httpRequest.send();
-}, 10000);
+}, 6000);
