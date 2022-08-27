@@ -38,6 +38,4 @@ $_SESSION['juego']['ans2']=$csv[$question_index]["respuesta2"];
 $_SESSION['juego']['ans3']=$csv[$question_index]["respuesta3"];
 $_SESSION['juego']['ans_c']=$csv[$question_index]["respuesta_correcta"];        //se almacena la respuesta correcta
 $_SESSION['juego']['question'] = $pregunta;
-
-$_SESSION['juego']['i'] = $question_index;
 ?>
