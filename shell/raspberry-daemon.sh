@@ -18,6 +18,7 @@ if [ $mode = 1]; then
     gpio mode 3 out; #LED etapa 1
     gpio mode 22 out; #LED etapa 2
     gpio mode 24 out; #LED etapa 3
+    #gpio mode 4 out;
 
     while :; do
         if [ "$(gpio read 2)" -eq 0 ] && [ "$lastsensor" -ne 1 ]; then

@@ -2,6 +2,7 @@
   session_start();
 
   #Inicializar variables a utilizar.
+  $paso = $_SESSION['juego']['paso'];
   $id = $_SESSION['usuario']['id'];
   $score = $_SESSION['tabla']['puntaje'];
 
@@ -39,6 +40,7 @@
   echo "<h1>" . $validation . "<h1>";
   if ($validation == 0) {
     #Insertar entrada a la tabla.
+    mysqli_query($link, "UPDATE journey SET `journey-step` = '$paso' WHERE `id-user` = '$id'");
     $insert = "INSERT INTO ranking (`id-user`, `ranking-nick`, `ranking-score`, `ranking-et`) VALUES ('$id', '$nick', '$score', '$et')";
     mysqli_query($link, $insert);
     $result = mysqli_query($link, $select);

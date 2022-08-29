@@ -3,7 +3,7 @@ include 'header/session.php';
 
 if(isset($_POST['respuestas']) && $_POST['respuestas'] == $_SESSION['juego']['ans_c']){ //Suma de puntos
     $_SESSION['juego']['racha']++;
-    $_SESSION['tabla']['puntaje'] = $_SESSION['tabla']['puntaje'] + 10 * $_SESSION['juego']['etapa'] * $_SESSION['juego']['racha'];
+    $_SESSION['tabla']['puntaje'] += ((10 * $_SESSION['juego']['etapa']) * $_SESSION['juego']['racha']);
 }else{
     $_SESSION['juego']['racha'] = 0;
 }
