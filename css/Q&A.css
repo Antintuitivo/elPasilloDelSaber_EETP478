@@ -60,3 +60,35 @@ form {
 .btn-submit:active{
     background: #3D95EA;
 }
+progress[value]{
+    width: 100vw;
+    height: 1.5vh;
+
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+
+    /*Restaurar a predeterminado*/
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    /* Quitar borde en Firefox */
+  
+    border: none;
+  
+  
+}
+progress[value]::-webkit-progress-bar{
+    background-color: rgba(0,0,0,0);
+}
+progress[value]::-webkit-progress-value {
+    background-color: green;
+}
+progress[value]::-moz-progress-bar {
+    background-color: green;
+}
+.barra {
+    background-color: rgba(0, 0, 0, 0.142);
+}
