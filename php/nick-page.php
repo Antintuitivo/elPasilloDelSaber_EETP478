@@ -21,7 +21,11 @@
     <div class="transparent-background"></div>
     <form method="POST">
         <h2>Ingresar nick</h2>
-            <input class="input-100" type="text" placeholder="Ingresar nick" name="nick" required>
+            <input class="input-100" type="text" placeholder="Ingresar nick" name="nick" maxlength="3" required>
+            <div class="stats">
+                <span><?PHP echo $_SESSION['tabla']['puntaje'];?></span>
+                <span><?PHP echo $_SESSION['tabla']['puntaje'];?></span>
+            </div>
             <input class="input-48 btn-enviar" type="submit" value="INGRESAR" formaction="../../web/php/nick.php">
     </form>
 </body>
