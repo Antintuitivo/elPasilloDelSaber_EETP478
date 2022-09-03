@@ -28,10 +28,15 @@
   if ($validation == 0) {
     #Insertar entrada a la tabla.
     mysqli_query($link, "UPDATE journey SET `journey-step` = '$paso' WHERE `id-user` = '$id'");
-    $insert = "INSERT INTO ranking (`id-user`, `ranking-nick`, `ranking-score`, `ranking-et`) VALUES ('$id', '$nick', '$score', '$et')";
-    mysqli_query($link, $insert);
-    $result = mysqli_query($link, $select);
     
+    $select = "SELECT*FROM ranking WHERE `id-user`='$id'";
+    $result = mysqli_query($link, $select);
+    $validation = mysqli_num_rows($result);
+
+    if ($validation == 0) {
+      $insert = "INSERT INTO ranking (`id-user`, `ranking-nick`, `ranking-score`, `ranking-et`) VALUES ('$id', '$nick', '$score', '$et')";
+      mysqli_query($link, $insert);
+    }
     #Cierre de sesión.
     #-----------------------------------------------------------------------------
     session_unset();
