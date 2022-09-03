@@ -26,6 +26,26 @@ if($_SESSION['juego']['paso'] >= 9){                //Salida del bucle una vez r
     $update = "UPDATE journey SET `journey-ended` = current_timestamp() WHERE `id-user` = '$id'";
     mysqli_query($link,$update);
     header("Location: ../../web/php/nick-page.php");
+
+    #Recuperación y comparación del tiempo transcurrido en el juego.
+    #-----------------------------------------------------------------------------
+    $select = "SELECT*FROM journey WHERE `id-user`='$id'";
+    $result = mysqli_query($link, $select);
+    $validation = mysqli_num_rows($result);
+
+    $journey = mysqli_fetch_assoc($result);
+
+    $first  = date_create($journey['journey-started']);
+    $second = date_create($journey['journey-ended']);
+
+    //echo date_format($first, 'H:i:s') . "<br>";
+    //echo date_format($second, 'H:i:s') . "<br>";
+
+    $diff = $first->diff($second);
+    $et = $diff->format( '%H:%I:%S' );
+
+    $_SESSION['tabla']['tiempo'] = $et;
+
     die();
 }
 

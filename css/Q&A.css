@@ -4,7 +4,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url(../img/eetp-478.png);
+    /* background: url(../img/eetp-478.png); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

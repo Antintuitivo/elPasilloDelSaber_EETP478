@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
 <head>
@@ -24,7 +27,7 @@
             <input class="input-100" type="text" placeholder="Ingresar nick" name="nick" maxlength="3" required>
             <div class="stats">
                 <span><?PHP echo $_SESSION['tabla']['puntaje'];?></span>
-                <span><?PHP echo $_SESSION['tabla']['puntaje'];?></span>
+                <span><?PHP echo $_SESSION['tabla']['tiempo'];?></span>
             </div>
             <input class="input-48 btn-enviar" type="submit" value="INGRESAR" formaction="../../web/php/nick.php">
     </form>

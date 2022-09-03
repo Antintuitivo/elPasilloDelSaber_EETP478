@@ -22,8 +22,7 @@ $p=$_SESSION['juego']['paso'];
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
-<body>
-<!-- <body background=<?PHP //echo "../img/Q&A-backgrounds/" . $_SESSION['juego']['tem'] . "-" . $_SESSION['juego']['sub'];?>> -->
+<body background="<?PHP echo "../img/Q&A-backgrounds/" . $_SESSION['juego']['sub'] . ".jpg";?>">
     <div class="transparent-background"></div>
     <h1><?php echo $_SESSION['juego']['question'];?></h1>
     <form method="POST" action="avance-pregunta.php">
