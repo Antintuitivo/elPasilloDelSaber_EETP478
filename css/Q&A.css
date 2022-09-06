@@ -4,7 +4,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background: url(../img/eetp-478.png); */
+    background: url(../img/eetp-478.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -18,7 +18,7 @@ body{
     z-index: -1;
 }
 h1 {
-    font-size: 48px;
+    font-size: 6vh;
     margin: 0.67em 0;
     letter-spacing: 3px;
     color: #e8eaed;
@@ -34,25 +34,27 @@ form {
 }
 .respuestas {
     display: flex;
-    flex-direction: row;
-    width: 100%;
+    flex-direction: column;
+    width: 70%;
     justify-content: space-evenly;
     align-items: center;
 }
 .respuesta {
+    font-size: 4vh;
     color: #e8eaed;
     font-family: 'Montserrat', sans-serif;
-    font-size: 32px;
+    margin: 0.3em;
 }
 .btn-submit{
+    font-size: 2vh;
     background: #0074E4;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 6px;
+    border-radius: 0.6vh;
     color: #fff;
     font-family: 'Montserrat';
-    padding: 10px 140px;
+    padding: 1vh 14vw;
     cursor: pointer;
-    margin: 60px;
+    margin: 6vh;
 }
 .btn-submit:hover{
     background: #288AE8
