@@ -25,7 +25,7 @@
         <article class="contenedor-inputs">
             <input class="input-100" type="email" placeholder="Dirección de correo electrónico" name="email" maxlength="30" required>
             <input class="input-100" type="number" placeholder="Edad" name="edad" min="0" max="99" required>
-            <input class="input-48 btn-enviar" type="submit" value="INICIAR" formaction="../../web/php/registro.php">
+            <input class="input-100 btn-enviar" type="submit" value="INICIAR" formaction="../../web/php/registro.php">
         </article>
     </form>
 </body>
