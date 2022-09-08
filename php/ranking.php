@@ -16,6 +16,7 @@
 </head>
 <body>
     <div class="transparent-background"></div>
+    <div class="big-box">
     <input type="text" placeholder="Buscar por nick.." id="search-input" onkeyup="myFunction(this.value, 'ranking')">
     <div style="overflow: auto; max-height: 400px;">
         <table id="ranking">
@@ -27,6 +28,7 @@
             </tr>
         </table>
         <!--<tr><td>Sin registros.</td></tr>-->
+    </div>
     </div>
     <script src="../../web/javascript/ranking-update.js"></script>
     <!--<h1>You are the number one Shōnen!</h1>
