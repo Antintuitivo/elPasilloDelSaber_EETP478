@@ -39,9 +39,9 @@ if [ $mode = 2 ]; then
 
         while [ $userid -eq $lastuserid ]; do
             score=$(mysql -h "$ip" -u raspberry -p'-r4spb3rry-' -se 'SELECT `ranking-score` FROM ranking WHERE `id-user` = '$userid'' feria-db)
-            echo "User score is $score"
             if [ -n "$score" ] && [ $score -ge 320 ] && [ $rewarded -eq 0 ]; then
                 echo "User $userid rewarded"
+                echo "User score is $score"
                 rewarded=1
                 #echo $ > ./raspberry-daemon.pid; #Registro del Process ID, para finalizarlo.
             fi
