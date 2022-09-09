@@ -17,6 +17,8 @@ if [ $mode = 1 ]; then
             score=$(mysql -h 10.0.1.40 -u raspberry -p'-r4spb3rry-' -se 'SELECT `ranking-score` FROM ranking WHERE `id-user` = '$userid'' feria-db)
             if [ -n "$score" ] && [ $score -ge 320 ] && [ $rewarded -eq 0 ]; then
                 gpio write 4 1
+                sleep 4
+                gpio write 4 0
                 rewarded=1
                 #echo $ > ./raspberry-daemon.pid; #Registro del Process ID, para finalizarlo.
             fi
