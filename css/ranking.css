@@ -78,7 +78,9 @@ img{
     text-align: center;
     font-size:calc(5px + 1.5vh);    
 }
-
+tr {
+    font-size:calc(5px + 1.5vh);
+}
 tr:hover{
     background-color: #ffffff;
     color: #000000;
