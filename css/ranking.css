@@ -59,7 +59,7 @@ img{
     padding: 0.2rem;
     width: 5%;
     height: 5%;
-    font-size: 2vh;
+    font-size:calc(5px + 1.5vh);
     border-radius: 6px; 
 }
 
@@ -71,7 +71,7 @@ img{
     height: 15%;
     border-radius: 0.4vh;
     text-align: center;
-    font-size: 1vh;
+    font-size:calc(5px + 1.5vh);    
 }
 
 tr:hover{
