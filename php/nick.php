@@ -47,10 +47,7 @@
     #-----------------------------------------------------------------------------
     header("Location: ../../web/php/ranking.php");
   } else {
-      $message = "Nick ya registrado.";
-      ?>
-      <span class="error"><?php echo $message;?></span>
-      <?php
-      include("../../web/php/nick-page.php");
+      $_SESSION['nick_message'] = "Nick ya registrado.";
+      header("Location: ../../web/php/nick-page.php");
   }
 ?>
