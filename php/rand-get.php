@@ -24,14 +24,13 @@ if($stage==1){          //Easy
     $max = 89;
 }
 
-do{
-    $question_index = rand($min,$max);                                  //Randomize the number of the question to fetch
-} while ($_SESSION['juego']['i'] == $question_index);
-
-$csv = array_map('str_getcsv', file($file,FILE_SKIP_EMPTY_LINES));  //mapea el archivo
-$keys = array_shift($csv);
-foreach ($csv as $i=>$row) {                                        //transforma el archivo a un array multidimensional
-    $csv[$i] = array_combine($keys, $row);
+while(in_array($csv[$question_index]["tópico"],$_SESSION['juego']['banlist'])){     //busca la pregunta de un tópico que no haya sido respondido aún en la etapa
+    $question_index = rand($min,$max);
+    $csv = array_map('str_getcsv', file($file,FILE_SKIP_EMPTY_LINES));  //mapea el archivo
+    $keys = array_shift($csv);
+    foreach ($csv as $i=>$row) {                                        //transforma el archivo a un array multidimensional
+        $csv[$i] = array_combine($keys, $row);
+    }
 }
 
 $_SESSION['juego']['i'] = $question_index;            //se almacena el índice de la pregunta
@@ -41,4 +40,5 @@ $_SESSION['juego']['ans2'] = $csv[$question_index]["respuesta2"];
 $_SESSION['juego']['ans3'] = $csv[$question_index]["respuesta3"];
 $_SESSION['juego']['ans_c'] = $csv[$question_index]["respuesta_correcta"];        //se almacena la respuesta correcta
 $_SESSION['juego']['sub'] = $csv[$question_index]["subtópico"];
+$_SESSION['juego']['banlist'][] = $csv[$question_index]["tópico"];
 ?>

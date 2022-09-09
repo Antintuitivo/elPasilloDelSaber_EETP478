@@ -17,6 +17,7 @@ if(isset($_POST['respuestas'])||$_SESSION['juego']['paso'] == 0 || $_SESSION['ju
 }
 
 if(($_SESSION['juego']['paso'] == 3 && $_SESSION['juego']['etapa'] == 1) || ($_SESSION['juego']['paso'] == 6 && $_SESSION['juego']['etapa'] == 2)){                 //Recupera la etapa actual del usuario de la base de datos 
+    unset($_SESSION['juego']['banlist']);
     header( "Location: ../../web/php/intermedio-page.php");
     die();
 }
