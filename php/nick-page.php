@@ -1,11 +1,11 @@
 <?php
 session_start();
 
-  if (isset($_SESSION['nick_message'])) {
-    ?>
-    <span class="error"><?php echo $_SESSION['nick_message'];?></span>
-    <?php
-  }
+if (isset($_SESSION['nick_message'])) {
+  ?>
+  <span class="error"><?php echo $_SESSION['nick_message'];?></span>
+  <?php
+}
 ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
