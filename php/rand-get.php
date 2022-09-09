@@ -4,6 +4,7 @@ $file = "file.csv";//dirección del archivo csv
 $age = $_SESSION['usuario']['edad'];
 $stage = $_SESSION['juego']['etapa'];//último sensor pisado por el usuario
 $pos = $_SESSION['juego']['paso'];//cantidad de preguntas respondidas
+$banlist = $_SESSION['juego']['banlist'];
 
 if($age<15){                //Se selecciona el archivo csv a utilizar según la edad del usuario
     $file = "menores.csv";
@@ -24,12 +25,12 @@ if($stage==1){          //Easy
     $max = 89;
 }
 
-    $question_index = rand($min,$max);
-    $csv = array_map('str_getcsv', file($file,FILE_SKIP_EMPTY_LINES));  //mapea el archivo
-    $keys = array_shift($csv);
-    foreach ($csv as $i=>$row) {                                        //transforma el archivo a un array multidimensional
-        $csv[$i] = array_combine($keys, $row);
-    }
+$question_index = rand($min,$max);
+$csv = array_map('str_getcsv', file($file,FILE_SKIP_EMPTY_LINES));  //mapea el archivo
+$keys = array_shift($csv);
+foreach ($csv as $i=>$row) {                                        //transforma el archivo a un array multidimensional
+    $csv[$i] = array_combine($keys, $row);
+}
 
 while(in_array($csv[$question_index]["tópico"],$_SESSION['juego']['banlist'])){     //busca la pregunta de un tópico que no haya sido respondido aún en la etapa
     $question_index = rand($min,$max);
@@ -47,5 +48,5 @@ $_SESSION['juego']['ans2'] = $csv[$question_index]["respuesta2"];
 $_SESSION['juego']['ans3'] = $csv[$question_index]["respuesta3"];
 $_SESSION['juego']['ans_c'] = $csv[$question_index]["respuesta_correcta"];        //se almacena la respuesta correcta
 $_SESSION['juego']['sub'] = $csv[$question_index]["subtópico"];
-$_SESSION['juego']['banlist'][] = $csv[$question_index]["tópico"];
+$banlist[] = $csv[$question_index]["tópico"];
 ?>
