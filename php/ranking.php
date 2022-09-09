@@ -19,7 +19,7 @@
         <div class="big-box">
         <img src="../../web/img/school-icon.svg">
         <div class="contenedor">
-            <input type="text" placeholder="Buscar por nick.." id="search-input" onkeyup="myFunction(this.value, 'ranking')">
+            <input class="input-48" type="text" placeholder="Buscar por nick.." id="search-input" onkeyup="myFunction(this.value, 'ranking')">
             <div style="overflow: auto; max-height: 400px;">
                 <table id="ranking">
                     <tr>

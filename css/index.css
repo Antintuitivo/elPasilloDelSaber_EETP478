@@ -102,6 +102,11 @@ svg{
     margin: 1vh;
 }
 
+.input-48{
+    width: 48%;
+    margin: 1vh;
+}
+
 .btn-enviar{
     background: #0074E4;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
