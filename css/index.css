@@ -1,5 +1,5 @@
 html{
-    font-size: 1vw;
+    font-size: 2vh;
     font-family: Arial;
 }
 
@@ -34,6 +34,7 @@ h2{
     font-family: 'Aboreto', cursive;
     font-weight: 100;
     font-size: 5vh;
+    margin: 1vh;
 }
 
 input, select{
@@ -118,11 +119,10 @@ svg{
     cursor: pointer;
 }
 
-    .btn-enviar:hover{
-        background: #288AE8
-    }
+.btn-enviar:hover{
+    background: #288AE8
+}
 
-    .btn-enviar:active{
-        background: #3D95EA;
-    }
-
+.btn-enviar:active{
+    background: #3D95EA;
+}

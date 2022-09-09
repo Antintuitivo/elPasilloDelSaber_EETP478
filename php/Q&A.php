@@ -41,6 +41,6 @@ if($_SESSION['juego']['etapa']==1){
         </div>
         <input class="btn-submit" type="submit">
     </form>
-    <progress id="q" max="10" value="<?php echo $p+1?>" class="barra" > <?php echo $p?>0% </progress>
+    <progress id="q" max="10" value="<?php echo $p+1?>" class="barra <?php echo $e ?>" > <?php echo $p?>0% </progress>
 </body>
 </html>

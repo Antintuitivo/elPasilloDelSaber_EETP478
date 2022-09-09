@@ -85,8 +85,14 @@ progress[value]{
 progress[value]::-webkit-progress-bar{
     background-color: rgba(0,0,0,0);
 }
-progress[value]::-webkit-progress-value {
+progress[value]::-webkit-progress-value.facil {
     background-color: green;
+}
+progress[value]::-webkit-progress-value.medio {
+    background-color: rgb(211, 100, 0);
+}
+progress[value]::-webkit-progress-value.dificil {
+    background-color: rgb(128, 0, 0);
 }
 progress[value]::-moz-progress-bar {
     background-color: green;
