@@ -15,7 +15,7 @@ if(isset($_POST['respuestas'])){                  //Aumenta la cantidad de pregu
 if(isset($_POST['respuestas'])||$_SESSION['juego']['paso'] == 0 || $_SESSION['juego']['paso'] == 3 || $_SESSION['juego']['paso']== 6){                                                        //recupera las preguntas sólo si se respondió la anterior
     include 'rand-get.php';
 }
-die();
+
 if(($_SESSION['juego']['paso'] == 3 && $_SESSION['juego']['etapa'] == 1) || ($_SESSION['juego']['paso'] == 6 && $_SESSION['juego']['etapa'] == 2)){                 //Recupera la etapa actual del usuario de la base de datos 
     unset($_SESSION['juego']['banlist']);
     header( "Location: ../../web/php/intermedio-page.php");
