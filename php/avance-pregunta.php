@@ -1,28 +1,33 @@
 <?php
 include 'header/session.php';
 
-if(isset($_POST['respuestas']) && ($_POST['respuestas'] == $_SESSION['juego']['ans_c'])){ //Suma de puntos
+//Suma de puntos
+if(isset($_POST['respuestas']) && ($_POST['respuestas'] == $_SESSION['juego']['ans_c'])){
     ++$_SESSION['juego']['racha'];
     $_SESSION['tabla']['puntaje'] += ((10 * $_SESSION['juego']['etapa']) * $_SESSION['juego']['racha']);
 }else if(isset($_POST['respuestas']) && ($_POST['respuestas'] == $_SESSION['juego']['ans_c'])) {
     $_SESSION['juego']['racha'] = 0;
 }
 
-if(isset($_POST['respuestas'])){                  //Aumenta la cantidad de preguntas respondidas
+//Aumenta la cantidad de preguntas respondidas
+if(isset($_POST['respuestas'])){
     $_SESSION['juego']['paso'] += 1;
 }
 
-if(isset($_POST['respuestas'])||$_SESSION['juego']['paso'] == 0 || $_SESSION['juego']['paso'] == 3 || $_SESSION['juego']['paso']== 6){                                                        //recupera las preguntas sólo si se respondió la anterior
+//recupera las preguntas sólo si se respondió la anterior
+if(isset($_POST['respuestas']) || $_SESSION['juego']['paso'] == 0 || $_SESSION['juego']['paso'] == 3 || $_SESSION['juego']['paso']== 6){
     include 'rand-get.php';
 }
-
-if(($_SESSION['juego']['paso'] == 3 && $_SESSION['juego']['etapa'] == 1) || ($_SESSION['juego']['paso'] == 6 && $_SESSION['juego']['etapa'] == 2)){                 //Recupera la etapa actual del usuario de la base de datos 
+echo "finished";
+//Recupera la etapa actual del usuario de la base de datos 
+if(($_SESSION['juego']['paso'] == 3 && $_SESSION['juego']['etapa'] == 1) || ($_SESSION['juego']['paso'] == 6 && $_SESSION['juego']['etapa'] == 2)){
     unset($_SESSION['juego']['banlist']);
     header( "Location: ../../web/php/intermedio-page.php");
     die();
 }
 
-if($_SESSION['juego']['paso'] >= 9){                //Salida del bucle una vez responda nueve preguntas
+//Salida del bucle una vez responda nueve preguntas
+if($_SESSION['juego']['paso'] >= 9){
     $id = $_SESSION['usuario']['id'];
     $update = "UPDATE journey SET `journey-ended` = current_timestamp() WHERE `id-user` = '$id'";
     mysqli_query($link,$update);

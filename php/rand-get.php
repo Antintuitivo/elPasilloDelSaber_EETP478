@@ -12,15 +12,18 @@ if($age<15){                //Se selecciona el archivo csv a utilizar según la 
     $file = "mayores.csv";
 }
 
-if($stage==1){          //Easy
-    $min = 0;           //minimum number of the question index to select
-    $max = 29;          //maximum number of the question index to select
+//Easy
+if($stage==1){
+    $min = 0;
+    $max = 29;
 
-}elseif($stage==2){     //Medium
+}//Medium
+elseif($stage==2){
     $min = 30;          
     $max = 59;          
 
-}elseif($stage==3){     //Hard
+}//Hard
+elseif($stage==3){
     $min = 60;          
     $max = 89;
 }
@@ -34,11 +37,12 @@ do{
     //transforma el archivo a un array multidimensional
     foreach ($csv as $i=>$row) {                                       
         $csv[$i] = array_combine($keys, $row);
+    echo $i;
     }
-    
- $tema =$csv[$question_index]["tema"];
-}while(in_array($tema,$banlist));
+    $tema =$csv[$question_index]["tema"];
 
+}while(in_array($tema,$banlist));
+echo "done";
 //se almacena el índice de la pregunta
 $_SESSION['juego']['i'] = $question_index;
 //se almacena la pregunta
