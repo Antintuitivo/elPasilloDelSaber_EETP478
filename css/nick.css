@@ -6,6 +6,10 @@
     align-items: center;
 }
 
+span{
+    color: #fff;
+}
+
 .big-box{
     background-color: #212121;
     display: flex;
@@ -87,7 +91,7 @@ img{
     height: 25vh;
 }
 
-stats{
+.stats{
     display: flex;
     align-items: center;
 

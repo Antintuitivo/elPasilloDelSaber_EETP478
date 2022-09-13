@@ -40,9 +40,8 @@ do{
     echo $i;
     }
     $tema =$csv[$question_index]["tema"];
-
 }while(in_array($tema,$banlist));
-echo "done";
+
 //se almacena el índice de la pregunta
 $_SESSION['juego']['i'] = $question_index;
 //se almacena la pregunta
@@ -54,6 +53,5 @@ $_SESSION['juego']['ans3'] = $csv[$question_index]["respuesta3"];
 //se almacena la respuesta correcta
 $_SESSION['juego']['ans_c'] = $csv[$question_index]["respuesta_correcta"];
 $_SESSION['juego']['sub'] = $csv[$question_index]["subtópico"];
-$banlist[] = $tema;
-$_SESSION['juego']['banlist']=$banlist;
+$_SESSION['juego']['banlist'][] =$tema;
 ?>
