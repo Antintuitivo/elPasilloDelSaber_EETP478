@@ -1,6 +1,14 @@
 <?php
 session_start();
 $p=$_SESSION['juego']['paso'];
+
+if($_SESSION['juego']['etapa']==1){
+    $e="facil";
+}elseif($_SESSION['juego']['etapa']==2){
+    $e="medio";
+}elseif($_SESSION['juego']['etapa']==3){
+    $e="dificil";
+}
 ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
@@ -22,7 +30,7 @@ $p=$_SESSION['juego']['paso'];
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
-<body>
+<body background="<?PHP echo "../img/Q&A-backgrounds/" . $_SESSION['juego']['sub'] . ".jpg";?>">
     <div class="transparent-background"></div>
     <h1><?php echo $_SESSION['juego']['question'];?></h1>
     <form method="POST" action="avance-pregunta.php">
@@ -33,7 +41,6 @@ $p=$_SESSION['juego']['paso'];
         </div>
         <input class="btn-submit" type="submit">
     </form>
-    <label for="q">Sigue avanzando!</label><!-- podemos cambiar la etiqueta por otras según etapa -->
-    <progress id="q" max="9" value="<?php echo $p?>"> <?php echo $p?>0% </progress>
+    <progress id="q" max="10" value="<?php echo $p+1?>" class="barra <?php echo $e ?>" > <?php echo $p?>0% </progress>
 </body>
 </html>

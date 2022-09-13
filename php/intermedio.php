@@ -17,6 +17,10 @@
     $signal = mysqli_fetch_array($signals);
     
     $id = $_SESSION['usuario']['id'];
+    if (($paso == 0 && $_SESSION['juego']['etapa'] == 1) || ($paso == 3 && $_SESSION['juego']['etapa'] == 2) || ($paso == 6 && $_SESSION['juego']['etapa'] == 3)){
+        echo "Q&A";
+        die();
+    }
     if ($paso == 0 && $signal['signal-stage'] == 1){
         mysqli_query($link, "UPDATE journey SET `journey-stage` = '1', `journey-step` = '$paso' WHERE `id-user` = '$id'");
         $_SESSION['juego']['etapa'] = 1;

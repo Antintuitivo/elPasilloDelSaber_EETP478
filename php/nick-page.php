@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (isset($_SESSION['nick_message'])) {
+  ?>
+  <span class="error"><?php echo $_SESSION['nick_message'];?></span>
+  <?php
+}
+?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
 <head>
@@ -11,7 +20,7 @@
     <link rel="icon" href="img\school-icon.svg">
     <link rel="stylesheet" type="text/css" href="../../web/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="../../web/css/messages.css">
-    <link rel="stylesheet" type="text/css" href="../../web/css/index.css">
+    <link rel="stylesheet" type="text/css" href="../../web/css/nick.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
@@ -19,10 +28,16 @@
 </head>
 <body>
     <div class="transparent-background"></div>
-    <form method="POST">
-        <h2>Ingresar nick</h2>
-            <input class="input-100" type="text" placeholder="Ingresar nick" name="nick" required>
+    <div class="big-box">
+        <form method="POST" class="contenedor">
+            <h2>Ingresar nick</h2>
+            <input class="input-100" type="text" placeholder="Ingresar nick" name="nick" maxlength="3" required>
+            <div class="stats">
+                <span><?PHP echo $_SESSION['tabla']['puntaje'];?></span>
+                <span><?PHP echo $_SESSION['tabla']['tiempo'];?></span>
+            </div>
             <input class="input-48 btn-enviar" type="submit" value="INGRESAR" formaction="../../web/php/nick.php">
-    </form>
+        </form>
+    </div>
 </body>
 </html>

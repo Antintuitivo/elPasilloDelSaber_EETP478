@@ -1,5 +1,5 @@
 html{
-    font-size: 1vw;
+    font-size: 2vh;
     font-family: Arial;
 }
 
@@ -29,31 +29,32 @@ body{
 
 h2{
     color: #ffff;
-    padding: 20px;
-    text-align: left;
+    padding: 0.2vh;
+    text-align: center;
     font-family: 'Aboreto', cursive;
     font-weight: 100;
-    font-size: 30px;
+    font-size: 5vh;
+    margin: 1vh;
 }
 
 input, select{
     background-color: #212121;
     margin-bottom: 15px;
-    padding: 15px;
+    padding: 2vh;
     border-radius: 6px;
     border: 1px solid #616161;
 
     font-family: 'Arial';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 2.1vh;
+    line-height: 1.6vh;
     color:#616161;
 }
 
 img{
-    width: 200px;
-    height: 200px;
+    width: auto;
+    height: 25vh;
 }
 /*
 svg{
@@ -73,14 +74,15 @@ svg{
 .big-box{
     background-color: #212121;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    height: 704px;
-    max-width: 470px;
-    width: 98%;
+    height: 98vh;
+    min-height: 580px;
+    max-width: 500px;
+    width: 95%;
     min-width: 300px;
-    border-radius: 7px;
+    border-radius: 1vh;
     flex-wrap: wrap;
     padding: 2%;
 }
@@ -88,8 +90,9 @@ svg{
 
 
 .contenedor-inputs{
-    
-    padding: 10px 30px;
+    width: 80%;
+    display: flex;
+    padding: 1vh 3vh;
     flex-direction: column;
     align-items: center;
     align-content: flex-start;
@@ -97,7 +100,12 @@ svg{
 
 .input-100{
     width: 100%;
-    margin: 10px;
+    margin: 1vh;
+}
+
+.input-48{
+    width: 48%;
+    margin: 1vh;
 }
 
 .btn-enviar{
@@ -107,15 +115,14 @@ svg{
 
     color: #fff;
     
-    padding: 10px 40px;
+    padding: 2vh 4vw;
     cursor: pointer;
 }
 
-    .btn-enviar:hover{
-        background: #288AE8
-    }
+.btn-enviar:hover{
+    background: #288AE8
+}
 
-    .btn-enviar:active{
-        background: #3D95EA;
-    }
-
+.btn-enviar:active{
+    background: #3D95EA;
+}
