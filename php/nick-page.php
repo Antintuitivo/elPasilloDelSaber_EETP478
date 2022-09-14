@@ -36,7 +36,7 @@ if (isset($_SESSION['nick_message'])) {
                 <span><?PHP echo $_SESSION['tabla']['puntaje'];?></span>
                 <span><?PHP echo $_SESSION['tabla']['tiempo'];?></span>
             </div>
-            <input class="input-48 btn-enviar" type="submit" value="INGRESAR" formaction="../../web/php/nick.php">
+            <input class="input-100 btn-enviar" type="submit" value="INGRESAR" formaction="../../web/php/nick.php">
         </form>
     </div>
 </body>

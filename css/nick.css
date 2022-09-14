@@ -18,18 +18,13 @@ span{
     align-items: center;
     height: fit-content;
     min-height: 320px;
-
+    max-width: max-content;
     width: 70%;
     min-width: 300px;
-    border-radius: 1vh;
+    border-radius: 1vw;
     flex-wrap: wrap;
     padding: 2%;
     overflow-y: auto;
-}
-
-.input-48{
-    width: 48%;
-    margin: 1vh;
 }
 
 html{
@@ -63,32 +58,32 @@ body{
 
 h2{
     color: #ffff;
-    padding: 0.4vh;
+    padding: 0.2vw;
     text-align: center;
     font-family: 'Aboreto', cursive;
     font-weight: 100;
-    font-size: 6vh;
+    font-size:calc(20px + 2vw);
     margin: 1vh;
 }
 
 input, select{
     background-color: #212121;
     margin-bottom: 15px;
-    padding: 2vh;
+    padding: 1vh 2vw;
     border-radius: 6px;
     border: 1px solid #616161;
 
     font-family: 'Arial';
     font-style: normal;
     font-weight: 400;
-    font-size: 2.1vh;
-    line-height: 1.6vh;
+    font-size:calc(5px + 1.1vw);
+    line-height: 1vw;
     color:#616161;
 }
 
 img{
-    width: auto;
-    height: 25vh;
+    width: 25vw;
+    height: auto;
 }
 
 .stats{
@@ -100,7 +95,7 @@ img{
 .contenedor-inputs{
     width: 80%;
     display: flex;
-    padding: 1vh 3vh;
+    padding: 1vh 3vw;
     flex-direction: column;
     align-items: center;
     align-content: flex-start;
@@ -108,12 +103,12 @@ img{
 
 .input-100{
     width: 100%;
-    margin: 1vh;
+    margin: 1vw;
 }
 
 .input-48{
     width: 48%;
-    margin: 1vh;
+    margin: 1vw;
 }
 
 .btn-enviar{

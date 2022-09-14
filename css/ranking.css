@@ -1,3 +1,32 @@
+input, select{
+    background-color: #212121;
+    margin-bottom: 15px;
+    padding: 2vh;
+    border-radius: 6px;
+    border: 1px solid #616161;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size:calc(10px + 1vw);
+    line-height: 1vw;
+    color:#616161;
+}
+
+table{
+    min-width: 300px;
+    border-radius: 0.5vw;
+    background-color: #616161;
+    max-width: 760px;
+    margin: 1vh;
+}
+
+img{
+    width: 20vw;
+    height: auto;
+    margin: 1vh;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -12,14 +41,6 @@
 option:hover{
     background: #212121;
     cursor: pointer;
-}
-
-table{
-    min-width: 300px;
-    border-radius: 0.5vh;
-    background-color: #616161;
-    max-width: 760px;
-    margin: 1vh;
 }
 
 .contenedor{
@@ -52,11 +73,6 @@ table{
     margin: 1vh;
 }
 
-img{
-    width: auto;
-    height: 25vh;
-    margin: 1vh;
-}
 
 .table-header {
     background-color: #0074E4;
@@ -64,7 +80,7 @@ img{
     padding: 0.2rem;
     width: 5%;
     height: 5%;
-    font-size:calc(5px + 1.5vh);
+    font-size:calc(5px + 1vw);
     border-radius: 6px; 
 }
 
@@ -76,10 +92,10 @@ img{
     height: 15%;
     border-radius: 0.4vh;
     text-align: center;
-    font-size:calc(5px + 1.5vh);    
+    font-size:calc(5px + 1vw);    
 }
 tr {
-    font-size:calc(5px + 1.5vh);
+    font-size:calc(5px + 1vw);
 }
 tr:hover{
     background-color: #ffffff;
