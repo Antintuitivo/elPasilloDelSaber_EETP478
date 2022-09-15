@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../../web/css/dashboard.css">
 </head>
 <body>
-    <div class="cover" id="cover">
+    <div id="cover">
         <div class="transparent-background"></div>
         <video autoplay loop muted plays-inline class="video">
             <source src="../img/video expo ciencias.webm" type="video/webm">
@@ -82,20 +82,20 @@
             <path d="M74.7721 40.8907C75.0778 40.8907 75.3255 40.6433 75.3255 40.3382C75.3255 40.0331 75.0778 39.7857 74.7721 39.7857C74.4664 39.7857 74.2186 40.0331 74.2186 40.3382C74.2186 40.6433 74.4664 40.8907 74.7721 40.8907Z" fill="#6EA8D7"/>
         </svg>
         <div class="contenedor">
-            <div class="subcontenedor" id="easy">
-                <div class="step" id="step-3"><span class="text" id="3-text">3</span></div>
-                <div class="step" id="step-2"><span class="text" id="2-text">2</span></div>
-                <div class="step" id="step-1"><span class="text" id="1-text">1</span></div>
+            <div class="subcontenedor">
+                <div class="step easy" id="step-3"><span class="text" id="3-text">3</span></div>
+                <div class="step easy" id="step-2"><span class="text" id="2-text">2</span></div>
+                <div class="step easy" id="step-1"><span class="text" id="1-text">1</span></div>
             </div>
-            <div class="subcontenedor" id="medium">
-                <div class="step" id="step-6"><span class="text" id="6-text">6</span></div>
-                <div class="step" id="step-5"><span class="text" id="5-text">5</span></div>
-                <div class="step" id="step-4"><span class="text" id="4-text">4</span></div>
+            <div class="subcontenedor">
+                <div class="step medium" id="step-6"><span class="text" id="6-text">6</span></div>
+                <div class="step medium" id="step-5"><span class="text" id="5-text">5</span></div>
+                <div class="step medium" id="step-4"><span class="text" id="4-text">4</span></div>
             </div>
-            <div class="subcontenedor" id="hard">
-                <div class="step" id="step-9"><span class="text" id="9-text">9</span></div>
-                <div class="step" id="step-8"><span class="text" id="8-text">8</span></div>
-                <div class="step" id="step-7"><span class="text" id="7-text">7</span></div>
+            <div class="subcontenedor">
+                <div class="step hard" id="step-9"><span class="text" id="9-text">9</span></div>
+                <div class="step hard" id="step-8"><span class="text" id="8-text">8</span></div>
+                <div class="step hard" id="step-7"><span class="text" id="7-text">7</span></div>
             </div>
         </div>
     </div>
