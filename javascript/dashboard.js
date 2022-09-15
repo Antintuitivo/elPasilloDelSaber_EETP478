@@ -23,7 +23,7 @@ function update(data) {
         countStandby = 0;
         elementStep.classList.toggle("active");
     }
-    if(countStandby >= 8) {
+    if(countStandby >= 10) {
         elementCover.style.visibility = "visible";
     } else {
         elementCover.style.visibility = "hidden";
