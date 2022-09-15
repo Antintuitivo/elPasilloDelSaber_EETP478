@@ -4,14 +4,15 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url(../img/eetp-478.png);
+    /* background: url(../img/eetp-478.png); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
 }
 .transparent-background {
-    background-color: rgba(18, 18, 18, 0.65);
+    /* background-color: rgba(18, 18, 18, 0.65); */
+    background-image: linear-gradient(rgb(12 12 12 / 62%),rgb(0 0 0 / 95%));
     width: 100%;
     height: 100%;
     position: absolute;
