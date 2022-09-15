@@ -14,7 +14,25 @@ body{
     height: 100%;
     overflow-y: auto;
 }
-
+.cover {
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+}
+.transparent-background {
+    background-color: rgba(18, 18, 18, 0.65);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 4;
+}
+.video {
+    position: absolute;
+    z-index: 6;
+    width: 100%;
+    height: 100%;
+}
 .contenedor{
     display: flex;
     flex-direction: row;
