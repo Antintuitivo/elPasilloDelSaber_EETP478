@@ -42,9 +42,5 @@
     if ($paso == 9){
         echo 'No';
         die();
-        /*$message = "Ya ha finalizado el cuestionario.";
-        ?>
-        <span class="error"><?php echo $message;?></span>
-        <?php*/
     }
 ?>

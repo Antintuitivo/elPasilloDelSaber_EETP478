@@ -12,6 +12,10 @@ if(isset($_POST['respuestas']) && ($_POST['respuestas'] == $_SESSION['juego']['a
 //Aumenta la cantidad de preguntas respondidas
 if(isset($_POST['respuestas'])){
     $_SESSION['juego']['paso'] += 1;
+    $id = $_SESSION['usuario']['id'];
+    $paso = $_SESSION['juego']['paso'];
+    $update = "UPDATE journey SET `journey-step` = '$paso' WHERE `id-user` = '$id'";
+    mysqli_query($link,$update);
 }
 
 //recupera las preguntas sólo si se respondió la anterior
