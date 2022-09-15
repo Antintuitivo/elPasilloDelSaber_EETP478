@@ -89,7 +89,15 @@ img{
 .stats{
     display: flex;
     align-items: center;
+    width: 100%;
+    justify-content: center;
+}
 
+.puntos{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width:100%;
 }
 
 .contenedor-inputs{
