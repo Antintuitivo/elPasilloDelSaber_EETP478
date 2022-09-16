@@ -1,30 +1,221 @@
+@media screen and (max-width:500px) {
+    input,select{
+        font-weight: 400;
+        font-size:calc(15px + 2vw);
+        line-height: normal;
+        margin-bottom: 15px;
+        padding: 2vh;
+        border-radius: 6px;
+        margin: 2vh;
+    }
+
+    table{
+        min-width: 100px;
+        border-radius: 0.5vw;
+        background-color: #616161;
+        max-width: 760px;
+    }
+    
+    img{
+        width: auto;
+        height: 25vh;
+        margin: 2vh;
+    }
+
+    .big-box{
+        background-color: #212121;
+        min-height: 320px;
+        width: 100%;
+        min-width: 300px;
+        height: 100%;
+        padding: 2%;
+    }
+
+    .table-header{
+        padding: 0.2vh;
+        width: 90%;
+        height: 30px;
+        font-size:calc(15px + 2vw);
+        border-radius: 3px;
+    }
+
+    .table-row{
+        padding: 0.2vh;
+        width: 60px;
+        height: 30px;
+        border-radius: 0.2vh;
+        text-align: center;
+        font-size:calc(12px + 1.5vw);
+    }
+    
+    tr {
+        padding: 0.2vh;
+        width: 60px;
+        height: 30px;
+        border-radius: 0.2vh;
+        text-align: center;
+        font-size:calc(10px + 1.5vw);
+    }
+    
+    .position{
+        font-size:calc(10px + 1.5vw);
+
+    }
+
+    .contenedor{
+        height: 95%;
+        width: fit-content;
+    }
+}
+
+@media screen and (min-width:500px) {
+    input,select{
+        font-weight: 400;
+        font-size:calc(15px + 1vh);
+        line-height: normal;
+        margin-bottom: 15px;
+        padding: 2vh;
+        border-radius: 6px;
+        margin: 2vh;
+    }
+
+    table{
+        min-width: 100px;
+        border-radius: 0.2vh;
+        background-color: #616161;
+        max-width: 760px;
+    }
+    
+    img{
+        width: auto;
+        height: 25vh;
+        margin: 2vh;
+    }
+
+    .big-box{
+        background-color: #212121;
+        min-height: 320px;
+        width: 60%;
+        min-width: 560px;
+        height: 80%;
+        padding: 2%;
+        border-radius: 1vh;
+    }
+
+    .table-header{
+        padding: 0.5vh;
+        width: 90%;
+        height: 30px;
+        font-size:calc(15px + 1vh);
+        border-radius: 0.2vh;
+    }
+
+    .table-row{
+        padding: 0.5vh;
+        width: 60px;
+        height: 30px;
+        border-radius: 0.2vh;
+        text-align: center;
+        font-size:calc(12px + 1vh);
+    }
+    
+    tr {
+        padding: 0.5vh;
+        width: 60px;
+        height: 30px;
+        border-radius: 0.2vh;
+        text-align: center;
+        font-size:calc(10px + 1vh);
+    }
+    
+    .position{
+        font-size:calc(10px + 1vh);
+
+    }
+
+    .contenedor{
+        height: 95%;
+        width: fit-content;
+    }
+}
+
+@media screen and (min-width:1500px) {
+    input,select{
+        font-weight: 400;
+        font-size:calc(15px + 2vh);
+        line-height: normal;
+        margin-bottom: 15px;
+        padding: 2vh;
+        border-radius: 6px;
+        margin: 2vh;
+    }
+
+    table{
+        min-width: 100px;
+        border-radius: 0.5vw;
+        background-color: #616161;
+        max-width: 760px;
+    }
+    
+    img{
+        width: auto;
+        height: 20vh;
+        margin: 2vh;
+    }
+
+    .big-box{
+        background-color: rgba(0, 0, 0, 0.3);
+        min-height: 320px;
+        width: 60%;
+        min-width: 300px;
+        height: fit-content;
+        padding: 2%;
+        border-radius: 1vh;
+    }
+
+    .table-header{
+        padding: 0.5vh;
+        width: 100%;
+        height: 4vh;
+        font-size:calc(15px + 2vh);
+        border-radius: 0.5vh;
+    }
+
+    .table-row{
+        padding: 0.5vh;
+        width: 60px;
+        height: 30px;
+        border-radius: 0.2vh;
+        text-align: center;
+        font-size:calc(12px + 1.5vh);
+    }
+    
+    tr {
+        padding: 0.5vh;
+        width: 60px;
+        height: 30px;
+        border-radius: 0.2vh;
+        text-align: center;
+        font-size:calc(10px + 1.5vh);
+    }
+    
+    .position{
+        font-size:calc(10px + 1.5vh);
+
+    }
+
+    .contenedor{
+        height: 95%;
+        width: fit-content;
+    }
+}
+
 input, select{
     background-color: #212121;
-    margin-bottom: 15px;
-    padding: 2vh;
-    border-radius: 6px;
     border: 1px solid #616161;
-
     font-family: 'Arial';
     font-style: normal;
-    font-weight: 400;
-    font-size:calc(10px + 1vw);
-    line-height: 1vw;
     color:#616161;
-}
-
-table{
-    min-width: 300px;
-    border-radius: 0.5vw;
-    background-color: #616161;
-    max-width: 760px;
-    margin: 1vh;
-}
-
-img{
-    width: 20vw;
-    height: auto;
-    margin: 1vh;
 }
 
 ::-webkit-scrollbar {
@@ -44,59 +235,69 @@ option:hover{
 }
 
 .contenedor{
-    height: fit-content;
-    width: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .big-box{
-    background-color: #212121;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: fit-content;
-    min-height: 320px;
-
-    width: 70%;
-    min-width: 300px;
-    border-radius: 1vh;
     flex-wrap: wrap;
-    padding: 2%;
     overflow-y: auto;
+}
+
+html{
+    font-size: 2vh;
+    font-family: Arial;
+}
+
+body{
+    /*background-color: #121212;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/eetp-478.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+.transparent-background {
+    background-color: rgba(18, 18, 18, 0.65);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
 }
 
 .input-48{
     width: 48%;
-    margin: 1vh;
 }
 
+.input-100{
+    width:100%;
+}
 
 .table-header {
     background-color: #0074E4;
     color: #ffffff;
-    padding: 0.2rem;
-    width: 5%;
-    height: 5%;
-    font-size:calc(5px + 1vw);
-    border-radius: 6px; 
 }
 
-.table-row {
+.table-rows {
     background-color: #CBCBCB;
     color: #616161;
-    padding: 0.2vh;
-    width: 15%;
-    height: 15%;
-    border-radius: 0.4vh;
-    text-align: center;
-    font-size:calc(5px + 1vw);    
 }
-tr {
-    font-size:calc(5px + 1vw);
+
+.table-row{
+    background-color: inherit;
+    color:inherit;
 }
+
 tr:hover{
     background-color: #ffffff;
     color: #000000;

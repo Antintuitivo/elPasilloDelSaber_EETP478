@@ -60,7 +60,7 @@
     }
     
     input,select{
-        padding: 2vw;
+        padding: 2vh;
         font-size:20px;
     }
 
@@ -166,21 +166,7 @@ img{
     width: auto;
     height: 25vh;
 }
-/*
-svg{
-    width: 200px;
-    height: 200px;
-}
 
-#gear:hover {
-    transform-origin:center center;
-	animation: spin 3s alternate infinite;
-}
-@keyframes spin {
-	100% {transform: rotate(360deg);
-	}
-}
-*/
 .big-box{
     display: flex;
     flex-direction: column;
@@ -190,8 +176,6 @@ svg{
     padding: 2%;
 }
 
-
-
 .contenedor-inputs{
     width: 80%;
     display: flex;
@@ -200,7 +184,6 @@ svg{
     align-items: center;
     align-content: flex-start;
 }
-
 
 .btn-enviar{
     background: #0074E4;
