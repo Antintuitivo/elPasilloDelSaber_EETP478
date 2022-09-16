@@ -1,10 +1,132 @@
-html{
-    font-size: 2vh;
-    font-family: Arial;
+/*config para pantallas de teléfonos móviles*/
+@media screen and (max-width:500px){
+    html{
+        font-size: 3vw;
+        font-family: Arial;
+    }
+    
+    h2{
+        color: #ffff;
+        padding: 0.2vh;
+        text-align: center;
+        font-family: 'Aboreto', cursive;
+        font-weight: 100;
+        font-size:calc(20px + 5vw);
+        margin: 1vw;
+    }
+    
+    input,select{
+        padding: 3vw;
+        font-size:15px;
+        min-width: 200px;
+    }
+
+    .input-100{
+        width: 100%;
+        margin: 1vw;
+    }
+    
+    .input-48{
+        width: 48%;
+        margin: 1vw;
+    }
+
+    .big-box{
+        height: 100%;
+        width: 100%;
+        background-color: #212121;
+    }
+    
+    .btn-enviar{
+        padding: 2vh 4vw;
+    }
+}
+
+/*pantalla de tablet o computadora pequeña*/
+@media screen and (min-width:500px) {
+    html{
+        font-size: 2vh;
+        font-family: Arial;
+    }
+    
+    h2{
+        color: #ffff;
+        padding: 0.2vh;
+        text-align: center;
+        font-family: 'Aboreto', cursive;
+        font-weight: 100;
+        font-size:calc(30px + 1.2vw);
+        margin: 1vw;
+    }
+    
+    input,select{
+        padding: 2vw;
+        font-size:20px;
+    }
+
+    .input-100{
+        width: 100%;
+        margin: 1vh;
+    }
+    
+    .input-48{
+        width: 48%;
+        margin: 1vh;
+    }
+
+    .big-box{
+        height: 90vh;
+        max-width: 700px;
+        width: 95%;
+        min-width: 320px;
+        border-radius: 5px;
+        background-color: #212121;
+    }
+}
+/*pantallas grandes y televisores*/
+@media screen and (min-width:1500px){
+    html{
+        font-size: 2vh;
+        font-family: Arial;
+    }
+    
+    h2{
+        color: #ffff;
+        padding: 0.2vh;
+        text-align: center;
+        font-family: 'Aboreto', cursive;
+        font-weight: 100;
+        font-size:calc(70px + 1.2vw);
+        margin: 0.5vw;
+    }
+    
+    input,select{
+        padding: 2vh;
+        font-size:2.2vh;
+    }
+
+    .input-100{
+        width: 100%;
+        margin: 1vh;
+    }
+    
+    .input-48{
+        width: 48%;
+        margin: 1vh;
+    }
+
+    .big-box{
+        height: 90vh;
+        max-width: 1400px;
+        width: 95%;
+        border-radius: 5px;   
+        background-color: rgba(0, 0, 0, 0.25);     
+    }
 }
 
 * {
     box-sizing: border-box;
+    font-size:calc(10px + 0.3vw);
 }
 
 body{
@@ -27,28 +149,16 @@ body{
     z-index: -1;
 }
 
-h2{
-    color: #ffff;
-    padding: 0.2vh;
-    text-align: center;
-    font-family: 'Aboreto', cursive;
-    font-weight: 100;
-    font-size:calc(20px + 2vw);
-    margin: 1vw;
-}
 
 input, select{
     background-color: #212121;
     margin-bottom: 15px;
-    padding: 2vh;
     border-radius: 6px;
     border: 1px solid #616161;
 
     font-family: 'Arial';
     font-style: normal;
     font-weight: 400;
-    font-size:calc(10px + 1vw);
-    line-height: 1vw;
     color:#616161;
 }
 
@@ -72,17 +182,10 @@ svg{
 }
 */
 .big-box{
-    background-color: #212121;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 98vh;
-    min-height: 580px;
-    max-width: 500px;
-    width: 95%;
-    min-width: 300px;
-    border-radius: 1vw;
     flex-wrap: nowrap;
     padding: 2%;
 }
@@ -98,15 +201,6 @@ svg{
     align-content: flex-start;
 }
 
-.input-100{
-    width: 100%;
-    margin: 1vw;
-}
-
-.input-48{
-    width: 48%;
-    margin: 1vw;
-}
 
 .btn-enviar{
     background: #0074E4;
@@ -115,7 +209,6 @@ svg{
 
     color: #fff;
     
-    padding: 2vh 4vw;
     cursor: pointer;
 }
 
