@@ -12,9 +12,7 @@
     <link rel="stylesheet" type="text/css" href="../../web/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="../../web/css/messages.css">
     <link rel="stylesheet" type="text/css" href="../../web/css/intermedio.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Distressed&family=Rubik+Maze&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../web/css/fonts.css">
 </head>
 <body>
     <div class="transparent-background"></div>

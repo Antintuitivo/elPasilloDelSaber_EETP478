@@ -24,11 +24,7 @@ if($_SESSION['juego']['etapa']==1){
     <link rel="stylesheet" type="text/css" href="../../web/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="../../web/css/messages.css">
     <link rel="stylesheet" type="text/css" href="../../web/css/Q&A.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../web/css/fonts.css">
 </head>
 <body background="<?PHP echo "../img/Q&A-backgrounds/" . $_SESSION['juego']['sub'] . ".jpg";?>">
     <div class="transparent-background"></div>

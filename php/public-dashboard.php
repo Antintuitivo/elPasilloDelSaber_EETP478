@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="../../web/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="../../web/css/messages.css">
     <link rel="stylesheet" type="text/css" href="../../web/css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="../../web/css/fonts.css">
 </head>
 <body>
     <div id="cover">

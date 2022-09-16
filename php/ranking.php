@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="../../web/css/messages.css">
     <link rel="stylesheet" type="text/css" href="../../web/css/index.css">
     <link rel="stylesheet" type="text/css" href="../../web/css/ranking.css">
+    <link rel="stylesheet" type="text/css" href="../../web/css/fonts.css">
 </head>
 <body>
     <div class="transparent-background"></div>
