@@ -41,7 +41,7 @@ do{
     }
     $tema = $csv[$question_index]["tema"];
 }while(in_array($tema,$banlist));
-
+print_r(in_array($tema,$banlist));
 //se almacena el índice de la pregunta
 $_SESSION['juego']['i'] = $question_index;
 //se almacena la pregunta
