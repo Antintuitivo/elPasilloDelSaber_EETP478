@@ -1,7 +1,7 @@
 ﻿a,tema,subtópico,pregunta,respuesta1,respuesta2,respuesta3,respuesta_correcta
 a,Historia y Geografía,Historia Argentina,¿Dónde fue izada por primera vez la bandera Argentina?,Rosario,Bueno Aires,Santa Fe Capital,1
 a,Historia y Geografía,Historia Europea,¿De qué nacionalidad era Albert Einstein?,Estadounidense,Alemán,Austriaco,2
-a,Historia y Geografía,Geografia Argentina,¿Dónde se ubica La Floralis Genérica?,Buenos Aires,Córdoba,Mendoza,1
+a,Historia y Geografía,Geografía Argentina,¿Dónde se ubica La Floralis Genérica?,Buenos Aires,Córdoba,Mendoza,1
 a,Historia y Geografía,Historia Antigua,¿Cual de estas batallas hizo más conocido a los espartanos?,Termópilas ,Mantinea,Monte Liceo,1
 a,Historia y Geografía,Banderas y Países,¿Cuales son los colores de Grecia?,Azul y blanco,"Amarillo, blanco y rojo",Blanco y verde,1
 a,Historia y Geografía,Geografía Mundial,¿Dónde se ubica el Arco del Triunfo?,Francia,Inglaterra,Grecia,1
@@ -26,12 +26,12 @@ a,Películas y Series,Series,¿Cómo se llamaba el perro de los argentos de casa
 a,Preguntas Varias,Libros,¿Cuántos libro hay de Harry Potter?,7,6,8,1
 a,Preguntas Varias,Videojuegos,"¿Cual es el apodo de el creador del videojuego ""Minecraft""?",Notch,Steve,Toby Fox,1
 a,Preguntas Varias,Ciencias,¿De qué reino es el hongo Agaricus bisporus?,Fungi ,Protoctista,Monera,1
-a,Preguntas Varias,Geografia Antigua,¿Desde dónde partía la ruta de la seda?,China,Finlandia,Vietnam,1
+a,Preguntas Varias,Geografía Antigua,¿Desde dónde partía la ruta de la seda?,China,Finlandia,Vietnam,1
 a,Preguntas Varias,Comidas Mundiales,¿Cuál de estas comidas es originaria de Italia?,Espagueti,Paella,Wok,1
 a,Preguntas Varias,Adivina la bandera,¿A qué bandera pertenecen los siguientes colores: Amarillo y Naranja? ,Bután,Chipre,Kosovo,1
 a,Historia y Geografía,Historia Argentina,¿Por qué hecho histórico fue creado el cuerpo de Patricios?,Guerra de la Triple Alianza,Invasiones inglesas,Revolución de Mayo,2
 a,Historia y Geografía,Historia Europea,¿Cuál de las siguientes batallas frenó el avance de Napoleón?,La campaña de Trafalgar,Jena 1806,Waterloo 1815,3
-a,Historia y Geografía,Geografia Argentina,¿Dónde se ubica Las cataratas del iguazú?,Chaco,Misiones,Corrientes,2
+a,Historia y Geografía,Geografía Argentina,¿Dónde se ubica Las cataratas del iguazú?,Chaco,Misiones,Corrientes,2
 a,Historia y Geografía,Historia Antigua,¿Quien era la mensajera de los dioses del Olimpo?,Anfítrite,Iris,Démeter,2
 a,Historia y Geografía,Banderas y Países,¿De qué colores es la bandera de Niger?,"Rojo, blanco y celeste","Naranja, blanco y verde","Negro, blanco y amarillo",2
 a,Historia y Geografía,Geografía Mundial,¿En qué continente se encuentra el país Albania?,Asia,Europa,Nórdico,2
@@ -56,12 +56,12 @@ a,Películas y Series,Series,¿Cuál es el apellido de Maria Elena de casados co
 a,Preguntas Varias,Libros,¿Cómo se llama la franquicia de Harry Potter?, Wizarding , Wizarding World,Blases Ringh,2
 a,Preguntas Varias,Videojuegos,¿Cuál es el animatronico con característica de un zorro de five night at freddy?,Freddy,Foxy,Bonnie,2
 a,Preguntas Varias,Ciencias,¿Cuantos planetas existen en nuestro sistema solar?,6,7,9,2
-a,Preguntas Varias,Geografia Antigua,¿Cuál es de los siguientes ríos circulaban por el antiguo Egipto?,Río Níger,Rio Nilo,Río Lualaba,2
+a,Preguntas Varias,Geografía Antigua,¿Cuál es de los siguientes ríos circulaban por el antiguo Egipto?,Río Níger,Rio Nilo,Río Lualaba,2
 a,Preguntas Varias,Comidas Mundiales,¿Cuál es la comida típica de Perú?,Lomo saltado,Pachamanca,Ceviche,3
 a,Preguntas Varias,Adivina la bandera,"El color rojo, y una estrella amarilla, ¿a qué bandera asiática pertenece?",Camboya,Vietnam,Taiwan,2
 a,Historia y Geografía,Historia Argentina,¿Quién organizó a los gauchos en la defensa de salta en la guerra de independencia Argentina?,José de San Martín,Manuel Belgrano ,Martín Miguel de Güemes,3
 a,Historia y Geografía,Historia Europea,¿Cual era el apodo de Napoleón Bonaparte?,Pequeño corso,El invencible,Conquistador de tierras,1
-a,Historia y Geografía,Geografia Argentina,¿De qué provincia fue gobernador Martín Miguel de Güemes?,Santa Fe ,Río Negro,Salta,3
+a,Historia y Geografía,Geografía Argentina,¿De qué provincia fue gobernador Martín Miguel de Güemes?,Santa Fe ,Río Negro,Salta,3
 a,Historia y Geografía,Historia Antigua,¿De qué nacionalidad era Gengis Kan?,Camboyano,Japonés,Mongol,3
 a,Historia y Geografía,Banderas y Países,¿Con qué países limita Mongolia?,Corea del sur y Japón,Rusia y Finlandia,Rusia y China,3
 a,Historia y Geografía,Geografía Mundial,¿Cuántos océanos existen en el planeta tierra?,4,6,5,3
@@ -86,6 +86,6 @@ a,Películas y Series,Series,¿Cuál es el apellido de soltera de moni argento d
 a,Preguntas Varias,Libros,"¿Según el libro ""Quidditch Through the Ages"", cuándo fue ""El torneo del que nadie se acuerda""?",1877,1878,1887,1
 a,Preguntas Varias,Videojuegos,"¿De qué videojuego es la personaje llamada ""Quinn""?",Overwatch,D&D,League of legends,3
 a,Preguntas Varias,Ciencias,¿Dónde nació el matemático Arquímedes?,Roma,Jerusalén,Siracusa,3
-a,Preguntas Varias,Geografia Antigua,¿Dónde se encuentra el monte everest?,Ghana,Camboya,Nepal,3
+a,Preguntas Varias,Geografía Antigua,¿Dónde se encuentra el monte everest?,Ghana,Camboya,Nepal,3
 a,Preguntas Varias,Comidas Mundiales,¿Qué comida es la más conocida en Francia?,Haricots au lait,Brosse à viande,Bœuf bourguignon,3
 a,Preguntas Varias,Adivina la bandera,"El color amarillo y blanco, ¿a qué bandera europea pertenece?",Italia,Estonia,El Vaticano,3

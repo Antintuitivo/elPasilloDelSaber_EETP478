@@ -10,11 +10,16 @@ if [ $mode = 1 ]; then
     while :; do
         rewarded=0
         userid=$(mysql -h 10.0.1.40 -u raspberry -p'-r4spb3rry-' -se 'SELECT `id-user` FROM users ORDER BY `id-user` DESC LIMIT 1' feria-db)
+        userage=$(mysql -h 10.0.1.40 -u raspberry -p'-r4spb3rry-' -se 'SELECT `user-age` FROM users ORDER BY `id-user` DESC LIMIT 1' feria-db)
         echo "Last user is $userid"
         lastuserid=$userid
 
         while [ $userid -eq $lastuserid ]; do
-            score=$(mysql -h 10.0.1.40 -u raspberry -p'-r4spb3rry-' -se 'SELECT `ranking-score` FROM ranking WHERE `id-user` = '$userid'' feria-db)
+            if  [$userage -lt 15 ]; then
+                score=$(mysql -h 10.0.1.40 -u raspberry -p'-r4spb3rry-' -se 'SELECT `ranking-score` FROM rankingmenores WHERE `id-user` = '$userid'' feria-db)
+            elif [$userage -ge 15 ]; then
+                score=$(mysql -h 10.0.1.40 -u raspberry -p'-r4spb3rry-' -se 'SELECT `ranking-score` FROM rankingmayores WHERE `id-user` = '$userid'' feria-db)
+            fi
             if [ -n "$score" ] && [ $score -ge 320 ] && [ $rewarded -eq 0 ]; then
                 gpio write 4 1
                 sleep 4
