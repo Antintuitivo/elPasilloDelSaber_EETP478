@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="../../web/css/fonts.css">
 </head>
 <body>
-    <div id="cover">
+    <div id="cover" class="nonctive">
         <div class="transparent-background"></div>
         <video autoplay loop muted plays-inline class="video">
             <source src="../img/video expo ciencias.webm" type="video/webm">
@@ -84,19 +84,19 @@
         </svg>
         <div class="contenedor">
             <div class="subcontenedor">
-                <div class="step easy" id="step-3"><span class="text" id="3-text">3</span></div>
-                <div class="step easy" id="step-2"><span class="text" id="2-text">2</span></div>
-                <div class="step easy" id="step-1"><span class="text" id="1-text">1</span></div>
+                <div class="step easy nonctive" id="step-3"><span class="text" id="3-text">3</span></div>
+                <div class="step easy nonctive" id="step-2"><span class="text" id="2-text">2</span></div>
+                <div class="step easy nonctive" id="step-1"><span class="text" id="1-text">1</span></div>
             </div>
             <div class="subcontenedor">
-                <div class="step medium" id="step-6"><span class="text" id="6-text">6</span></div>
-                <div class="step medium" id="step-5"><span class="text" id="5-text">5</span></div>
-                <div class="step medium" id="step-4"><span class="text" id="4-text">4</span></div>
+                <div class="step medium nonctive" id="step-6"><span class="text" id="6-text">6</span></div>
+                <div class="step medium nonctive" id="step-5"><span class="text" id="5-text">5</span></div>
+                <div class="step medium nonctive" id="step-4"><span class="text" id="4-text">4</span></div>
             </div>
             <div class="subcontenedor">
-                <div class="step hard" id="step-9"><span class="text" id="9-text">9</span></div>
-                <div class="step hard" id="step-8"><span class="text" id="8-text">8</span></div>
-                <div class="step hard" id="step-7"><span class="text" id="7-text">7</span></div>
+                <div class="step hard nonctive" id="step-9"><span class="text" id="9-text">9</span></div>
+                <div class="step hard nonctive" id="step-8"><span class="text" id="8-text">8</span></div>
+                <div class="step hard nonctive" id="step-7"><span class="text" id="7-text">7</span></div>
             </div>
         </div>
     </div>

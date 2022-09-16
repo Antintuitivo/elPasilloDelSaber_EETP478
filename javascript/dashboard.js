@@ -14,19 +14,27 @@ function update(data) {
         for (let i = 1; i <= 9; i++) {
             idStep = "step-" + i;
             elementStep = document.getElementById(idStep);
-            elementStep.classList.toggle("active");
+            if(elementStep.classList.contains("active")){
+                elementStep.classList.toggle("active");
+                elementStep.classList.toggle("nonctive");
+            }
         }
     }
     if(data >= 1 && data != lastStep) {
         console.log(data);
         lastStep = data;
         countStandby = 0;
+        elementStep.classList.toggle("nonctive");
         elementStep.classList.toggle("active");
     }
-    if(countStandby >= 10) {
-        elementCover.style.visibility = "visible";
-    } else {
-        elementCover.style.visibility = "hidden";
+
+    if(countStandby >= 10 && !elementCover.classList.contains("active")) {
+        elementCover.classList.toggle("nonctive");
+        elementCover.classList.toggle("active");
+    }
+    if(countStandby == 0 && elementCover.classList.contains("active")){
+        elementCover.classList.toggle("active");
+        elementCover.classList.toggle("nonctive");
     }
 }
 
@@ -47,6 +55,6 @@ httpRequest.onreadystatechange = function(){
         }
     }
 };
-httpRequest.open('GET', "../php/dashboard-get.php",true);
+httpRequest.open('GET', "../php/get-dashboard.php",true);
 httpRequest.send();
 }, 3000);

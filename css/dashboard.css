@@ -20,7 +20,7 @@ body{
     z-index: 4;
     width: 100%;
     height: 100%;
-    visibility: hidden;
+    opacity: 0;
 }
 .transparent-background {
     background-color: rgb(44 44 44);
@@ -69,7 +69,7 @@ body{
     justify-content: center;
     height: 30%;
     width: 100%;
-    visibility: hidden;
+    opacity: 0;
 	/* animation: spawn 2s ease-in-out; */
 }
 @keyframes spawn {
@@ -84,17 +84,32 @@ body{
     }
 }
 
-.active {
-	animation: trans 2s forwards;
+.nonctive {
+    animation: transe 2s forwards ease-in-out;
 }
+
+.active {
+	animation: trans 2s forwards ease-in-out;
+}
+
 @keyframes trans {
     0% {
-        background-color: transparent;
-        transform: translateY(-4vw);
+        opacity: 0;
+        transform: translateY(-10vw);
     }
     100% {
-        visibility: visible;
+        opacity: 1;
         transform: translateY(0);
+    }
+}
+@keyframes transe {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10vw);
     }
 }
 
