@@ -1,4 +1,4 @@
-<?php  
+<?php
 $file = "file.csv";//dirección del archivo csv 
 
 $age = $_SESSION['usuario']['edad'];
@@ -35,11 +35,11 @@ do{
     $csv = array_map('str_getcsv', file($file,FILE_SKIP_EMPTY_LINES));
     $keys = array_shift($csv);
     //transforma el archivo a un array multidimensional
-    foreach ($csv as $i=>$row) {                                       
+    foreach ($csv as $i=>$row) {
         $csv[$i] = array_combine($keys, $row);
-    echo $i;
+        echo $i;
     }
-    $tema =$csv[$question_index]["tema"];
+    $tema = $csv[$question_index]["tema"];
 }while(in_array($tema,$banlist));
 
 //se almacena el índice de la pregunta

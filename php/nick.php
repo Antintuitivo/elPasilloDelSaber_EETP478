@@ -20,7 +20,11 @@
 #---------------------------------------------------------------------------------------------
   #Comprobar si el nick está utilizado.
   #-----------------------------------------------------------------------------
-  $select = "SELECT*FROM ranking WHERE `ranking-nick`='$nick'";
+  if($_SESSION['usuario']['edad'] < 15){
+    $select = "SELECT*FROM rankingmenores WHERE `ranking-nick`='$nick'";
+  }elseif($_SESSION['usuario']['edad'] >= 15){
+    $select = "SELECT*FROM rankingmayores WHERE `ranking-nick`='$nick'";
+  }
   $result = mysqli_query($link, $select);
   $validation = mysqli_num_rows($result);
 
@@ -29,12 +33,21 @@
     #Insertar entrada a la tabla.
     mysqli_query($link, "UPDATE journey SET `journey-step` = '$paso' WHERE `id-user` = '$id'");
     
-    $select = "SELECT*FROM ranking WHERE `id-user`='$id'";
+    if($_SESSION['usuario']['edad'] < 15){
+      $select = "SELECT*FROM rankingmenores WHERE `id-user`='$id'";
+    }elseif($_SESSION['usuario']['edad'] >= 15){
+      $select = "SELECT*FROM rankingmayores WHERE `id-user`='$id'";
+    }
+
     $result = mysqli_query($link, $select);
     $validation = mysqli_num_rows($result);
 
     if ($validation == 0) {
-      $insert = "INSERT INTO ranking (`id-user`, `ranking-nick`, `ranking-score`, `ranking-et`) VALUES ('$id', '$nick', '$score', '$et')";
+      if($_SESSION['usuario']['edad'] < 15){
+        $insert = "INSERT INTO rankingmenores (`id-user`, `ranking-nick`, `ranking-score`, `ranking-et`) VALUES ('$id', '$nick', '$score', '$et')";
+      }elseif($_SESSION['usuario']['edad'] >= 15){
+        $insert = "INSERT INTO rankingmayores (`id-user`, `ranking-nick`, `ranking-score`, `ranking-et`) VALUES ('$id', '$nick', '$score', '$et')";
+      }
       mysqli_query($link, $insert);
     }
     #Cierre de sesión.
