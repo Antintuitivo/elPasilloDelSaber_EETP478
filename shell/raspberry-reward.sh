@@ -25,6 +25,8 @@ if [ $mode = 1 ]; then
                 gpio write 4 1
                 sleep 4
                 gpio write 4 0
+                echo "User $userid rewarded"
+                echo "User score is $score"
                 rewarded=1
                 #echo $ > ./raspberry-daemon.pid; #Registro del Process ID, para finalizarlo.
             fi
