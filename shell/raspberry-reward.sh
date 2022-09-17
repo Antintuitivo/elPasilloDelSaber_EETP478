@@ -21,7 +21,7 @@ if [ $mode = 1 ]; then
             elif [ $userage -ge 15 ]; then
                 score=$(mysql -h 10.0.1.40 -u raspberry -p'-r4spb3rry-' -se 'SELECT `ranking-score` FROM rankingmayores WHERE `id-user` = '$userid'' feria-db)
             fi
-            if [ -n "$score" ] && [ $score -ge 320 ] && [ $rewarded -eq 0 ]; then
+            if [ -n "$score" ] && [ $score -ge 800 ] && [ $rewarded -eq 0 ]; then
                 gpio write 4 1
                 sleep 4
                 gpio write 4 0
@@ -55,7 +55,7 @@ if [ $mode = 2 ]; then
             elif [ $userage -ge 15 ]; then
                 score=$(mysql -h 10.0.1.40 -u raspberry -p'-r4spb3rry-' -se 'SELECT `ranking-score` FROM rankingmayores WHERE `id-user` = '$userid'' feria-db)
             fi
-            if [ -n "$score" ] && [ $score -ge 320 ] && [ $rewarded -eq 0 ]; then
+            if [ -n "$score" ] && [ $score -ge 800 ] && [ $rewarded -eq 0 ]; then
                 echo "User $userid rewarded"
                 echo "User score is $score"
                 rewarded=1
