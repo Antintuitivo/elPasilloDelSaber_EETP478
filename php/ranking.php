@@ -11,16 +11,15 @@
     <link rel="icon" href="../../web/img/school-icon.svg">
     <link rel="stylesheet" type="text/css" href="../../web/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="../../web/css/messages.css">
-    <link rel="stylesheet" type="text/css" href="../../web/css/index.css">
-    <link rel="stylesheet" type="text/css" href="../../web/css/ranking.css">
     <link rel="stylesheet" type="text/css" href="../../web/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../web/css/ranking.css">
 </head>
 <body>
     <div class="transparent-background"></div>
         <div class="big-box">
-        <img src="../../web/img/school-icon.svg">
         <div class="contenedor">
-            <input class="input-48" type="text" placeholder="Buscar por nick.." id="search-input" onkeyup="myFunction(this.value, 'ranking')">
+            <img src="../../web/img/school-icon.svg">
+            <input class="input-100" type="text" placeholder="Buscar por nick.." id="search-input" onkeyup="myFunction(this.value, 'ranking')">
             <div style="overflow: auto; max-height: 400px;">
                 <table id="ranking">
                     <tr>

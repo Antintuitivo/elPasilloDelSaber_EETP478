@@ -1,3 +1,20 @@
+@media screen and (max-width:500px) {
+    .respuesta{
+        font-size: 4vh;
+    }
+}
+@media screen and (min-width:500px) {
+    .respuesta{
+        font-size: 3vh;
+    }
+}
+@media screen and (min-width:1500px) {
+    .respuesta{
+        font-size: 3vh;
+    }
+}
+
+
 body{
     /*background-color: #121212;*/
     display: flex;
@@ -36,12 +53,11 @@ form {
 .respuestas {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: fit-content;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
 }
 .respuesta {
-    font-size: 4vh;
     color: #e8eaed;
     font-family: 'Montserrat', sans-serif;
     margin: 0.3em;
