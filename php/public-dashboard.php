@@ -17,7 +17,7 @@
 <body>
     <div id="cover" class="nonctive">
         <div class="transparent-background"></div>
-        <video autoplay loop muted plays-inline class="video">
+        <video loop muted plays-inline id="video">
             <source src="../img/video expo ciencias.webm" type="video/webm">
         </video>
     </div>

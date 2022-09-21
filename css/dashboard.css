@@ -29,7 +29,7 @@ body{
     position: absolute;
     z-index: 5;
 }
-.video {
+#video {
     position: absolute;
     z-index: 6;
     width: 100%;

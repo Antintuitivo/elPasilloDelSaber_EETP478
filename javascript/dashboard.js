@@ -1,6 +1,6 @@
 var lastStep;
 var countStandby;
-
+videoStandby = document.getElementById('video');
 elementCover = document.getElementById('cover');
 
 function update(data) {
@@ -31,10 +31,12 @@ function update(data) {
     if(countStandby >= 10 && !elementCover.classList.contains("active")) {
         elementCover.classList.toggle("nonctive");
         elementCover.classList.toggle("active");
+        videoStandby.play();
     }
     if(countStandby == 0 && elementCover.classList.contains("active")){
         elementCover.classList.toggle("active");
         elementCover.classList.toggle("nonctive");
+        videoStandby.pause();
     }
 }
 
