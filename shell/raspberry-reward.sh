@@ -44,16 +44,16 @@ if [ $mode = 2 ]; then
     while :; do
         rewarded=0
         userid=$(mysql -h "$ip" -u raspberry -p'-r4spb3rry-' -se 'SELECT `id-user` FROM users ORDER BY `id-user` DESC LIMIT 1' feria-db)
-        userage=$(mysql -h 10.0.1.40 -u raspberry -p'-r4spb3rry-' -se 'SELECT `user-age` FROM users ORDER BY `id-user` DESC LIMIT 1' feria-db)
+        userage=$(mysql -h "$ip" -u raspberry -p'-r4spb3rry-' -se 'SELECT `user-age` FROM users ORDER BY `id-user` DESC LIMIT 1' feria-db)
         echo "Last user is $userid"
         echo "Age: $userage"
         lastuserid=$userid
 
         while [ $userid -eq $lastuserid ]; do
             if [ $userage -lt 15 ]; then
-                score=$(mysql -h 10.0.1.40 -u raspberry -p'-r4spb3rry-' -se 'SELECT `ranking-score` FROM rankingmenores WHERE `id-user` = '$userid'' feria-db)
+                score=$(mysql -h "$ip" -u raspberry -p'-r4spb3rry-' -se 'SELECT `ranking-score` FROM rankingmenores WHERE `id-user` = '$userid'' feria-db)
             elif [ $userage -ge 15 ]; then
-                score=$(mysql -h 10.0.1.40 -u raspberry -p'-r4spb3rry-' -se 'SELECT `ranking-score` FROM rankingmayores WHERE `id-user` = '$userid'' feria-db)
+                score=$(mysql -h "$ip" -u raspberry -p'-r4spb3rry-' -se 'SELECT `ranking-score` FROM rankingmayores WHERE `id-user` = '$userid'' feria-db)
             fi
             if [ -n "$score" ] && [ $score -ge 800 ] && [ $rewarded -eq 0 ]; then
                 echo "User $userid rewarded"
