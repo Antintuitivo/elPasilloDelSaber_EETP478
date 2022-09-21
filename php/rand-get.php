@@ -4,7 +4,10 @@ $file = "file.csv";//dirección del archivo csv
 $age = $_SESSION['usuario']['edad'];
 $stage = $_SESSION['juego']['etapa'];//último sensor pisado por el usuario
 $pos = $_SESSION['juego']['paso'];//cantidad de preguntas respondidas
-$banlist[] = $_SESSION['juego']['banlist'];
+if(!isset($_SESSION['juego']['banlist'])){
+    $_SESSION['juego']['banlist'] = array();
+}
+$banlist = $_SESSION['juego']['banlist'];
 
 if($age<15){                //Se selecciona el archivo csv a utilizar según la edad del usuario
     $file = "menores.csv";
@@ -37,11 +40,10 @@ do{
     //transforma el archivo a un array multidimensional
     foreach ($csv as $i=>$row) {
         $csv[$i] = array_combine($keys, $row);
-        echo $i;
     }
-    $tema = $csv[$question_index]["tema"];
-}while(in_array($tema,$banlist));
-print_r(in_array($tema,$banlist));
+    $tema = $csv[$question_index]["tópico"];
+}while(in_array($tema,$banlist) == True);
+
 //se almacena el índice de la pregunta
 $_SESSION['juego']['i'] = $question_index;
 //se almacena la pregunta

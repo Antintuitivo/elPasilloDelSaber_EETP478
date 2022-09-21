@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(!isset($_SESSION['usuario'])){
+  header("Location: ../../web/php/ranking.php");
+}
 
 if (isset($_SESSION['nick_message'])) {
   ?>

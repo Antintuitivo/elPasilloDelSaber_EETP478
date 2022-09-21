@@ -1,6 +1,15 @@
 <?php
 include 'header/session.php';
 
+//Aumenta la cantidad de preguntas respondidas
+if(isset($_POST['respuestas'])){
+    $_SESSION['juego']['paso'] += 1;
+    $id = $_SESSION['usuario']['id'];
+    $paso = $_SESSION['juego']['paso'];
+    $update = "UPDATE journey SET `journey-step` = '$paso' WHERE `id-user` = '$id'";
+    mysqli_query($link,$update);
+}
+
 //Suma de puntos
 if(isset($_POST['respuestas']) && ($_POST['respuestas'] == $_SESSION['juego']['ans_c'])){
     ++$_SESSION['juego']['racha'];
@@ -14,37 +23,28 @@ if($_SESSION['juego']['paso'] >= 9){
     $id = $_SESSION['usuario']['id'];
     $update = "UPDATE journey SET `journey-ended` = current_timestamp() WHERE `id-user` = '$id'";
     mysqli_query($link,$update);
-    header("Location: ../../web/php/nick-page.php");
-
+    
     #Recuperación y comparación del tiempo transcurrido en el juego.
     #-----------------------------------------------------------------------------
     $select = "SELECT*FROM journey WHERE `id-user`='$id'";
     $result = mysqli_query($link, $select);
     $validation = mysqli_num_rows($result);
-
+    
     $journey = mysqli_fetch_assoc($result);
-
+    
     $first  = date_create($journey['journey-started']);
     $second = date_create($journey['journey-ended']);
-
+    
     //echo date_format($first, 'H:i:s') . "<br>";
     //echo date_format($second, 'H:i:s') . "<br>";
-
+    
     $diff = $first->diff($second);
     $et = $diff->format( '%H:%I:%S' );
-
+    
     $_SESSION['tabla']['tiempo'] = $et;
-
+    
+    header("Location: ../../web/php/nick-page.php");
     die();
-}
-
-//Aumenta la cantidad de preguntas respondidas
-if(isset($_POST['respuestas'])){
-    $_SESSION['juego']['paso'] += 1;
-    $id = $_SESSION['usuario']['id'];
-    $paso = $_SESSION['juego']['paso'];
-    $update = "UPDATE journey SET `journey-step` = '$paso' WHERE `id-user` = '$id'";
-    mysqli_query($link,$update);
 }
 
 //recupera las preguntas sólo si se respondió la anterior
@@ -52,12 +52,12 @@ if(isset($_POST['respuestas']) || $_SESSION['juego']['paso'] == 0 || $_SESSION['
     include 'rand-get.php';
 }
 echo "finished";
-//Recupera la etapa actual del usuario de la base de datos 
+//Redirecciona al intermedio y borra la banlist
 if(($_SESSION['juego']['paso'] == 3 && $_SESSION['juego']['etapa'] == 1) || ($_SESSION['juego']['paso'] == 6 && $_SESSION['juego']['etapa'] == 2)){
     unset($_SESSION['juego']['banlist']);
     header( "Location: ../../web/php/intermedio-page.php");
     die();
+} else {
+    header("Location: ../../web/php/Q&A.php");
 }
-
-header("Location: Q&A.php");
 ?>

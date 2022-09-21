@@ -59,6 +59,8 @@
     #Redirección al ranking.
     #-----------------------------------------------------------------------------
     header("Location: ../../web/php/ranking.php");
+    die();
+
   } else {
       $_SESSION['nick_message'] = "Nick ya registrado.";
       header("Location: ../../web/php/nick-page.php");
