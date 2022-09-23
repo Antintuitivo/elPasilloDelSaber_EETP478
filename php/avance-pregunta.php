@@ -13,7 +13,7 @@ if(isset($_POST['respuestas'])){
 //Suma de puntos
 if(isset($_POST['respuestas']) && ($_POST['respuestas'] == $_SESSION['juego']['ans_c'])){
     ++$_SESSION['juego']['racha'];
-    $_SESSION['tabla']['puntaje'] += ((10 * $_SESSION['juego']['etapa']) * $_SESSION['juego']['racha']);
+    $_SESSION['tabla']['puntaje'] += ((13 * $_SESSION['juego']['etapa']) * $_SESSION['juego']['racha']);
 }else if(isset($_POST['respuestas']) && ($_POST['respuestas'] == $_SESSION['juego']['ans_c'])) {
     $_SESSION['juego']['racha'] = 0;
 }
