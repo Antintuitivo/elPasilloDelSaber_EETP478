@@ -78,7 +78,11 @@
     span{
         color: #fff;
         font-size: 3vh;
-        margin-top: 2vh;
+    }
+
+    p{
+        font-size: 10vh;
+        margin: 1vh;
     }
 
     .stats{

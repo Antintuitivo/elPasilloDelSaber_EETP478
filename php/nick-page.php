@@ -30,9 +30,10 @@ if (isset($_SESSION['nick_message'])) {
     <div class="transparent-background"></div>
     <div class="big-box">
         <form method="POST" class="contenedor">
-            <img src="../../web/img/school-icon.svg">
-            <h2>Ingresar nick</h2>
-            <input class="input-100" type="text" placeholder="Ingresar nick" name="nick" maxlength="3" required>
+            <img src="../../web/img/school-icon.svg"> 
+           <h2>Ingresar nick</h2>
+           <input class="input-100" type="text" placeholder="Ingresar nick" name="nick" maxlength="3" required>
+           <p><?php include 'header/emoji.php'?></p>
             <div class="stats">
                 <span class="puntos"><b>Puntos:</b> <?PHP echo $_SESSION['tabla']['puntaje'];?></span>
                 <span class="puntos"><b>Tiempo:</b> <?PHP echo $_SESSION['tabla']['tiempo'];?></span>
