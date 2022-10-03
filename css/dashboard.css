@@ -1,0 +1,134 @@
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.big-box{
+    background-color: #212121;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+#cover {
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.transparent-background {
+    background-color: rgb(44 44 44);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 5;
+}
+#video {
+    position: absolute;
+    z-index: 6;
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 90%;
+    width: 100%;
+}
+.subcontenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-around; */
+    height: 100%;
+    width: 28%;
+}
+.easy {
+    background-color: #489e48;
+}
+.medium {
+    background-color: #bd9448;
+}
+.hard {
+    background-color: #9e4848;
+}
+
+.step {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+    width: 100%;
+    opacity: 0;
+	/* animation: spawn 2s ease-in-out; */
+}
+@keyframes spawn {
+    0% {
+        transform: translate(0,-4vw);
+    }
+    100% {
+        /*background-color: #414141;*/
+        transform: translate(0,0);
+        color: #ffffff;
+        text-shadow: 0 0 0 rgb(0, 0, 0);
+    }
+}
+
+.nonctive {
+    animation: transe 2s forwards ease-in-out;
+}
+
+.active {
+	animation: trans 2s forwards ease-in-out;
+}
+
+@keyframes trans {
+    0% {
+        opacity: 0;
+        transform: translateY(-10vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes transe {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10vw);
+    }
+}
+
+.text {
+    font-family: monospace;
+    font-size: 4rem;
+    margin: 10%;
+}
+
+.school-icon{
+    width: auto;
+    height: 10%;
+    margin: 1vh;
+}
+#gear {
+    transform-origin:center center;
+	animation: spin 5s alternate infinite;
+}
+@keyframes spin {
+	100% {transform: rotate(360deg);
+	}
+}
