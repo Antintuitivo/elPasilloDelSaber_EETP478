@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-08-2022 a las 22:43:45
+-- Tiempo de generación: 16-09-2022 a las 19:07:01
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -38,10 +38,23 @@ CREATE TABLE `journey` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `ranking`
+-- Estructura de tabla para la tabla `rankingmayores`
 --
 
-CREATE TABLE `ranking` (
+CREATE TABLE `rankingmayores` (
+  `id-user` int(11) NOT NULL COMMENT 'Código de identificación único para cada usuario.',
+  `ranking-nick` varchar(3) COLLATE utf8_spanish_ci NOT NULL COMMENT 'Nick ingresado por el usuario.',
+  `ranking-score` int(11) NOT NULL COMMENT 'Puntaje total en el juego.',
+  `ranking-et` time NOT NULL COMMENT 'Tiempo transcurrido (elapsed time, et) total en el juego.'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `rankingmenores`
+--
+
+CREATE TABLE `rankingmenores` (
   `id-user` int(11) NOT NULL COMMENT 'Código de identificación único para cada usuario.',
   `ranking-nick` varchar(3) COLLATE utf8_spanish_ci NOT NULL COMMENT 'Nick ingresado por el usuario.',
   `ranking-score` int(11) NOT NULL COMMENT 'Puntaje total en el juego.',
@@ -60,25 +73,6 @@ CREATE TABLE `signals` (
   `signal-time` datetime NOT NULL DEFAULT current_timestamp() COMMENT 'Fecha y hora de la creación del registro.'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
---
--- Volcado de datos para la tabla `signals`
---
-
-INSERT INTO `signals` (`id-record`, `signal-stage`, `signal-time`) VALUES
-(1, '3', '2022-08-05 14:47:38'),
-(2, '3', '2022-08-05 15:11:23'),
-(3, '3', '2022-08-05 15:11:32'),
-(4, '3', '2022-08-05 15:11:33'),
-(5, '1', '2022-08-05 15:13:15'),
-(6, '2', '2022-08-05 15:13:16'),
-(7, '3', '2022-08-05 15:13:17'),
-(8, '2', '2022-08-05 15:13:24'),
-(9, '1', '2022-08-05 15:14:03'),
-(10, '2', '2022-08-05 15:14:33'),
-(11, '1', '2022-08-05 15:17:36'),
-(12, '2', '2022-08-05 15:19:30'),
-(13, '1', '2022-08-05 15:19:37');
-
 -- --------------------------------------------------------
 
 --
@@ -92,14 +86,6 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
--- Volcado de datos para la tabla `users`
---
-
-INSERT INTO `users` (`id-user`, `user-email`, `user-age`) VALUES
-(1, 'juanignaciobianchini@gmail.com', 19),
-(2, 'f@gmail.com', 20);
-
---
 -- Índices para tablas volcadas
 --
 
@@ -110,11 +96,18 @@ ALTER TABLE `journey`
   ADD UNIQUE KEY `id-user` (`id-user`);
 
 --
--- Indices de la tabla `ranking`
+-- Indices de la tabla `rankingmayores`
 --
-ALTER TABLE `ranking`
+ALTER TABLE `rankingmayores`
   ADD UNIQUE KEY `position-nick` (`ranking-nick`),
   ADD UNIQUE KEY `id-user` (`id-user`);
+
+--
+-- Indices de la tabla `rankingmenores`
+--
+ALTER TABLE `rankingmenores`
+  ADD UNIQUE KEY `id-user` (`id-user`),
+  ADD UNIQUE KEY `position-nick` (`ranking-nick`);
 
 --
 -- Indices de la tabla `signals`
@@ -137,13 +130,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `signals`
 --
 ALTER TABLE `signals`
-  MODIFY `id-record` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Código de registro único.', AUTO_INCREMENT=14;
+  MODIFY `id-record` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Código de registro único.';
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id-user` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Código de identificación único para cada usuario.', AUTO_INCREMENT=3;
+  MODIFY `id-user` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Código de identificación único para cada usuario.';
 
 --
 -- Restricciones para tablas volcadas
@@ -156,10 +149,16 @@ ALTER TABLE `journey`
   ADD CONSTRAINT `journey_ibfk_1` FOREIGN KEY (`id-user`) REFERENCES `users` (`id-user`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Filtros para la tabla `ranking`
+-- Filtros para la tabla `rankingmayores`
 --
-ALTER TABLE `ranking`
-  ADD CONSTRAINT `ranking_ibfk_1` FOREIGN KEY (`id-user`) REFERENCES `users` (`id-user`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `rankingmayores`
+  ADD CONSTRAINT `rankingmayores_ibfk_1` FOREIGN KEY (`id-user`) REFERENCES `users` (`id-user`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `rankingmenores`
+--
+ALTER TABLE `rankingmenores`
+  ADD CONSTRAINT `rankingmenores_ibfk_1` FOREIGN KEY (`id-user`) REFERENCES `users` (`id-user`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

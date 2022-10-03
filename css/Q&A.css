@@ -1,0 +1,119 @@
+@media screen and (max-width:500px) {
+    .respuesta{
+        font-size: 4vh;
+    }
+}
+@media screen and (min-width:500px) {
+    .respuesta{
+        font-size: 3vh;
+    }
+}
+@media screen and (min-width:1500px) {
+    .respuesta{
+        font-size: 3vh;
+    }
+}
+
+
+body{
+    /*background-color: #121212;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: url(../img/eetp-478.png); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+.transparent-background {
+    /* background-color: rgba(18, 18, 18, 0.65); */
+    background-image: linear-gradient(rgb(12 12 12 / 62%),rgb(0 0 0 / 95%));
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+h1 {
+    font-size: 5vh;
+    margin: 0.67em 0;
+    letter-spacing: 3px;
+    color: #e8eaed;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.respuestas {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.respuesta {
+    color: #e8eaed;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0.3em;
+}
+.btn-submit{
+    font-size: 2vh;
+    background: #0074E4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0.6vh;
+    color: #fff;
+    font-family: 'Montserrat';
+    padding: 1vh 14vw;
+    cursor: pointer;
+    margin: 6vh;
+}
+.btn-submit:hover{
+    background: #288AE8
+}
+.btn-submit:active{
+    background: #3D95EA;
+}
+progress[value]{
+    width: 100vw;
+    height: 1.5vh;
+
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+
+    /*Restaurar a predeterminado*/
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    /* Quitar borde en Firefox */
+  
+    border: none;
+  
+  
+}
+progress[value]::-webkit-progress-bar{
+    background-color: rgba(0,0,0,0);
+}
+progress[value]::-webkit-progress-value.facil {
+    background-color: green;
+}
+progress[value]::-webkit-progress-value.medio {
+    background-color: rgb(211, 100, 0);
+}
+progress[value]::-webkit-progress-value.dificil {
+    background-color: rgb(128, 0, 0);
+}
+progress[value]::-moz-progress-bar {
+    background-color: green;
+}
+.barra {
+    background-color: rgba(0, 0, 0, 0.142);
+}
