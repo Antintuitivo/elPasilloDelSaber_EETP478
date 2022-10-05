@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (isset($_SESSION['index_message'])) {
+  ?>
+  <span class="error"><?php echo $_SESSION['index_message'];?></span>
+  <?php
+}
+?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
 <head>
@@ -20,7 +29,8 @@
         <img src="../../web/img/school-icon.svg">
         <h2>El pasillo del saber</h2>
         <article class="contenedor-inputs">
-            <input class="input-100" type="email" placeholder="Dirección de correo electrónico" name="email" maxlength="30" required>
+            <input class="input-100" type="text" placeholder="Ingresar nick" name="nick" maxlength="3" autocomplete="off" required>
+            <input class="input-100" type="email" placeholder="Dirección de correo electrónico" name="email" maxlength="30" autocomplete="off" required>
             <input class="input-100" type="number" placeholder="Edad" name="edad" min="0" max="99" required>
             <input class="input-100 btn-enviar" type="submit" value="INICIAR" formaction="../../web/php/registro.php">
         </article>

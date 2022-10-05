@@ -9,9 +9,9 @@ if(!isset($_SESSION['juego']['banlist'])){
 }
 $banlist = $_SESSION['juego']['banlist'];
 
-if($age<15){                //Se selecciona el archivo csv a utilizar según la edad del usuario
+if($age == "rankingmenores"){                //Se selecciona el archivo csv a utilizar según la edad del usuario
     $file = "menores.csv";
-}elseif($age>=15){
+}elseif($age == "rankingmayores"){
     $file = "mayores.csv";
 }
 

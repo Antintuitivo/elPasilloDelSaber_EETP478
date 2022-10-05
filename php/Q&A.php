@@ -2,13 +2,13 @@
 session_start();
 $p=$_SESSION['juego']['paso'];
 
-if($_SESSION['juego']['etapa']==1){
-    $e="facil";
-}elseif($_SESSION['juego']['etapa']==2){
-    $e="medio";
-}elseif($_SESSION['juego']['etapa']==3){
-    $e="dificil";
-}
+// if($_SESSION['juego']['etapa']==1){
+//     $e="facil";
+// }elseif($_SESSION['juego']['etapa']==2){
+//     $e="medio";
+// }elseif($_SESSION['juego']['etapa']==3){
+//     $e="dificil";
+// }
 ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">

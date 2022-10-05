@@ -1,5 +1,6 @@
 <?php
 include 'header/session.php';
+$edad = $_SESSION['usuario']['edad'];
 
 //Aumenta la cantidad de preguntas respondidas
 if(isset($_POST['respuestas'])){
@@ -13,7 +14,12 @@ if(isset($_POST['respuestas'])){
 //Suma de puntos
 if(isset($_POST['respuestas']) && ($_POST['respuestas'] == $_SESSION['juego']['ans_c'])){
     ++$_SESSION['juego']['racha'];
-    $_SESSION['tabla']['puntaje'] += ((13 * $_SESSION['juego']['etapa']) * $_SESSION['juego']['racha']);
+    $_SESSION['tabla']['puntaje'] += ((10 * $_SESSION['juego']['etapa']) * $_SESSION['juego']['racha']);
+
+    $puntaje = $_SESSION['tabla']['puntaje'];
+    $update = "UPDATE $edad SET `ranking-score` = '$puntaje' WHERE `id-user` = $id";
+
+    mysqli_query($link,$update);
 }else if(isset($_POST['respuestas']) && ($_POST['respuestas'] == $_SESSION['juego']['ans_c'])) {
     $_SESSION['juego']['racha'] = 0;
 }
@@ -40,11 +46,22 @@ if($_SESSION['juego']['paso'] >= 9){
     
     $diff = $first->diff($second);
     $et = $diff->format( '%H:%I:%S' );
-    
-    $_SESSION['tabla']['tiempo'] = $et;
-    
-    header("Location: ../../web/php/nick-page.php");
+
+    $update = "UPDATE $edad SET `ranking-et` = '$et' WHERE `id-user` = $id";
+
+    mysqli_query($link, $update);
+
+    #Cierre de sesión.
+    #-----------------------------------------------------------------------------
+    session_unset();
+    session_destroy();
+    setcookie("PHPSESSID", "", time()-1000,"/", "127.0.0.1",false,false);
+
+    #Redirección al ranking.
+    #-----------------------------------------------------------------------------
+    header("Location: ../../web/php/ranking.php");
     die();
+
 }
 
 //recupera las preguntas sólo si se respondió la anterior
