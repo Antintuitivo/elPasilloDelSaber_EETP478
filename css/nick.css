@@ -80,11 +80,6 @@
         font-size: 3vh;
     }
 
-    p{
-        font-size: 10vh;
-        margin: 1vh;
-    }
-
     .stats{
         margin:1vh;
         flex-direction: row;
@@ -219,7 +214,7 @@ body{
 
 img{
     width: auto;
-    height: 25vh;
+    height: 20vh;
     margin: 2vh;
 }
 

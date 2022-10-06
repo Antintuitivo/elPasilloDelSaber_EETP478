@@ -4,12 +4,6 @@
   #Obtener variables desde el formulario en HTML, con el método POST.
   $email = $_POST['email'];
   $edad = $_POST['edad'];
-  if($edad < 15){
-    $edad = "rankingmenores";
-  }elseif($edad >= 15){
-    $edad = "rankingmayores";
-  }
-
   $nick = $_POST['nick'];
 
   #Realizar, comprobar y almacenar credecenciales de la conexión a la DBMS.
@@ -40,6 +34,12 @@
   $select = "SELECT*FROM journey WHERE `id-user`='$id'";
   $result = mysqli_query($link, $select);
   $validation = mysqli_num_rows($result);
+
+  if($edad < 15){
+    $edad = "rankingmenores";
+  }elseif($edad >= 15){
+    $edad = "rankingmayores";
+  }
 
   if ($validation == 0) {
 

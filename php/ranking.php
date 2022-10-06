@@ -1,3 +1,8 @@
+<?php session_start();
+    if(isset($_SESSION['usuario']['id'])){
+        $puntaje = $_SESSION['tabla']['puntaje'];
+    }
+?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
 <head>
@@ -18,7 +23,16 @@
     <div class="transparent-background"></div>
         <div class="big-box">
         <div class="contenedor">
-            <img src="../../web/img/school-icon.svg">
+            <?PHP
+                if(isset($_SESSION['usuario']['id'])){
+                    include 'header/emoji.php';
+                    ?><span class="puntos"><b>Puntos:</b> <?PHP echo $_SESSION['tabla']['puntaje'];?></span>
+                    <span class="puntos"><b>Tiempo:</b> <?PHP echo $_SESSION['tabla']['tiempo'];?></span> <?PHP
+                }else{
+                    ?><img src="../../web/img/school-icon.svg"><?PHP
+                }
+            ?>
+            <!-- <img src="../../web/img/school-icon.svg"> -->
             <input class="input-100" type="text" placeholder="Buscar por nick.." id="search-input" onkeyup="myFunction(this.value, 'ranking')">
             <div style="overflow: auto; max-height: 400px;">
                 <table id="ranking">
@@ -36,4 +50,11 @@
     <script src="../../web/javascript/ranking-update.js"></script>
     <!--<h1>You are the number one Shōnen!</h1>
     <img src="//c.tenor.com/TIABFPqpNzIAAAAd/all-might-anime.gif">-->
+    <?PHP 
+    #Cierre de sesión.
+    #-----------------------------------------------------------------------------
+        session_unset();
+        session_destroy();
+        setcookie("PHPSESSID", "", time()-1000,"/", "127.0.0.1",false,false);
+    ?>
 </body>

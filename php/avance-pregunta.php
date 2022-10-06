@@ -40,22 +40,18 @@ if($_SESSION['juego']['paso'] >= 9){
     
     $first  = date_create($journey['journey-started']);
     $second = date_create($journey['journey-ended']);
-    
+
     //echo date_format($first, 'H:i:s') . "<br>";
     //echo date_format($second, 'H:i:s') . "<br>";
     
     $diff = $first->diff($second);
     $et = $diff->format( '%H:%I:%S' );
-
+    
     $update = "UPDATE $edad SET `ranking-et` = '$et' WHERE `id-user` = $id";
-
+    
     mysqli_query($link, $update);
-
-    #Cierre de sesión.
-    #-----------------------------------------------------------------------------
-    session_unset();
-    session_destroy();
-    setcookie("PHPSESSID", "", time()-1000,"/", "127.0.0.1",false,false);
+    
+    $_SESSION['tabla']['tiempo'] = $et;
 
     #Redirección al ranking.
     #-----------------------------------------------------------------------------

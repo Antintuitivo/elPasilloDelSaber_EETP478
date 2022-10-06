@@ -62,6 +62,12 @@
 
     }
 
+    span{
+        color: #fff;
+        font-size: 5vw;
+        margin: 2vw;
+    }
+
     .contenedor{
         height: 95%;
         width: fit-content;
@@ -90,6 +96,11 @@
         width: auto;
         height: 25vh;
         margin: 2vh;
+    }
+
+    span{
+        color: #fff;
+        font-size: 3vh;
     }
 
     .big-box{
@@ -161,6 +172,11 @@
         width: auto;
         height: 20vh;
         margin: 2vh;
+    }
+
+    span{
+        color: #fff;
+        font-size: 3vh;
     }
 
     .big-box{
