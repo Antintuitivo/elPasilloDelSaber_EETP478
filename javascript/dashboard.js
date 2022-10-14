@@ -2,14 +2,20 @@ var lastStep;
 var countStandby;
 videoStandby = document.getElementById('video');
 elementCover = document.getElementById('cover');
+score = document.getElementById('score');
 
 function update(data) {
+
+    var data = JSON.parse(data);
+    score.innerHTML = data['ranking']['ranking-score'];
+    console.log(data);
+
     countStandby = countStandby + 1;
-    idStep = "step-" + data;
+    idStep = "step-" + data['journey']['journey-step'];
 
     var elementStep = document.getElementById(idStep);
-    if(data == 0 && data != lastStep){
-        lastStep = data;
+    if(data['journey']['journey-step'] == 0 && data['journey']['journey-step'] != lastStep){
+        lastStep = data['journey']['journey-step'];
         countStandby = 0;
         for (let i = 1; i <= 9; i++) {
             idStep = "step-" + i;
@@ -20,12 +26,20 @@ function update(data) {
             }
         }
     }
-    if(data >= 1 && data != lastStep) {
-        console.log(data);
-        lastStep = data;
+    if(data['journey']['journey-step'] >= 1 && data['journey']['journey-step'] != lastStep) {
+        console.log(data['journey']['journey-step']);
+        lastStep = data['journey']['journey-step'];
         countStandby = 0;
         elementStep.classList.toggle("nonctive");
         elementStep.classList.toggle("active");
+        for (let i = 1; i < data['journey']['journey-step']; i++) {
+            idStep = "step-" + i;
+            elementStep = document.getElementById(idStep);
+            if(!elementStep.classList.contains("active")){
+                elementStep.classList.toggle("nonctive");
+                elementStep.classList.toggle("active");
+            }
+        }
     }
 
     if(countStandby >= 10 && !elementCover.classList.contains("active")) {
