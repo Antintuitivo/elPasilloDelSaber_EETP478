@@ -7,7 +7,7 @@
 
     #Recolección y clasificación de las entradas del ranking.
     #-----------------------------------------------------------------------------
-    $select = "SELECT `id-user`, `journey-stage` FROM journey ORDER BY `id-user` DESC LIMIT 1";
+    $select = "SELECT `id-user`, `journey-step` FROM journey ORDER BY `id-user` DESC LIMIT 1";
     $result = mysqli_query($link, $select);
     $data['journey'] = mysqli_fetch_assoc($result);
     // print_r($data);

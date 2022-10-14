@@ -38,7 +38,7 @@ if (isset($_SESSION['index_message'])) {
             </div>
             <input class="input-100" type="email" placeholder="Dirección de correo electrónico" name="email" maxlength="30" autocomplete="off" required>
             <input class="input-100" type="number" placeholder="Edad" name="edad" min="0" max="99" required>
-            <input class="input-100 btn-enviar" type="submit" value="INICIAR" formaction="../../web/php/registro.php">
+            <input class="input-100 btn-enviar" type="submit" value="REGISTRAR" formaction="../../web/php/registro.php">
         </article>
     </form>
     <?php 

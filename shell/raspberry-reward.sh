@@ -32,6 +32,9 @@ if [ $mode = 1 ]; then
                     rewarded=1
                     #echo $ > ./raspberry-daemon.pid; #Registro del Process ID, para finalizarlo.
                 fi
+                gpio write 3 0
+                gpio write 22 0
+                gpio write 24 0
             fi
             sleep 10
             userid=$(mysql -h 10.0.1.40 -u raspberry -p'-r4spb3rry-' -se 'SELECT `id-user` FROM journey ORDER BY `id-user` DESC LIMIT 1' feria-db)
@@ -55,6 +58,7 @@ if [ $mode = 2 ]; then
 
         while [ $userid -eq $lastuserid ]; do
             userstep=$(mysql -h "$ip" -u raspberry -p'-r4spb3rry-' -se 'SELECT `journey-step` FROM journey WHERE `id-user` = '$userid'' feria-db)
+            if [ $userstep -eq 9 ]; then
                 if [ $userage -lt 15 ]; then
                     score=$(mysql -h "$ip" -u raspberry -p'-r4spb3rry-' -se 'SELECT `ranking-score` FROM rankingmenores WHERE `id-user` = '$userid'' feria-db)
                 elif [ $userage -ge 15 ]; then
@@ -66,6 +70,7 @@ if [ $mode = 2 ]; then
                     rewarded=1
                     #echo $ > ./raspberry-daemon.pid; #Registro del Process ID, para finalizarlo.
                 fi
+                echo "Lights gets off"
             fi
             sleep 10
             userid=$(mysql -h "$ip" -u raspberry -p'-r4spb3rry-' -se 'SELECT `id-user` FROM journey ORDER BY `id-user` DESC LIMIT 1' feria-db)
