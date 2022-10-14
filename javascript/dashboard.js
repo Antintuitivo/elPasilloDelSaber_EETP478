@@ -3,11 +3,13 @@ var countStandby;
 videoStandby = document.getElementById('video');
 elementCover = document.getElementById('cover');
 score = document.getElementById('score');
+id = document.getElementById('id');
 
 function update(data) {
 
     var data = JSON.parse(data);
     score.innerHTML = data['ranking']['ranking-score'];
+    id.innerHTML = data['journey']['id-user'];
     console.log(data);
 
     countStandby = countStandby + 1;
