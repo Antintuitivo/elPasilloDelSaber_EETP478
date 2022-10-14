@@ -35,5 +35,12 @@ if (isset($_SESSION['index_message'])) {
             <input class="input-100 btn-enviar" type="submit" value="INICIAR" formaction="../../web/php/registro.php">
         </article>
     </form>
+    <?php 
+        #Cierre de sesión para vaciar variables.
+        #-----------------------------------------------------------------------------
+        session_unset();
+        session_destroy();
+        setcookie("PHPSESSID", "", time()-1000,"/", "127.0.0.1",false,false);
+    ?>
 </body>
 </html>

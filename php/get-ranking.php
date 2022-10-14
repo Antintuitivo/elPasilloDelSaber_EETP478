@@ -4,8 +4,14 @@
     include 'header\link.php';
     $link = connect();
 
+    #Comprobar último usuario.
+    $select = "SELECT `id-user` FROM journey ORDER BY `id-user` DESC LIMIT 1";
+    $result = mysqli_query($link, $select);
+    $user = mysqli_fetch_assoc($result);
+    $id = $user['id-user'];
+
     #Comprobar la edad del último usuario para eleguir ranking a mostrar.
-    $select = "SELECT `user-age` FROM users ORDER BY `id-user` DESC LIMIT 1";
+    $select = "SELECT `user-age` FROM users WHERE `id-user` = '$id'";
     $result = mysqli_query($link, $select);
     $user = mysqli_fetch_assoc($result);
 
