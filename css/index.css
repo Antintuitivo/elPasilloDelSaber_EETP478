@@ -58,7 +58,27 @@
         font-size:calc(30px + 1.2vw);
         margin: 1vw;
     }
+
+    h3{
+        color: #bdbdbd;
+        padding: 0.2vh;
+        text-align: center;
+        font-family: inherit;
+        font-size:calc(15px + 1.2vw);
+    }
     
+    .borde{
+        border:#616161 solid 1px;
+        border-radius: 6px;
+        padding: 4px;
+        background: #303030;
+    }
+
+    .nickname-creation{
+        display: flex; 
+        justify-content:space-between;
+    }
+
     input,select{
         padding: 2vh;
         font-size:20px;
@@ -71,7 +91,16 @@
     
     .input-48{
         width: 48%;
-        margin: 1vh;
+    }
+
+    .noLeftMargin{
+        margin: 1vh 1vw 0vh 0vw;
+    }
+    .noRightMargin{
+        margin: 1vh 0vw 0vh 1vw;
+    }
+    .nomargin{
+        margin: 0vh 0vw 0vh 0vw;
     }
 
     .big-box{

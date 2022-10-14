@@ -29,7 +29,13 @@ if (isset($_SESSION['index_message'])) {
         <img src="../../web/img/school-icon.svg">
         <h2>El pasillo del saber</h2>
         <article class="contenedor-inputs">
-            <input class="input-100" type="text" placeholder="Ingresar nick" name="nick" maxlength="3" autocomplete="off" required>
+            <div class="borde">
+                <h3>Ingrese su usuario</h3>
+                <div class="nickname-creation">
+                    <input class="input-48 noLeftMargin" type="text" placeholder="Ingrese 3 letras" name="nick" maxlength="3" autocomplete="off" required>
+                    <input class="input-48 noRightMargin" type="number" placeholder="Agregue 3 números" name="nums" maxlength="3" autocomplete="off" required>
+                </div>
+            </div>
             <input class="input-100" type="email" placeholder="Dirección de correo electrónico" name="email" maxlength="30" autocomplete="off" required>
             <input class="input-100" type="number" placeholder="Edad" name="edad" min="0" max="99" required>
             <input class="input-100 btn-enviar" type="submit" value="INICIAR" formaction="../../web/php/registro.php">
