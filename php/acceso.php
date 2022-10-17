@@ -2,7 +2,7 @@
   session_start();
 
   #Obtener variables desde el formulario en HTML, con el método POST.
-  $email = $_POST['email'];
+  $usuario = $_POST['Usuario'];//$email = $_POST['email'];
 
   #Realizar, comprobar y almacenar credecenciales de la conexión a la DBMS.
   #-----------------------------------------------------------------------------
@@ -11,14 +11,17 @@
 
   #Validación de cuenta.
   #-----------------------------------------------------------------------------
-  $select = "SELECT*FROM users WHERE `user-email`='$email'";
+  $select = "SELECT*FROM users WHERE `nick` = '$usuario'";//$select = "SELECT*FROM users WHERE `user-email`='$email'";
   $result = mysqli_query($link, $select);
   $validation = mysqli_num_rows($result);
+
 
   if ($validation == 0) {
     #Notificar que primero se debe crear un usuario en el registro.
     $_SESSION['index_message'] = "Cuenta no registrada. Por favor, primero dirígete a la terminal de registro.";
-    header("Location: ../../web/");
+    //header("Location: ../../web/");
+    echo $usuario;
+    echo $validation;
     die();
   }
 
