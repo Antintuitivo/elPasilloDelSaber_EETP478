@@ -35,6 +35,7 @@ if [ $mode = 1 ]; then
                 gpio write 3 0
                 gpio write 22 0
                 gpio write 24 0
+		        echo "Lights gets off"
             fi
             sleep 10
             userid=$(mysql -h 10.0.1.40 -u raspberry -p'-r4spb3rry-' -se 'SELECT `id-user` FROM journey ORDER BY `id-user` DESC LIMIT 1' feria-db)
