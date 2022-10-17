@@ -29,7 +29,7 @@ if (isset($_SESSION['index_message'])) {
         <img src="../../web/img/school-icon.svg">
         <h2>El pasillo del saber</h2>
         <article class="contenedor-inputs">
-            <input class="input-100" type="email" placeholder="Dirección de correo electrónico" name="email" maxlength="30" autocomplete="off" required>
+            <input class="input-100" type="text" placeholder="Insertar usuario registrado" name="Usuario" maxlength="6" autocomplete="off" required>
             <input class="input-100 btn-enviar" type="submit" value="INICIAR" formaction="../../web/php/acceso.php">
         </article>
     </form>

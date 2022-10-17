@@ -4,7 +4,9 @@
   #Obtener variables desde el formulario en HTML, con el método POST.
   $email = $_POST['email'];
   $edad = $_POST['edad'];
-  $nick = $_POST['nick'];
+  $letras = $_POST['nick'];//
+  $nums = $_POST['nums'];//
+  $nick = $letras.$nums;//se arma el nickname
 
   #Realizar, comprobar y almacenar credecenciales de la conexión a la DBMS.
   #-----------------------------------------------------------------------------
@@ -19,7 +21,7 @@
 
   if ($validation == 0) {
     #Insertar nuevo usuario.
-    $insert = "INSERT INTO users (`user-age`, `user-email`) VALUES ('$edad', '$email')";
+    $insert = "INSERT INTO users (`user-age`, `user-email`, `nick`) VALUES ('$edad', '$email','$nick')";
     mysqli_query($link, $insert);
     $result = mysqli_query($link, $select);
   } else {
