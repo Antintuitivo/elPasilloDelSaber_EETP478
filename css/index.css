@@ -1,10 +1,132 @@
-html{
-    font-size: 1vw;
-    font-family: Arial;
+/*config para pantallas de teléfonos móviles*/
+@media screen and (max-width:500px){
+    html{
+        font-size: 3vw;
+        font-family: Arial;
+    }
+    
+    h2{
+        color: #ffff;
+        padding: 0.2vh;
+        text-align: center;
+        font-family: 'Aboreto', cursive;
+        font-weight: 100;
+        font-size:calc(20px + 5vw);
+        margin: 1vw;
+    }
+    
+    input,select{
+        padding: 3vw;
+        font-size:15px;
+        min-width: 200px;
+    }
+
+    .input-100{
+        width: 100%;
+        margin: 1vw;
+    }
+    
+    .input-48{
+        width: 48%;
+        margin: 1vw;
+    }
+
+    .big-box{
+        height: 100%;
+        width: 100%;
+        background-color: #212121;
+    }
+    
+    .btn-enviar{
+        padding: 2vh 4vw;
+    }
+}
+
+/*pantalla de tablet o computadora pequeña*/
+@media screen and (min-width:500px) {
+    html{
+        font-size: 2vh;
+        font-family: Arial;
+    }
+    
+    h2{
+        color: #ffff;
+        padding: 0.2vh;
+        text-align: center;
+        font-family: 'Aboreto', cursive;
+        font-weight: 100;
+        font-size:calc(30px + 1.2vw);
+        margin: 1vw;
+    }
+    
+    input,select{
+        padding: 2vh;
+        font-size:20px;
+    }
+
+    .input-100{
+        width: 100%;
+        margin: 1vh;
+    }
+    
+    .input-48{
+        width: 48%;
+        margin: 1vh;
+    }
+
+    .big-box{
+        height: 90vh;
+        max-width: 700px;
+        width: 95%;
+        min-width: 320px;
+        border-radius: 5px;
+        background-color: #212121;
+    }
+}
+/*pantallas grandes y televisores*/
+@media screen and (min-width:1500px){
+    html{
+        font-size: 2vh;
+        font-family: Arial;
+    }
+    
+    h2{
+        color: #ffff;
+        padding: 0.2vh;
+        text-align: center;
+        font-family: 'Aboreto', cursive;
+        font-weight: 100;
+        font-size:calc(70px + 1.2vw);
+        margin: 0.5vw;
+    }
+    
+    input,select{
+        padding: 2vh;
+        font-size:2.2vh;
+    }
+
+    .input-100{
+        width: 100%;
+        margin: 1vh;
+    }
+    
+    .input-48{
+        width: 48%;
+        margin: 1vh;
+    }
+
+    .big-box{
+        height: 90vh;
+        max-width: 1400px;
+        width: 95%;
+        border-radius: 5px;   
+        background-color: rgba(0, 0, 0, 0.25);     
+    }
 }
 
 * {
     box-sizing: border-box;
+    font-size:calc(10px + 0.3vw);
 }
 
 body{
@@ -27,76 +149,40 @@ body{
     z-index: -1;
 }
 
-h2{
-    color: #ffff;
-    padding: 20px;
-    text-align: center;
-    font-weight: 100;
-    font-size: 30px;
-}
 
 input, select{
     background-color: #212121;
     margin-bottom: 15px;
-    padding: 15px;
     border-radius: 6px;
     border: 1px solid #616161;
 
     font-family: 'Arial';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
     color:#616161;
 }
 
 img{
-    width: 200px;
-    height: 200px;
-}
-/*
-svg{
-    width: 200px;
-    height: 200px;
+    width: auto;
+    height: 25vh;
 }
 
-#gear:hover {
-	animation: spin 3s alternate infinite;
-}
-@keyframes spin {
-	100% {transform: rotate(360deg);
-	}
-}
-*/
 .big-box{
-    background-color: #212121;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    height: 80%;
-    max-height: 600px;
-    max-width: 470px;
-    width: 98%;
-    min-width: 300px;
-    border-radius: 7px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding: 2%;
 }
 
-
-
 .contenedor-inputs{
-    
-    padding: 10px 30px;
+    width: 80%;
+    display: flex;
+    padding: 1vh 3vh;
     flex-direction: column;
     align-items: center;
     align-content: flex-start;
-}
-
-.input-100{
-    width: 100%;
-    margin: 10px;
 }
 
 .btn-enviar{
@@ -106,15 +192,13 @@ svg{
 
     color: #fff;
     
-    padding: 10px 40px;
     cursor: pointer;
 }
 
-    .btn-enviar:hover{
-        background: #288AE8
-    }
+.btn-enviar:hover{
+    background: #288AE8
+}
 
-    .btn-enviar:active{
-        background: #3D95EA;
-    }
-
+.btn-enviar:active{
+    background: #3D95EA;
+}

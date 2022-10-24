@@ -1,0 +1,78 @@
+html{
+    font-size: 1vw;
+    font-family: Arial;
+}
+
+body{
+    /*background-color: #121212;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url(../img/eetp-478.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+.transparent-background {
+    background-color: rgba(18, 18, 18, 0.65);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.school-icon{
+    max-width: 500px;
+    max-height: 500px;
+	animation: expandicon 5s forwards;
+}
+@keyframes expandicon {
+	0% {
+        transform: translate(0,-10vh);
+        width: 200px;
+        height: 200px;
+	}
+	100% {
+        transform: translate(0,0);
+        width: 60vw;
+        height: 60vw;
+	}
+}
+
+#gear {
+    transform-origin:center center;
+	animation: spin 5s alternate infinite;
+}
+@keyframes spin {
+	100% {transform: rotate(360deg);
+	}
+}
+
+.title {
+	padding: 2vw 2vh;
+    /*font-family: monospace;*/
+    font-family: 'Rubik Distressed', cursive;
+    font-family: 'Rubik Maze', cursive;
+	animation: change-title 2s forwards;
+}
+@keyframes change-title {
+    0% {
+        transform: translate(0,-4vw);
+    }
+    100% {
+        /*background-color: #414141;*/
+        transform: translate(0,0);
+        font-size: 70px;
+        color: #ffffff;
+        text-shadow: 0 0 0 rgb(0, 0, 0);
+    }
+}
