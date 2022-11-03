@@ -73,6 +73,6 @@ httpRequest.onreadystatechange = function(){
         }
     }
 };
-httpRequest.open('GET', "../php/get-dashboard.php",true);
+httpRequest.open('GET', "../php/get-progression.php",true);
 httpRequest.send();
 }, 3000);

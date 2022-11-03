@@ -11,7 +11,7 @@
     <link rel="icon" href="../../web/img/school-icon.svg">
     <link rel="stylesheet" type="text/css" href="../../web/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="../../web/css/messages.css">
-    <link rel="stylesheet" type="text/css" href="../../web/css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="../../web/css/progression.css">
     <link rel="stylesheet" type="text/css" href="../../web/css/fonts.css">
 </head>
 <body>
@@ -109,7 +109,7 @@
             </div>
         </div>
     </div>
-    <script src="../../web/javascript/dashboard.js"></script>
+    <script src="../../web/javascript/player-progression.js"></script>
     <!--<h1>You are the number one Shōnen!</h1>
     <img src="//c.tenor.com/TIABFPqpNzIAAAAd/all-might-anime.gif">-->
 </body>
