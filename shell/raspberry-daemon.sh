@@ -4,9 +4,9 @@ lastsensor=0
 
 #echo $! > ./raspberry-daemon.pid; #Registro del Process ID, para finalizarlo.
 #sudo mysql -h 10.0.1.40 -u raspberry -p'-r4spb3rry-' -e 'SELECT * FROM signals ORDER BY `id-record` DESC LIMIT 1' feria-db;
-echo "Welcome to the input-output control program."
+echo "Bienvenido al programa de control de entradas y salidas."
 
-echo "Write 1 for Raspberry or 2 for terminal-only tests:"
+echo "Escriba 1 para Raspberry o 2 para pruebas de solo terminal: "
 read mode
 
 if [ $mode = 1 ]; then
@@ -53,7 +53,7 @@ fi
 
 if [ $mode = 2 ]; then
 
-    echo "Enter the host ip: "
+    echo "Ingrese la dirección IP del host: "
     read ip
 
     while :; do
@@ -62,18 +62,21 @@ if [ $mode = 2 ]; then
             sudo mysql -h "$ip" -u raspberry -p'-r4spb3rry-' -e 'INSERT INTO signals (`signal-stage`) VALUES ('1')' feria-db
             lastsensor=1
             echo "Llegada a etapa 1 registrada"
+            echo "Primera luz encendida. Otras luces apagadas"
             sleep 10
         fi
         if [ "$signal" -eq 2 ] && [ "$lastsensor" -ne 2 ]; then
             sudo mysql -h "$ip" -u raspberry -p'-r4spb3rry-' -e 'INSERT INTO signals (`signal-stage`) VALUES ('2')' feria-db
             lastsensor=2
             echo "Llegada a etapa 2 registrada"
+            echo "Segunda luz encendida. Otras luces apagadas"
             sleep 10
         fi
         if [ "$signal" -eq 3 ] && [ "$lastsensor" -ne 3 ]; then
             sudo mysql -h "$ip" -u raspberry -p'-r4spb3rry-' -e 'INSERT INTO signals (`signal-stage`) VALUES ('3')' feria-db
             lastsensor=3
             echo "Llegada a etapa 3 registrada"
+            echo "Tercera luz encendida. Otras luces apagadas"
             sleep 10
         fi
     done

@@ -1,6 +1,6 @@
 #!/bin/bash
-echo "Welcome to the dispenser control program."
-echo "Write 1 for Raspberry or 2 for terminal-only tests:"
+echo "Bienvenido al programa de control del dispenser."
+echo "Escriba 1 para Raspberry o 2 para pruebas de solo terminal: "
 read mode
 
 if [ $mode = 1 ]; then
@@ -11,8 +11,8 @@ if [ $mode = 1 ]; then
         rewarded=0
         userid=$(mysql -h 10.0.1.40 -u raspberry -p'-r4spb3rry-' -se 'SELECT `id-user` FROM journey ORDER BY `id-user` DESC LIMIT 1' feria-db)
         userage=$(mysql -h 10.0.1.40 -u raspberry -p'-r4spb3rry-' -se 'SELECT `user-age` FROM users WHERE `id-user` = '$userid'' feria-db)
-        echo "Last user is $userid"
-        echo "Age: $userage"
+        echo "El último usuario es $userid"
+        echo "Edad: $userage"
         lastuserid=$userid
 
         while [ $userid -eq $lastuserid ]; do
@@ -27,34 +27,34 @@ if [ $mode = 1 ]; then
                     gpio write 4 1
                     sleep 4
                     gpio write 4 0
-                    echo "User $userid rewarded"
-                    echo "User score is $score"
+                    echo "Usuario $userid recompensado"
+                    echo "La puntuación del usuario es $score"
                     rewarded=1
                     #echo $ > ./raspberry-daemon.pid; #Registro del Process ID, para finalizarlo.
                 fi
                 gpio write 3 0
                 gpio write 22 0
                 gpio write 24 0
-		        echo "Lights gets off"
+		        echo "Las luces se apagan"
             fi
             sleep 10
             userid=$(mysql -h 10.0.1.40 -u raspberry -p'-r4spb3rry-' -se 'SELECT `id-user` FROM journey ORDER BY `id-user` DESC LIMIT 1' feria-db)
         done
     sleep 4
-    echo "User has changed"
+    echo "El usuario ha cambiado"
     done
 fi
 
 if [ $mode = 2 ]; then
-    echo "Enter the host ip: "
+    echo "Ingrese la dirección IP del host: "
     read ip
 
     while :; do
         rewarded=0
         userid=$(mysql -h "$ip" -u raspberry -p'-r4spb3rry-' -se 'SELECT `id-user` FROM journey ORDER BY `id-user` DESC LIMIT 1' feria-db)
         userage=$(mysql -h "$ip" -u raspberry -p'-r4spb3rry-' -se 'SELECT `user-age` FROM users WHERE `id-user` = '$userid'' feria-db)
-        echo "Last user is $userid"
-        echo "Age: $userage"
+        echo "El último usuario es $userid"
+        echo "Edad: $userage"
         lastuserid=$userid
 
         while [ $userid -eq $lastuserid ]; do
@@ -66,17 +66,17 @@ if [ $mode = 2 ]; then
                     score=$(mysql -h "$ip" -u raspberry -p'-r4spb3rry-' -se 'SELECT `ranking-score` FROM rankingmayores WHERE `id-user` = '$userid'' feria-db)
                 fi
                 if [ -n "$score" ] && [ $score -ge 800 ] && [ $rewarded -eq 0 ]; then
-                    echo "User $userid rewarded"
-                    echo "User score is $score"
+                    echo "Usuario $userid recompensado"
+                    echo "La puntuación del usuario es $score"
                     rewarded=1
                     #echo $ > ./raspberry-daemon.pid; #Registro del Process ID, para finalizarlo.
                 fi
-                echo "Lights gets off"
+                echo "Las luces se apagan"
             fi
             sleep 10
             userid=$(mysql -h "$ip" -u raspberry -p'-r4spb3rry-' -se 'SELECT `id-user` FROM journey ORDER BY `id-user` DESC LIMIT 1' feria-db)
         done
     sleep 4
-    echo "User has changed"
+    echo "El usuario ha cambiado"
     done
 fi
