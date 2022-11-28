@@ -21,7 +21,7 @@ if(isset($_POST['respuestas']) && ($_POST['respuestas'] == $_SESSION['juego']['a
     $update = "UPDATE $edad SET `ranking-score` = '$puntaje' WHERE `id-user` = $id";
 
     mysqli_query($link,$update);
-}else if(isset($_POST['respuestas']) && ($_POST['respuestas'] == $_SESSION['juego']['ans_c'])) {
+}else if(isset($_POST['respuestas']) && ($_POST['respuestas'] != $_SESSION['juego']['ans_c'])) {
     $_SESSION['juego']['racha'] = 0;
 }
 
