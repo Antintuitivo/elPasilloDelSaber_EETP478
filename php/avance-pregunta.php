@@ -1,5 +1,6 @@
 <?php
-include 'header/session.php';
+include 'link.php';
+$link = connect();
 $edad = $_SESSION['usuario']['edad'];
 
 //Aumenta la cantidad de preguntas respondidas
