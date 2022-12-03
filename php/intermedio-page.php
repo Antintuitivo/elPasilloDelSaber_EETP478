@@ -81,7 +81,4 @@
         <script src="../../web/javascript/typewriter.js"></script>
     </div>
     <script src="../../web/javascript/change-stage.js"></script>
-
-    <!--<h1>It's working!</h1>
-    <img src="//media0.giphy.com/media/CuMiNoTRz2bYc/giphy.gif">-->
 </body>

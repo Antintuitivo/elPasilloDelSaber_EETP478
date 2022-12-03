@@ -110,6 +110,4 @@
         </div>
     </div>
     <script src="../../web/javascript/player-progression.js"></script>
-    <!--<h1>You are the number one Shōnen!</h1>
-    <img src="//c.tenor.com/TIABFPqpNzIAAAAd/all-might-anime.gif">-->
 </body>
