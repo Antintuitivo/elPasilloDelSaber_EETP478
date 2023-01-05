@@ -1,6 +1,6 @@
 <?php
     header("Content-Type: application/json"); // Advise client of response type
-    #Realizar, comprobar y almacenar credecenciales de la conexión a la DBMS.
+    #Realizar, comprobar y almacenar credenciales de la conexión a la DBMS.
     #-----------------------------------------------------------------------------
     include 'header\link.php';
     $link = connect();

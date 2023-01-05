@@ -1,7 +1,7 @@
 function change(data) {
     if(data == "Q&A"){
         console.log(data);
-        document.location.href = '../php/Q&A.php';
+        document.location.href = '../php/avance-pregunta.php';
     }
     if(data == 1){
         document.location.href = '../php/avance-pregunta.php';

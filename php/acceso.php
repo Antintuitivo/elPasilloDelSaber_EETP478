@@ -4,7 +4,7 @@
   #Obtener variables desde el formulario en HTML, con el método POST.
   $usuario = $_POST['Usuario'];//$email = $_POST['email'];
 
-  #Realizar, comprobar y almacenar credecenciales de la conexión a la DBMS.
+  #Realizar, comprobar y almacenar credenciales de la conexión a la DBMS.
   #-----------------------------------------------------------------------------
   include 'header\link.php';
   $link = connect();
@@ -19,9 +19,7 @@
   if ($validation == 0) {
     #Notificar que primero se debe crear un usuario en el registro.
     $_SESSION['index_message'] = "Cuenta no registrada. Por favor, primero dirígete a la terminal de registro.";
-    //header("Location: ../../web/");
-    echo $usuario;
-    echo $validation;
+    header("Location: ../../web/login.php");
     die();
   }
 

@@ -1,7 +1,7 @@
 <?php
     session_start();
     
-    #Realizar, comprobar y almacenar credecenciales de la conexión a la DBMS.
+    #Realizar, comprobar y almacenar credenciales de la conexión a la DBMS.
     #-----------------------------------------------------------------------------
     include 'header\link.php';
     $link = connect();

@@ -31,7 +31,7 @@ elseif($stage==3){
     $max = 89;
 }
 
-//busca la pregunta de un tópico que no haya sido respondido aún en la etapa
+//Busca la pregunta de un tópico que no haya sido respondido aún en la etapa
 do{
     $question_index = rand($min,$max);
     //mapea el archivo

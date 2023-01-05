@@ -8,7 +8,7 @@
   $nums = $_POST['nums'];//
   $nick = $letras.$nums;//se arma el nickname
 
-  #Realizar, comprobar y almacenar credecenciales de la conexión a la DBMS.
+  #Realizar, comprobar y almacenar credenciales de la conexión a la DBMS.
   #-----------------------------------------------------------------------------
   include 'header\link.php';
   $link = connect();

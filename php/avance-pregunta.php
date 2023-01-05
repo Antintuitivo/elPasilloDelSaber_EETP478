@@ -1,5 +1,6 @@
 <?php
-include 'link.php';
+session_start();
+include 'header/link.php';
 $link = connect();
 $edad = $_SESSION['usuario']['edad'];
 
@@ -12,7 +13,7 @@ if(isset($_POST['respuestas'])){
     mysqli_query($link,$update);
 }
 
-//Suma de puntos
+//Procesar respuesta, calcular puntaje y almacenarlo.
 if(isset($_POST['respuestas']) && ($_POST['respuestas'] == $_SESSION['juego']['ans_c'])){
     ++$_SESSION['juego']['racha'];
     $_SESSION['tabla']['puntaje'] += ((10 * $_SESSION['juego']['etapa']) * $_SESSION['juego']['racha']);
@@ -61,7 +62,7 @@ if($_SESSION['juego']['paso'] >= 9){
 
 }
 
-//recupera las preguntas sólo si se respondió la anterior
+//Recupera las preguntas sólo si se respondió la anterior
 if(isset($_POST['respuestas']) || $_SESSION['juego']['paso'] == 0 || $_SESSION['juego']['paso'] == 3 || $_SESSION['juego']['paso'] == 6){
     include 'rand-get.php';
 }
